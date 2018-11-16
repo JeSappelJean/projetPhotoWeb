@@ -12,7 +12,7 @@
     <a href="https://www.photoweb.fr/livraison-gratuite">
       <div id="conteneur1" >
         <div class="element">
-          <img src="imagesSite/colis.png" alt="ImageBoitePhotoWeb">
+          <img src="../data/imagesSite/colis.png" alt="ImageBoitePhotoWeb">
         </div>
         <div class="element">
           <p><b><span class="bleu">ABONNEMENT LIVRAISON PREMIUM :</span> <span class="blanc">  Livraison gratuite et illimitée !   <span class="souligne">> Je découvre</span></span></b></p>
@@ -31,7 +31,7 @@
         <p><b>Sourire Garanti</b></p>
       </div>
       <div class="element">
-        <img src="imagesSite/LogoPhotoweb.png" alt="ImageLogoPhotoWeb">
+        <img src="../data/imagesSite/LogoPhotoweb.png" alt="ImageLogoPhotoWeb">
       </div>
     </div>
 
