@@ -45,12 +45,23 @@
           </div>
 
           <div>
-              <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2fcreations"> <img width= 75px; height=75px; src="../data/imagesSite/Créations.png" alt="pinceau">
-              <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2fphotos"> <img width= 75px; height=75px; src="../data/imagesSite/MesPhotos.png" alt="cadre">
-              <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2f"> <img width= 75px; height=75px; src="../data/imagesSite/Compte.png" alt="user">
-              <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fPanier"> <img width= 75px; height=75px; src="../data/imagesSite/Panier.png" alt="panier">
+              <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2fcreations"> <img width= 75px; height=75px; src="../data/imagesSite/Créations.png" alt="pinceau"></a>
+              <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2fphotos"> <img width= 75px; height=75px; src="../data/imagesSite/MesPhotos.png" alt="cadre"></a>
+              <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2f"> <img width= 75px; height=75px; src="../data/imagesSite/Compte.png" alt="user"></a>
+              <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fPanier"> <img width= 75px; height=75px; src="../data/imagesSite/Panier.png" alt="panier"></a>
           </div>
         </nav>
+        <ul id="navigation">
+  <li><a href="#" title="Livre photo">Livre photo</a></li>
+  <li><a href="#" title="Agenda & calendrier">Agenda & calendrier</a></li>
+  <li><a href="#" title="Tirages Photo">Tirages Photo</a></li>
+  <li><a href="#" title="Deco Murale">Deco Murale</a></li>
+  <li><a href="#" title="Cartes et Faire-Part">Cartes et Faire-Part</a></li>
+  <li><a href="#" title="Objets & Déco">Objets & Déco</a></li>
+  <li><a href="#" title="Promos">Promos</a></li>
+  <li><a href="#" title="Cadeaux Noël">Cadeaux Noël</a></li>
+  <li><a href="#" title="Template">Template</a></li>
+</ul>
 
       </header>
 
