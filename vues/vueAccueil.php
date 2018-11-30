@@ -31,6 +31,7 @@
           <p>
             <a href="https://www.photoweb.fr/espace_contact/espace-contact.asp">ASSISTANCE : <b>0 820 220 108</b></a> - <a href="https://www.photoweb.fr/espace_contact/espace-contact.asp">SUIVI DE COMMANDE : <b>09 69 32 05 36</b></a>
           </p>
+          
         <section>
 
         <nav id="conteneur1">
