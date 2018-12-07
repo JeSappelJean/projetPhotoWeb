@@ -1,0 +1,44 @@
+header>article>a {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: #31333D;
+    font-style: normal;
+    font-family: sans-serif;
+    font-size: 90%;
+}
+
+header>section>p {
+  display: flex;
+  flex-wrap: nowrap;
+  font-style: normal;
+  font-family: sans-serif;
+  font-size: 75%;
+}
+
+header>section>p>a{
+  text-decoration: none;
+}
+
+#conteneur1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+span.bleu {
+    color: #029BDD;
+}
+
+span.souligne {
+    text-decoration: underline;
+}
+
+span.blanc {
+    color: #FFFFFF;
+}
+
+header>ul>li {
+  text-decoration: none;
+  display: inline;
+}
