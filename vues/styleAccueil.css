@@ -19,9 +19,7 @@ header>section>p {
 header>section>p>a{
   text-decoration: none;
 }
-div li {
-  text-decoration: none;
-}
+
 #conteneur1{
     display: flex;
     flex-wrap: nowrap;
@@ -40,19 +38,6 @@ span.blanc {
     color: #FFFFFF;
 }
 
-ul {
-    list-style-type: none;
-    margin-right: 35px;
-    padding: 35px;
-
-}
-li {
-  display: inline;
-
-}
-li a {
+header>ul>li {
   text-decoration: none;
-  font-weight: bold;
-  color: #262626;
-  padding-right: 15px;
 }
