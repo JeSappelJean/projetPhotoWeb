@@ -52,14 +52,14 @@
           </div>
         </nav>
         <ul id="navigation">
-  <li><a href="#" title="Livre photo">Livre photo</a></li>
-  <li><a href="#" title="Agenda & calendrier">Agenda & calendrier</a></li>
-  <li><a href="#" title="Tirages Photo">Tirages Photo</a></li>
-  <li><a href="#" title="Deco Murale">Deco Murale</a></li>
-  <li><a href="#" title="Cartes et Faire-Part">Cartes et Faire-Part</a></li>
-  <li><a href="#" title="Objets & Déco">Objets & Déco</a></li>
-  <li><a href="#" title="Promos">Promos</a></li>
-  <li><a href="#" title="Cadeaux Noël">Cadeaux Noël</a></li>
+  <li><a href="https://www.photoweb.fr/livre-photo/listing" title="Livre photo">Livre photo</a></li>
+  <li><a href="https://www.photoweb.fr/produits/calendrier-agenda-photo#muraux" title="Agenda & calendrier">Agenda & calendrier</a></li>
+  <li><a href="https://www.photoweb.fr/produits/tirage-photo" title="Tirages Photo">Tirages Photo</a></li>
+  <li><a href="https://www.photoweb.fr/decoration-murale/listing" title="Deco Murale">Deco Murale</a></li>
+  <li><a href="https://www.photoweb.fr/produits/faire-part" title="Cartes et Faire-Part">Cartes et Faire-Part</a></li>
+  <li><a href="https://www.photoweb.fr/deco-maison/listing" title="Objets & Déco">Objets & Déco</a></li>
+  <li><a href="https://www.photoweb.fr/promotion/code-promo" title="Promos">Promos</a></li>
+  <li><a href="https://www.photoweb.fr/promotion/cadeau-photo-noel.asp" title="Cadeaux Noël">Cadeaux Noël</a></li>
   <li><a href="#" title="Template">Template</a></li>
 </ul>
 
