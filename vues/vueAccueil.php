@@ -47,7 +47,7 @@
           <div>
               <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2fcreations"> <img width= 75px; height=75px; src="../data/imagesSite/Créations.png" alt="pinceau"></a>
               <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2fphotos"> <img width= 75px; height=75px; src="../data/imagesSite/MesPhotos.png" alt="cadre"></a>
-              <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2f"> <img width= 75px; height=75px; src="../data/imagesSite/Compte.png" alt="user"></a>
+              <a href="../vues/vueCompte.php"> <img width= 75px; height=75px; src="../data/imagesSite/Compte.png" alt="user"></a>
               <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fPanier"> <img width= 75px; height=75px; src="../data/imagesSite/Panier.png" alt="panier"></a>
           </div>
         </nav>
