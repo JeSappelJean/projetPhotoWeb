@@ -11,6 +11,4 @@
         private $database = 'sqlite:../data/DB.db'; //renommer dbpath
     }
 
-bonjour
-
     ?>
