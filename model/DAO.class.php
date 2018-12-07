@@ -9,6 +9,7 @@
         private $db;
         // Le type, le chemin et le nom de la base de donnée
         private $database = 'sqlite:../data/DB.db'; //renommer dbpath
+        bonjour je m'appelle olvieir 
     }
 
     ?>
