@@ -38,7 +38,34 @@ span.blanc {
     color: #FFFFFF;
 }
 
+header>ul {
+  list-style-type: none;
+  margin-right: 35px;
+  padding: 35px;
+}
+
 header>ul>li {
-  text-decoration: none;
   display: inline;
+  font-weight: bold;
+  color: black;
+  padding-right: 15px;
+}
+
+header>ul>li>a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 150%;
+}
+
+ul.SubmenuTemplate {
+  display: none;
+}
+
+li:hover ul.SubmenuTemplate {
+  display: block;
+}
+
+header>ul>li>nav {
+  width: 100px;
+  height: 100px;
 }

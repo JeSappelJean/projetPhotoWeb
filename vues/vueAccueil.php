@@ -51,17 +51,98 @@
           </div>
         </nav>
 
-      <ul id="navigation">
-          <li><a href="https://www.photoweb.fr/livre-photo/listing" title="Livre photo">Livre photo</a></li>
-          <li><a href="https://www.photoweb.fr/produits/calendrier-agenda-photo#muraux" title="Calendrier & Agenda">Calendrier & Agenda</a></li>
-          <li><a href="https://www.photoweb.fr/produits/tirage-photo" title="Tirages Photo">Tirages Photo</a></li>
-          <li><a href="https://www.photoweb.fr/decoration-murale/listing" title="Deco Murale">Deco Murale</a></li>
-          <li><a href="https://www.photoweb.fr/produits/faire-part" title="Cartes et Faire-Part">Cartes et Faire-Part</a></li>
-          <li><a href="https://www.photoweb.fr/deco-maison/listing" title="Objets & Déco">Objets & Déco</a></li>
-          <li><a href="https://www.photoweb.fr/promotion/code-promo" title="Promos">Promos</a></li>
-          <li><a href="https://www.photoweb.fr/promotion/cadeau-photo-noel.asp" title="Cadeaux Noël">Cadeaux Noël</a></li>
-          <li><a href="#" title="Template">Template</a></li>
-      </ul>
+
+            <nav>
+              <a href="#" class="template" title="Livre photo">Livre photo</a>
+              <ul class="SubmenuTemplate">
+                  <li>Créer un Livre</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+            </nav>
+
+
+            <nav>
+              <a href="https://www.photoweb.fr/produits/calendrier-agenda-photo#muraux" title="Calendrier & Agenda">Calendrier & Agenda</a>
+              <ul class="SubmenuTemplate">
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+            </nav>
+
+            <nav>
+              <a href="https://www.photoweb.fr/produits/tirage-photo" title="Tirages Photo">Tirages Photo</a>
+              <ul class="SubmenuTemplate">
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+            </nav>
+
+
+            <nav>
+              <a href="https://www.photoweb.fr/decoration-murale/listing" title="Deco Murale">Deco Murale</a>
+              <ul class="SubmenuTemplate">
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+            </nav>
+
+
+
+            <nav>
+              <a href="https://www.photoweb.fr/produits/faire-part" title="Cartes et Faire-Part">Cartes et Faire-Part</a>
+              <ul class="SubmenuTemplate">
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+            </nav>
+
+
+
+            <nav>
+              <a href="https://www.photoweb.fr/deco-maison/listing" title="Objets & Déco">Objets & Déco</a>
+              <ul class="SubmenuTemplate">
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+          </nav>
+
+
+
+            <nav>
+              <a href="https://www.photoweb.fr/promotion/code-promo" title="Promos">Promos</a></li>
+              <ul class="SubmenuTemplate">
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+          </nav>
+
+
+
+            <nav>
+              <a href="https://www.photoweb.fr/promotion/cadeau-photo-noel.asp" title="Cadeaux Noël">Cadeaux Noël</a>
+              <ul class="SubmenuTemplate">
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+            </nav>
+
+            <nav>
+              <a href="#" class="template" title="Template">Template</a>
+              <ul class="SubmenuTemplate">
+                  <li>Créer un Template</li>
+                  <li>Consulter mes Templates</li>
+                  <li>Communauté</li>
+              </ul>
+            </nav>
+
 
       </header>
 
