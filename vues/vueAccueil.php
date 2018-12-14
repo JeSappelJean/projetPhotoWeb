@@ -14,7 +14,8 @@
     <body>
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
-
+      <footer>
+      </footer>
     </body>
 
 </html>
