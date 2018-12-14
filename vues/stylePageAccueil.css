@@ -38,34 +38,46 @@ span.blanc {
     color: #FFFFFF;
 }
 
-header>ul {
-  list-style-type: none;
+header>nav>ul {
   margin-right: 35px;
   padding: 35px;
 }
 
-header>ul>li {
+header>nav>ul>li {
   display: inline;
   font-weight: bold;
   color: black;
-  padding-right: 15px;
+  padding-right: 20px;
 }
 
-header>ul>li>a {
+header>nav>ul>li>a {
   text-decoration: none;
   color: #262626;
   font-size: 150%;
 }
 
-ul.SubmenuTemplate {
+ul.sousMenu {
   display: none;
 }
 
-li:hover ul.SubmenuTemplate {
+li:hover ul.sousMenu {
   display: block;
 }
 
-header>ul>li>nav {
-  width: 100px;
-  height: 100px;
+header>nav>ul>li {
+  float: left;
+  position:relative;
+}
+/*https://www.pierre-giraud.com/html-css/exercices-html-css/creation-menu-deroulant-html-css.php*/
+header>nav>ul>li>ul>li {
+  list-style-type: none;
+}
+
+header>nav>ul>li>ul>li>a {
+  text-decoration: none;
+  color: black;
+}
+
+header>nav>ul>li>ul>li>a:hover {
+  color:green;
 }

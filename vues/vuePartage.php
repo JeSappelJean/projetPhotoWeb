@@ -15,6 +15,13 @@
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
 
+      <!--Affichage Image (Template par la suite)-->
+      <section>
+        <img src="../data/imagesSite/photoImageTest.jpg" alt="ImageTestPartage">
+      </section>
+
+
+
     </body>
 
 </html>
