@@ -18,7 +18,7 @@
         Page à venir Création de template
       </footer>
       <nav>
-        <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Partage"></a>
+        <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Finaliser"></a>
       </nav>
     </body>
 

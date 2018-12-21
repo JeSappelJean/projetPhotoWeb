@@ -23,8 +23,8 @@
         </nav>
 
         <nav>
-          <input type="button" value="Partage">
-          <input type="button" value="Sauvegarde">
+          <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Partage"></a>
+          <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Sauvegarder"></a>
         </nav>
 
       </footer>
