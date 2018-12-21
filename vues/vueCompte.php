@@ -35,17 +35,35 @@
 
           <div class="milieu">
             <h2>Mon compte</h2>
-              <div class="Photos">
+              <div class="photos">
                   <h3>Mes Photos</h3>
+                    <p>bla bla</p>
+                    <p>bla bla</p>
               </div>
-              <div class="Mes avantages">
+              <div class="avantages">
                   <h3>Mes avantages</h3>
+                    <p>bla bla</p>
+                    <p>bla bla</p>
               </div>
-              <div class="Mes créations">
+              <div class="créations">
                   <h3>Mes créations</h3>
+                    <p>Vous n'avez pas de <a href="#">créations<a/> en cours </p>
+                    <p>Vous n'avez pas de <a href="#">créations archivées<a/> </p>
               </div>
-              <div class="Parrainage">
+              <div class="parrainage">
                   <h3>Mes parrainages</h3>
+                    <p>bla bla</p>
+                    <p>bla bla</p>
+              </div>
+              <div class="commandes">
+                  <h3>Mes commandes</h3>
+                    <p>bla bla</p>
+                    <p>bla bla</p>
+              </div>
+              <div class="infosperso">
+                  <h3>Mes infos personnelles</h3>
+                    <p>bla bla</p>
+                    <p>bla bla</p>
               </div>
           </div>
         </div>
