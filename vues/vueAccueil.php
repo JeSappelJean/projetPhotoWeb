@@ -13,7 +13,9 @@
 
     <body>
       <!--Affichage du bandeau du site-->
-      <?php include_once('../vues/vueBandeauSite.php') ?>
+      <?php
+        echo "<p>" ,$currentLogin, " est actuellement connecté </p>";
+      include_once('../vues/vueBandeauSite.php') ?>
       <footer>
       </footer>
     </body>
