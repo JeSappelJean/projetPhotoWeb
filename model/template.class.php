@@ -1,10 +1,9 @@
+//Création du squelette d'un template
 <?php
     // Un template
     class Template {
-      private $nom;
+      private $num;
       private $theme;
-      private $hauteur;
-      private $longueur;
       private $nbpages;
     }
 ?>
