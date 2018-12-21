@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+=======
+CREATE TABLE UTILISATEURS (
+	 id_user INT PRIMARY KEY NOT NULL,
+   login TEXT NOT NULL,
+	 mdp TEXT NOT NULL,
+	 mail TEXT NOT NULL
+);
+
+CREATE TABLE IMAGES (
+	 id_image INT PRIMARY KEY NOT NULL,
+	 image TEXT NOT NULL,
+   nom TEXT NOT NULL,
+   theme TEXT NOT NULL
+);
+
+CREATE TABLE APPARTIENT (
+   id_user INT NOT NULL REFERENCES UTILISATEURS(id_user),
+   id_image INT NOT NULL REFERENCES IMAGES(id_image),
+	 PRIMARY KEY (id_user, id_image)
+);
+>>>>>>> 5e5f8e2283780033341505dbd06cdbe20136f335

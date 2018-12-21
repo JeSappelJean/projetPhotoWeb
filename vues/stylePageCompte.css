@@ -1,0 +1,110 @@
+div.header {
+  display: flex;
+}
+header>article>a {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: #31333D;
+    font-style: normal;
+    font-family: sans-serif;
+    font-size: 90%;
+}
+
+header>section>p {
+  display: flex;
+  flex-wrap: nowrap;
+  font-style: normal;
+  font-family: sans-serif;
+  font-size: 75%;
+}
+
+header>section>p>a{
+  text-decoration: none;
+}
+
+#conteneur1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+span.bleu {
+    color: #029BDD;
+}
+
+span.souligne {
+    text-decoration: underline;
+}
+
+span.blanc {
+    color: #FFFFFF;
+}
+
+header>nav>ul {
+  margin-right: 35px;
+  padding: 35px;
+}
+
+header>nav>ul>li {
+  display: inline;
+  font-weight: bold;
+  color: black;
+  padding-right: 20px;
+}
+
+header>nav>ul>li>a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 150%;
+}
+
+ul.sousMenu {
+  display: none;
+}
+
+li:hover ul.sousMenu {
+  display: block;
+}
+
+header>nav>ul>li {
+  float: left;
+  position:relative;
+}
+/*https://www.pierre-giraud.com/html-css/exercices-html-css/creation-menu-deroulant-html-css.php*/
+header>nav>ul>li>ul>li {
+  list-style-type: none;
+}
+
+header>nav>ul>li>ul>li>a {
+  text-decoration: none;
+  color: black;
+}
+
+header>nav>ul>li>ul>li>a:hover {
+  color:green;
+}
+/*Fin du css du bandeau, debut de la suite !*/
+div.page {
+  display: flex;
+}
+
+
+
+div.cote {
+
+  float: left;
+  width: 15%;
+}
+
+div.cote a {
+  position : relative;
+}
+
+div.milieu {
+  width: 100%;
+}
+
+div.milieu h2 {
+  text-align: center;
+}
