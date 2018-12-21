@@ -4,7 +4,7 @@
 
     function __construct(){
       try{
-        $this->db = new PDO('sqlite:../model/Data/freshCooling.db');
+        $this->db = new PDO('sqlite:../data/photoWeb.db');
       }
       catch(PDOException $e){
         die("erreur de connexion :".$e->getmessage());
@@ -30,12 +30,14 @@
     }
 
     function insertMembre($login,$mdp) {
-  $query=$this->db->prepare('INSERT INTO membre (login, mdp) VALUES (:login,:pseudo)');
+      $query=$this->db->prepare('INSERT INTO membre (login, mdp) VALUES (:login,:pass)');
+      $query->bindValue(':login', $login, PDO::PARAM_STR);
+      $query->bindValue(':pass', $mdp, PDO::PARAM_STR);
+      $query->execute();
+      $query->CloseCursor();
+    }
 
-  $query->bindValue(':login', $login, PDO::PARAM_STR);
-  $query->bindValue(':pass', $mdp, PDO::PARAM_STR);
-  $query->execute();
-  $query->CloseCursor();
+    
 }
 
 ?>

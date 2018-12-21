@@ -5,6 +5,7 @@
     <title></title>
   </head>
   <body>
-    <p>Erreur connexion</p>
+    <p>Connexion réussi</p>
+    <a href='../controleur/controleurAccueil.php'> Page d'accueil </a>
   </body>
 </html>
