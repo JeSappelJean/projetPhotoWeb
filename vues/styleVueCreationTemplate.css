@@ -1,6 +1,3 @@
-div.header {
-  display: flex;
-}
 header>article>a {
     display: flex;
     flex-wrap: nowrap;
@@ -83,28 +80,4 @@ header>nav>ul>li>ul>li>a {
 
 header>nav>ul>li>ul>li>a:hover {
   color:green;
-}
-/*Fin du css du bandeau, debut de la suite !*/
-div.page {
-  display: flex;
-}
-
-
-
-div.cote {
-
-  float: left;
-  width: 15%;
-}
-
-div.cote a {
-  position : relative;
-}
-
-div.milieu {
-  width: 100%;
-}
-
-div.milieu h2 {
-  text-align: center;
 }

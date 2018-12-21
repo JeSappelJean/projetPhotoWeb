@@ -1,4 +1,4 @@
 <?php
     //include_once('../model/DAO.class.php');
-    include('../vues/vuePartage.php');
+    include('../vues/vueCreationTemplate.php');
  ?>
