@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <title>PhotoWeb (Test Site)</title>
-        <link rel="stylesheet" type="text/css" href="../vues/styleVuePartage.css">
+        <link rel="stylesheet" type="text/css" href="../vues/styleVueCreationTemplate.css">
 
         <!--Affichage petit icône en haut de page-->
         <link rel="shortcut icon" type="image/ico" href="../data/imagesSite/favicon.ico"/>
@@ -15,8 +15,11 @@
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
       <footer>
+        Page à venir Création de template
       </footer>
-      Vue partage à venir
+      <nav>
+        <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Finaliser"></a>
+      </nav>
     </body>
 
 </html>

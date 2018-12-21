@@ -43,7 +43,7 @@
             <li>
               <a href="#" class="menuLivres" title="Livre photo">Livre photo</a>
               <ul class="sousMenu">
-                <li><a href="#" class="menuLivres" title="Livre photo">Categorie 1</a></li>
+                <li><a href="../controleur/afficherVueCreationLivre.ctrl.php" class="menuLivres" title="Livre photo">Créer un Livre</a></li>
                 <li><a href="#" class="menuLivres" title="Livre photo">Categorie 2</a></li>
               </ul>
             </li>
@@ -58,7 +58,7 @@
 
             <li><a href="#" class="" title="Template">Template</a>
               <ul class="sousMenu">
-                <li><a href="#" class="menuLivres" title="Livre photo">Categorie 1</a></li>
+                <li><a href="../controleur/afficherVueCreationTemplate.ctrl.php" class="menuLivres" title="Template">Créer un template</a></li>
                 <li><a href="#" class="menuLivres" title="Livre photo">Categorie 2</a></li>
               </ul>
             </li>
