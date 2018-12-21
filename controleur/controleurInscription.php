@@ -1,6 +1,6 @@
 <?php
-require_once('../model/freshCoolingDAO.class.php');
-$BDD = new freshCoolingDAO();
+require_once('../model/DAO.class.php');
+$BDD = new DAO();
 
 $nbErr = 0;
 $login = $_POST['login'];

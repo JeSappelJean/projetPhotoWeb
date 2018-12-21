@@ -1,9 +1,8 @@
 <?php
 session_start();
-require_once('../model/freshCoolingDAO.class.php');
-require_once('../model/article.class.php');
-$BDD = new freshCoolingDAO();
-require_once('../model/membres.class.php');
+require_once('../model/DAO.class.php');
+$BDD = new DAO();
+require_once('../model/membre.class.php');
 
 if ((empty($_POST['mail']) || empty(md5($_POST['mdp']))) && (isset($_POST['mail']) && isset($_POST['mdp']))) {
     include("../Vue/connexionErreur.vue.html");

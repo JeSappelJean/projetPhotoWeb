@@ -1,5 +1,5 @@
 <?php
-  class freshCoolingDAO{
+  class DAO{
     private $db;
 
     function __construct(){
