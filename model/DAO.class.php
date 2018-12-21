@@ -38,4 +38,6 @@
   $query->CloseCursor();
 }
 
+
+  function insertTemplate($)
 ?>
