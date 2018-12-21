@@ -81,3 +81,28 @@ header>nav>ul>li>ul>li>a {
 header>nav>ul>li>ul>li>a:hover {
   color:green;
 }
+
+/*Fin du css du bandeau, debut de la suite !*/
+
+
+footer>nav>img{
+  weight:250px;
+  height:250px;
+}
+
+footer {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer>nav>input {
+  margin-top: 125%;
+  float: right;
+  margin-left: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
