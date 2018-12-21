@@ -108,3 +108,46 @@ div.milieu {
 div.milieu h2 {
   text-align: center;
 }
+
+div.milieu div {
+  border: 0.5px solid black;
+
+}
+div.milieu div h3 {
+  padding: 10px 10px 10px 10px;
+}
+
+div.milieu div p {
+  padding: 10px 10px 10px 10px;
+}
+div.milieu div.photos {
+  width: 49%;
+  float: left;
+}
+
+div.milieu div.avantages {
+  width: 50%;
+  float: right;
+}
+div.milieu div.créations {
+  width: 49%;
+  float: left;
+  margin-top: 5px;
+}
+div.milieu div.parrainage {
+  width: 50%;
+  float: right;
+  margin-top: 5px;
+}
+
+div.milieu div.commandes {
+  width: 49%;
+  float: left;
+  margin-top: 5px;
+}
+
+div.milieu div.infosperso {
+  width: 50%;
+  float: right;
+  margin-top: 5px;
+}
