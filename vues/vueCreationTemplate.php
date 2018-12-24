@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--On récupère les fonctions à utilisés-->
-<?php require_once('../vue/function.vue.php');?>
+<?php require_once('../vues/function.vue.php');?>
 
 <html>
 
