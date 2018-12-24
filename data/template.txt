@@ -1,10 +1,10 @@
-1 | hiver | 4
-2 | ete | 5
-3 | automne | 8
-4 | printemps | 25
-5 | hiver | 2
-6 | ete | 76
-7 | hiver | 25
-8 | automne | 14
-9 | ete | 6
-10 | printemps | 9
+1|hiver|4
+2|ete|5
+3|automne|8
+4|printemps|25
+5|hiver|2
+6|ete|76
+7|hiver|25
+8|automne|14
+9|ete|6
+10|printemps|9
