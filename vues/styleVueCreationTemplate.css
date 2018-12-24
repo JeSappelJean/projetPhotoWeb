@@ -81,3 +81,23 @@ header>nav>ul>li>ul>li>a {
 header>nav>ul>li>ul>li>a:hover {
   color:green;
 }
+
+/*#################################################################################*/
+
+#container{
+  padding-top: 100px;
+  width:780px;
+  margin:0 auto;
+  display: flex;
+}
+
+#column_left{
+  width:560px;
+  height:250px;
+  margin-right:20px;
+}
+
+#column_right{
+  width:200px;
+  height:250px;
+}
