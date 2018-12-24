@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<!--On récupère les fonctions à utilisés-->
+<?php /*require_once('../vue/function.vue.php');*/?>
+
 <html>
 
     <head>

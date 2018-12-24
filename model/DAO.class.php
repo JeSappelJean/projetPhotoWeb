@@ -1,4 +1,6 @@
 <?php
+  /*require_once('../model/template.class.php');*/
+
   class DAO{
     private $db;
 
@@ -11,7 +13,7 @@
       }
     }
 
-    function getInfoMembre($login) : bool{
+    function getInfoMembre($login) : bool {
      $sql = "SELECT COUNT(*) AS nbr FROM UTILISATEURS WHERE login='$login'";
      $sth = $this->db->query($sql);
      $dispo = ($sth->fetchColumn()==0)?1:0;
@@ -37,9 +39,30 @@
       $query->CloseCursor();
     }
 
+    /*Fonction non testée
+    function getTemplate(int $num): array {
+        $req="Select * from template where num=$num;";
+        $sth=$this->db->query($req);
+        $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
+        return $result;
+    }
+
+    /*Fonction non testée | 121 devra etre remplacé par le dernier num des templates + 1
+    function createTemplateVide(): array {
+        $req="INSERT INTO template values (121, null, 1) ";
+        $sth=$this->db->query($req);
+        $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
+        return $result;
+    }
+
+    /*Fonction non testée
+    function getAllTemplate(): array {
+        $req="Select * from template;";
+        $sth=$this->db->query($req);
+        $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
+        return $result;
+    }*/
+
 
 }
-
-
-  //function insertTemplate($)
 ?>

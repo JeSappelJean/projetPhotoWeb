@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<!--On récupère les fonctions à utilisés-->
+<?php /*require_once('../vue/function.vue.php');*/?>
+
 <html>
 
     <head>
@@ -19,7 +23,7 @@
       <footer>
 
         <div id="container">
-            <div id="column_left"> Représentation Template </div>
+            <div id="column_left"> <b> Représentation Template : </b></div>
 
             <div id="column_right">
               <p> <b>Choisissez le thème de votre Template : </b></p>

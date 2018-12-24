@@ -101,6 +101,7 @@ header>nav>ul>li>ul>li>a:hover {
   width:200px;
   height:325px;
   border: 2px solid black;
+  border-radius: 10px;
   text-align: center;
 }
 
