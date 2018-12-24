@@ -20,13 +20,16 @@
 
         <div id="container">
             <div id="column_left"> Représentation Template </div>
-            <div class="column_right">
+
+            <div id="column_right">
               <p> <b>Choisissez le thème de votre Template : </b></p>
               <p>
-                <a href="#">Hiver</a>
-                <a href="#">Automne</a>
-                <a href="#">Printemps</a>
-                <a href="#">Eté</a>
+                <b>
+                  <a id="boutonSaisonsH" href="#">Hiver</a>
+                  <a id="boutonSaisonsA" href="#">Automne</a>
+                  <a id="boutonSaisonsP" href="#">Printemps</a>
+                  <a id="boutonSaisonsE" href="#">Eté</a>
+                </b>
               </p>
 
             </div>
