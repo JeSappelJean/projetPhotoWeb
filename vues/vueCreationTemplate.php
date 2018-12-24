@@ -14,6 +14,7 @@
     <body>
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
+<<<<<<< HEAD
       Page à venir Création de template
       <footer>
         <nav>
@@ -21,6 +22,34 @@
         </nav>
       </footer>
 
+=======
+
+
+      <footer>
+
+        <div id="container">
+            <div id="column_left"> Représentation Template </div>
+
+            <div id="column_right">
+              <p> <b>Choisissez le thème de votre Template : </b></p>
+              <p>
+                <b>
+                  <a id="boutonSaisonsH" href="#">Hiver</a>
+                  <a id="boutonSaisonsA" href="#">Automne</a>
+                  <a id="boutonSaisonsP" href="#">Printemps</a>
+                  <a id="boutonSaisonsE" href="#">Eté</a>
+                </b>
+              </p>
+
+            </div>
+        </div>
+
+      </footer>
+
+      <nav>
+        <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Finaliser"></a>
+      </nav>
+>>>>>>> b38569b52dcdf2b38cb353986206c027f19971a1
     </body>
 
 </html>

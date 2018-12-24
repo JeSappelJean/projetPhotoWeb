@@ -82,7 +82,107 @@ header>nav>ul>li>ul>li>a:hover {
   color:green;
 }
 
+<<<<<<< HEAD
 footer {
   display: flex;
   
+=======
+/*#################################################################################*/
+
+#container{
+  padding-top: 100px;
+  width:780px;
+  margin:0 auto;
+  display: flex;
+}
+
+#column_left{
+  width:560px;
+  height:500px;
+  margin-right:20px;
+}
+
+#column_right{
+  width:200px;
+  height:325px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+#column_right>p>b>a {
+  margin : 15px;
+}
+
+/*Bouton Choix Thèmes*/
+#boutonSaisonsH {
+display:block;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+color:black;
+text-decoration:none;
+border-radius: 15px;
+background-image:url(../data/imagesSite/imHiver.jpg);
+}
+
+#boutonSaisonsH:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+
+#boutonSaisonsA {
+display:block;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+color:black;
+text-decoration:none;
+border-radius: 15px;
+background-image:url(../data/imagesSite/imAutomne.jpg);
+}
+
+#boutonSaisonsA:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+
+#boutonSaisonsP {
+display:block;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+color:black;
+text-decoration:none;
+border-radius: 15px;
+background-image: url(../data/imagesSite/imPrintemps.jpg);
+}
+
+#boutonSaisonsP:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+
+#boutonSaisonsE {
+display:block;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+color:black;
+text-decoration:none;
+border-radius: 15px;
+background-image:url(../data/imagesSite/imEte.jpg);
+}
+
+#boutonSaisonsE:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+>>>>>>> b38569b52dcdf2b38cb353986206c027f19971a1
 }

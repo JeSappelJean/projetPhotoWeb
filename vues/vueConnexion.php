@@ -6,7 +6,7 @@
     <title>Connexion</title>
   </head>
   <body>
-        <form class="" action="../controler/page_acceuil.controler.php?id=1" method="post">
+        <form class="" action="../controleur/controleurConnexion.php" method="post">
       <p>E-mail</p>
       <input type="text" name="login" placeholder="E-mail" >
       <p>Mot de passe</p>
