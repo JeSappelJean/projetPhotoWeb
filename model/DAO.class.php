@@ -1,5 +1,8 @@
 <?php
+
   /*require_once('../model/template.class.php');*/
+  // Creation de l'unique objet DAO
+  $dao = new DAO();
 
   class DAO{
     private $db;
@@ -49,10 +52,8 @@
 
     /*Fonction non testée | 121 devra etre remplacé par le dernier num des templates + 1*/
     function createTemplateVide(){
-        $req="INSERT INTO template values (121, null, null) ";
+        $req="insert into template values (121, null, null)";
         $sth=$this->db->query($req);
-        $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
-        return $result;
     }
 
     /*Fonction non testée
