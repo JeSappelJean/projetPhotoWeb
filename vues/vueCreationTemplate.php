@@ -14,15 +14,6 @@
     <body>
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
-<<<<<<< HEAD
-      Page à venir Création de template
-      <footer>
-        <nav>
-          <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Finaliser"></a>
-        </nav>
-      </footer>
-
-=======
 
 
       <footer>
@@ -49,7 +40,6 @@
       <nav>
         <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Finaliser"></a>
       </nav>
->>>>>>> b38569b52dcdf2b38cb353986206c027f19971a1
     </body>
 
 </html>

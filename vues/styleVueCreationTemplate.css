@@ -82,11 +82,6 @@ header>nav>ul>li>ul>li>a:hover {
   color:green;
 }
 
-<<<<<<< HEAD
-footer {
-  display: flex;
-  
-=======
 /*#################################################################################*/
 
 #container{
@@ -184,5 +179,4 @@ background-image:url(../data/imagesSite/imEte.jpg);
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
->>>>>>> b38569b52dcdf2b38cb353986206c027f19971a1
 }
