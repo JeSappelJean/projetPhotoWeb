@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--On récupère les fonctions à utilisés-->
-<?php /*require_once('../vue/function.vue.php');*/?>
+<?php require_once('../vue/function.vue.php');?>
 
 <html>
 
@@ -23,7 +23,16 @@
       <footer>
 
         <div id="container">
-            <div id="column_left"> <b> Représentation Template : </b></div>
+            <div id="column_left">
+              <b> Représentation Template : </b>
+              <?php
+                echo'<div>';
+                  echo createTemplateVide();
+                echo'</div>';
+              ?>
+
+
+            </div>
 
             <div id="column_right">
               <p> <b>Choisissez le thème de votre Template : </b></p>

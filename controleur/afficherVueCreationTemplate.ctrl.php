@@ -1,5 +1,4 @@
 <?php
-    /*include_once('../model/DAO.class.php');
-    $GLOBALS['template']= $dao->getAllTemplate();*/
+    include_once('../model/DAO.class.php');
     include('../vues/vueCreationTemplate.php');
  ?>

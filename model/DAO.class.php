@@ -13,23 +13,23 @@
       }
     }
 
-    function getInfoMembre($login) : bool {
+    /*function getInfoMembre($login) : bool {
      $sql = "SELECT COUNT(*) AS nbr FROM UTILISATEURS WHERE login='$login'";
      $sth = $this->db->query($sql);
      $dispo = ($sth->fetchColumn()==0)?1:0;
 
 
      return $dispo;
-    }
+   }*/
 
-    function getLoginMdp($login) : array {
+    /*function getLoginMdp($login) : array {
       $sql = "SELECT login,mdp FROM UTILISATEURS WHERE login='$login'";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'Membres');
 
 
       return $res;
-    }
+    }*/
 
     function insertMembre($login,$mdp) {
       $query=$this->db->prepare('INSERT INTO UTILISATEURS (login, mdp) VALUES (:login,:pass)');
@@ -45,11 +45,11 @@
         $sth=$this->db->query($req);
         $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
         return $result;
-    }
+    }*/
 
-    /*Fonction non testée | 121 devra etre remplacé par le dernier num des templates + 1
-    function createTemplateVide(): array {
-        $req="INSERT INTO template values (121, null, 1) ";
+    /*Fonction non testée | 121 devra etre remplacé par le dernier num des templates + 1*/
+    function createTemplateVide(){
+        $req="INSERT INTO template values (121, null, null) ";
         $sth=$this->db->query($req);
         $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
         return $result;
