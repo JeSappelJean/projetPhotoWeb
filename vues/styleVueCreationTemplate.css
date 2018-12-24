@@ -81,3 +81,8 @@ header>nav>ul>li>ul>li>a {
 header>nav>ul>li>ul>li>a:hover {
   color:green;
 }
+
+footer {
+  display: flex;
+  
+}

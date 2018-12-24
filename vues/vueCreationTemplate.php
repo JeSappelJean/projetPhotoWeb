@@ -14,12 +14,13 @@
     <body>
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
+      Page à venir Création de template
       <footer>
-        Page à venir Création de template
+        <nav>
+          <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Finaliser"></a>
+        </nav>
       </footer>
-      <nav>
-        <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Finaliser"></a>
-      </nav>
+
     </body>
 
 </html>
