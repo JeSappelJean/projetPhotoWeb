@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 
 <!--On récupère les fonctions à utilisés-->
-<<<<<<< HEAD
-<?php require_once('../vues/function.vue.php');?>
-=======
 <?php /*require_once('../vue/function.vue.php');*/?>
->>>>>>> 2f651c602956712858d5a8d2b854cc4996ea6772
 
 <html>
 
@@ -29,11 +25,22 @@
         <div id="container">
             <div id="column_left">
               <b> Représentation Template : </b>
-              <?php
-                echo'<div>';
-                  echo $GLOBALS["templateModifiable"]->$num;;
-                echo'</div>';
-              ?>
+
+                <div>
+                <fieldset>
+                    <form action="traitementNouveauTemplate.ctrl.php" method="post">
+                        <p>num:</p>
+                        <input type="text" name="num" required="required">
+                        <p>theme:</p>
+                        <input type="text" name="theme" required="required">
+                        <p>nbpages:</p>
+                        <input type="text" name="nbpages" required="required">
+                        <input type="submit" value="valider">
+                    </form>
+                </fieldset>
+                </div>
+                <?php echo $GLOBALS['resultatCréation']; ?>
+
 
 
             </div>

@@ -51,8 +51,8 @@
     }*/
 
     /*Fonction non testée | 121 devra etre remplacé par le dernier num des templates + 1*/
-    function createTemplateVide(){
-        $req="insert into template values (121, null, null)";
+    function createTemplateVide($num, $theme, $nbpages){
+        $req="insert into template values ($num, $theme, $nbpages)";
         $sth=$this->db->query($req);
     }
 
