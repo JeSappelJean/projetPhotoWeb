@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 
 <!--On récupère les fonctions à utilisés-->
+<<<<<<< HEAD
 <?php require_once('../vues/function.vue.php');?>
+=======
+<?php /*require_once('../vue/function.vue.php');*/?>
+>>>>>>> 2f651c602956712858d5a8d2b854cc4996ea6772
 
 <html>
 
@@ -27,7 +31,7 @@
               <b> Représentation Template : </b>
               <?php
                 echo'<div>';
-                  echo createTemplateVide();
+                  echo $GLOBALS["templateModifiable"]->$num;;
                 echo'</div>';
               ?>
 
