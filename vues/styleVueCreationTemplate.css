@@ -101,3 +101,18 @@ header>nav>ul>li>ul>li>a:hover {
   width:200px;
   height:250px;
 }
+
+/*Bouton Choix Thèmes*/
+.column_right a {
+display:block;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+background:url(images/bouton-noir.png) no-repeat;
+color:white;
+text-decoration:none;
+}
+.column_right a:hover {
+background:url(images/bouton-noir-2.png) no-repeat;
+}

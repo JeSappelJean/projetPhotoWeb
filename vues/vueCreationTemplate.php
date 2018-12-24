@@ -14,14 +14,22 @@
     <body>
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
-      Page à venir Création de template
 
 
       <footer>
 
         <div id="container">
             <div id="column_left"> Représentation Template </div>
-            <div id="column_right"> Bouton Modification Template</div>
+            <div class="column_right">
+              <p> <b>Choisissez le thème de votre Template : </b></p>
+              <p>
+                <a href="#">Hiver</a>
+                <a href="#">Automne</a>
+                <a href="#">Printemps</a>
+                <a href="#">Eté</a>
+              </p>
+
+            </div>
         </div>
 
       </footer>
