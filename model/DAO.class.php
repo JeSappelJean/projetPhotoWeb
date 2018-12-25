@@ -42,12 +42,12 @@
       $query->CloseCursor();
     }
 
-    function getTemplate(int $num): array {
+    */*function getTemplate(int $num): array {
         $req="Select * from template where num=$num;";
         $sth=$this->db->query($req);
         $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
         return $result;
-    }
+    }*/
 
     function createTemplateVide($num, $theme, $nbpages){
         $req="insert into template values ($num, $theme, $nbpages)";
