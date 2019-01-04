@@ -29,7 +29,7 @@
                   <h3>Votre Template Final :</h3>
                   <p> <b>Thème : </b></p>
                   <p> <b>Créé par : </b></p>
-                  <p> <b>Nombres de pages</b></p>
+                  <p> <b>Nombres de pages :</b></p>
                   <p> <b>...</b></p>
                 </b>
               </p>

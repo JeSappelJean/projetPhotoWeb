@@ -25,8 +25,7 @@
 
         <div id="container">
             <div id="column_left">
-              <b> Représentation Template : </b>
-
+              <h2> Nos Templates Du Jour : </h2>
                 <div>
 
                 </div>
@@ -39,7 +38,7 @@
               <p> <b>Utilisations : </b></p>
               <p>
                 <b>
-                  <a id="useButtonModel" href="#">Utiliser ce modèle</a>
+                  <a id="useButtonModel" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce modèle</a>
                 </b>
               </p>
             </div>

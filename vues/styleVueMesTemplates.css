@@ -1,0 +1,258 @@
+/*Code CSS du Bandeau*/
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial ;
+}
+
+header>article>a {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: #31333D;
+    font-style: normal;
+    font-family: sans-serif;
+    font-size: 90%;
+}
+
+header>section>p {
+  display: flex;
+  flex-wrap: nowrap;
+  font-style: normal;
+  font-family: sans-serif;
+  font-size: 75%;
+}
+
+header>section>p>a{
+  text-decoration: none;
+}
+
+#conteneur1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+span.bleu {
+    color: #029BDD;
+}
+
+span.souligne {
+    text-decoration: underline;
+}
+
+span.blanc {
+    color: #FFFFFF;
+}
+
+header>nav>ul {
+  margin-right: 35px;
+  padding: 35px;
+  display: flex;
+}
+
+header>nav>ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header>nav>ul>li {
+  display: inline;
+  font-weight: bold;
+  color: black;
+  padding-right: 20px;
+  float: left;
+  position:relative;
+}
+
+header>nav>ul>li:hover {
+  display: inline;
+  font-weight: bold;
+  color: black;
+  padding-right: 20px;
+  float: left;
+  position:relative;
+  font-size: 102%;
+}
+
+header>nav>ul>li>a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 150%;
+}
+
+ul.sousMenu {
+  display: none;
+}
+
+li:hover ul.sousMenu {
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  padding: 0px;
+  z-index: 100000;
+}
+
+ul.sousMenu li {
+  border-bottom: 1px solid #CCC;
+}
+
+ul.sousMenu li a {
+  padding-left: 15px;
+}
+
+header>nav>ul>li>ul>li {
+  list-style-type: none;
+}
+
+header>nav>ul>li>ul>li>a {
+  text-decoration: none;
+  color:black;
+}
+
+header>nav>ul>li>ul>li>a:hover {
+  color:white;
+  background-color: grey;
+}
+
+/*Code CSS de l'affichage du footer*/
+
+#navigueBar{
+  width:auto;
+  height: 50px;
+  margin-top: 75px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  padding: 5px;
+}
+
+#MesModeles{
+  text-align: center;
+  width: 220px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  padding-top: 10px;
+}
+
+#ModeleComm{
+  text-align: center;
+  width: 220px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: #DCD9DC;
+  text-decoration: none;
+  color: black;
+  padding-top: 10px;
+}
+
+#ModeleComm:hover{
+  background-color: white;
+}
+
+#MonthTheme{
+  text-align: center;
+  width: 220px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: #DCD9DC;
+  text-decoration: none;
+  color: black;
+  padding-top: 10px;
+}
+
+#MonthTheme:hover{
+  background-color: white;
+}
+
+#container{
+  width:auto;
+  height: 500px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #DCD9DC;
+}
+
+#column_left{
+  width: 50%;
+  border-right: 2px solid black;
+  text-align: center;
+}
+
+#column_right{
+  width:50%;
+  display: flex;
+}
+
+#column_right>div{
+  border: 3px solid #2C2827;
+  height: 75px;
+  width: 125px;
+  text-align: center;
+  margin: 15px;
+  border-radius: 4px;
+}
+
+#column_right>div>div:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+
+#boutonEdit{
+  display:block;
+  width:150px;
+  line-height:50px;
+  text-align:center;
+  vertical-align:middle;
+  border: 2px solid black;
+  color:black;
+  text-decoration:none;
+  border-radius: 15px;
+  background-color: #DCD9DC;
+  float: left;
+  margin-top: 20px;
+}
+
+#boutonEdit:hover {
+  background-color: white;
+}
+
+#boutonUse{
+  margin-top: 20px;
+  display:block;
+  width:150px;
+  line-height:50px;
+  text-align:center;
+  vertical-align:middle;
+  border: 2px solid black;
+  color:black;
+  text-decoration:none;
+  border-radius: 15px;
+  background-color: #DCD9DC;
+  float: right;
+  margin-right: 5px;
+}
+
+#boutonUse:hover {
+  background-color: white;
+}
+
+#repTemplate{
+  margin: auto;
+  height: 250px;
+  width: 250px;
+  border: 1px dashed black;
+}

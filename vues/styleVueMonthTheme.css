@@ -1,9 +1,8 @@
 /*Code CSS du Bandeau*/
-
-/*Code CSS du Bandeau*/
 body {
   margin: 0px;
   padding: 0px;
+  font-family: Arial ;
 }
 
 header>article>a {
@@ -49,6 +48,7 @@ span.blanc {
 header>nav>ul {
   margin-right: 35px;
   padding: 35px;
+  display: flex;
 }
 
 header>nav>ul::after {
@@ -114,45 +114,60 @@ header>nav>ul>li>ul>li>a {
 
 header>nav>ul>li>ul>li>a:hover {
   color:white;
-  background-color: orange;
+  background-color: grey;
 }
 
-/*Code CSS de l'affichage du template et de ses caractéristiques*/
 
-footer {
+/*Code CSS du Footer*/
+
+#navigueBar{
+  width:auto;
+  height: 50px;
   margin-top: 75px;
-}
-
-#container{
-  width:780px;
-  margin:0 auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
   display: flex;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 5px
-}
-
-#column_left{
-  width:560px;
-  height:500px;
-  margin-right:20px;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 5px
-}
-
-#column_right{
-  width:200px;
-  height:200px;
-  border: 2px solid black;
-  border-radius: 5px;
   padding: 5px;
-  text-align: left;
 }
 
-footer>nav>a {
-  float: right;
-  margin-right:50px;
-  margin-top: 10px;
-  margin-bottom:50px;
+#MesModeles{
+  text-align: center;
+  width: 220px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: #DCD9DC;
+  text-decoration: none;
+  color: black;
+  padding-top: 10px;
+}
+
+#ModeleModeles:hover{
+  background-color: white;
+}
+
+#ModeleComm{
+  text-align: center;
+  width: 220px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: #DCD9DC;
+  text-decoration: none;
+  color: black;
+  padding-top: 10px;
+}
+
+#ModeleComm:hover{
+  background-color: white;
+}
+
+#MonthTheme{
+  text-align: center;
+  width: 220px;
+  border: 2px solid black;
+  border-radius: 2px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  padding-top: 10px;
 }
