@@ -1,3 +1,4 @@
+<!--Class DAO du projet + definition de différentes fonctions-->
 <?php
 
   /*require_once('../model/template.class.php');*/

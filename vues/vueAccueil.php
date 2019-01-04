@@ -18,9 +18,33 @@
     <body>
       <!--Affichage du bandeau du site-->
       <?php
-        echo "<p>" ,$currentLogin, " est actuellement connecté </p>";
+        /*echo "<p>" ,$currentLogin, " est actuellement connecté </p>";*/
       include_once('../vues/vueBandeauSite.php') ?>
+
       <footer>
+
+        <div id="container">
+            <div id="column_left">
+              <b> Représentation Template : </b>
+
+                <div>
+
+                </div>
+            </div>
+
+            <div id="column_right">
+              <h3>Modèle du jour :</h3>
+              <p> <b>Thème : </b></p>
+              <p> <b>Créé par : </b></p>
+              <p> <b>Utilisations : </b></p>
+              <p>
+                <b>
+                  <a id="useButtonModel" href="#">Utiliser ce modèle</a>
+                </b>
+              </p>
+            </div>
+        </div>
+
       </footer>
     </body>
 

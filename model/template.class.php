@@ -1,6 +1,5 @@
-//Création du squelette d'un template
+<!--Définition de la class Template-->
 <?php
-    // Un template
     class Template {
       private $num;
       private $theme;

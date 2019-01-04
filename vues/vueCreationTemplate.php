@@ -24,7 +24,7 @@
 
         <div id="container">
             <div id="column_left">
-              <b> Représentation Template : </b>
+              <b> Représentation Template : (Temporaire)</b>
 
                 <div>
                 <fieldset>

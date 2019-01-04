@@ -15,7 +15,7 @@
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
       <footer>
-        Page à venir Création de Livre + template
+        <p>Page à venir Création de Livre + template</p>
       </footer>
       <nav>
         <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Finaliser"></a>

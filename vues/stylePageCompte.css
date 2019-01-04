@@ -1,6 +1,8 @@
+/*Code CSS du Bandeau*/
 div.header {
   display: flex;
 }
+
 header>article>a {
     display: flex;
     flex-wrap: nowrap;
@@ -71,7 +73,7 @@ header>nav>ul>li {
   float: left;
   position:relative;
 }
-/*https://www.pierre-giraud.com/html-css/exercices-html-css/creation-menu-deroulant-html-css.php*/
+
 header>nav>ul>li>ul>li {
   list-style-type: none;
 }
@@ -84,12 +86,11 @@ header>nav>ul>li>ul>li>a {
 header>nav>ul>li>ul>li>a:hover {
   color:green;
 }
-/*Fin du css du bandeau, debut de la suite !*/
+
+/*Code CSS de la partie inscription*/
 div.page {
   display: flex;
 }
-
-
 
 div.cote {
 

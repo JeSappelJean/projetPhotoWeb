@@ -1,3 +1,11 @@
+/*Code CSS du Bandeau*/
+
+/*Code CSS du Bandeau*/
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 header>article>a {
     display: flex;
     flex-wrap: nowrap;
@@ -43,11 +51,29 @@ header>nav>ul {
   padding: 35px;
 }
 
+header>nav>ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 header>nav>ul>li {
   display: inline;
   font-weight: bold;
   color: black;
   padding-right: 20px;
+  float: left;
+  position:relative;
+}
+
+header>nav>ul>li:hover {
+  display: inline;
+  font-weight: bold;
+  color: black;
+  padding-right: 20px;
+  float: left;
+  position:relative;
+  font-size: 102%;
 }
 
 header>nav>ul>li>a {
@@ -61,23 +87,65 @@ ul.sousMenu {
 }
 
 li:hover ul.sousMenu {
-  display: block;
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  padding: 0px;
+  z-index: 100000;
 }
 
-header>nav>ul>li {
-  float: left;
-  position:relative;
+ul.sousMenu li {
+  border-bottom: 1px solid #CCC;
 }
-/*https://www.pierre-giraud.com/html-css/exercices-html-css/creation-menu-deroulant-html-css.php*/
+
+ul.sousMenu li a {
+  padding-left: 15px;
+}
+
 header>nav>ul>li>ul>li {
   list-style-type: none;
 }
 
 header>nav>ul>li>ul>li>a {
   text-decoration: none;
-  color: black;
+  color:black;
 }
 
 header>nav>ul>li>ul>li>a:hover {
-  color:green;
+  color:white;
+  background-color: orange;
+}
+
+/*Code CSS de l'affichage du template et de ses caractéristiques*/
+
+footer {
+  margin-top: 75px;
+}
+
+#container{
+  width:780px;
+  margin:0 auto;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px
+}
+
+#column_left{
+  width:560px;
+  height:500px;
+  margin-right:20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px
+}
+
+#column_right{
+  width:200px;
+  height:200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: left;
 }

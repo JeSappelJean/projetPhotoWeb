@@ -1,3 +1,4 @@
+<!--Traitement pour la création d'un nouveau template-->
 <?php
     include_once('../model/DAO.class.php');
     $dao->createTemplateVide($_POST['num'],$_POST['theme'],$_POST['nbpages']);
