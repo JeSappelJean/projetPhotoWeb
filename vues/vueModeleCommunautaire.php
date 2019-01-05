@@ -27,14 +27,32 @@
         </div>
 
         <div id="container">
+
             <div id="column_left">
+
               <div id="column_up">
+                <!-- barre de recherche -->
+                <form>
+                  Recherche:
+                  <input type="text" name="recherche" value="hiver.."><br>
+                  Thème:
+                  <select name="theme" type="text" size="1">
+                    <option value="ete" selected="selected">ete</option>
+                    <option value="automne">automne</option>
+                    <option value="hiver">hiver</option>
+                    <option value="printemps">printemps</option>
+                    <option value="printemps">hiver</option>
+                    <option value="printemps">...(a generer en php)</option>
+                  </select>
+                </form>
                 <a href="#" title="Search"><input type="button" value="Rechercher"></a><!--Vue Rechercher a faire-->
               </div>
+
               <div id="column_down">
 
               </div>
             </div>
+            
             <div id="column_right">
             </div>
         </div>
