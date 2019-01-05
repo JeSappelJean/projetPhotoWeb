@@ -34,6 +34,18 @@
               <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2fphotos"> <img width= 75px; height=75px; src="../data/imagesSite/MesPhotos.png" alt="cadre"></a>
               <a href="../vues/vueCompte.php"> <img width= 75px; height=75px; src="../data/imagesSite/Compte.png" alt="user"></a>
               <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fPanier"> <img width= 75px; height=75px; src="../data/imagesSite/Panier.png" alt="panier"></a>
+
+              <?php
+              if (isset($_SESSION['login'])){
+                echo $_SESSION['login'], " est connecté";
+                echo "<a href=\"../controleur/controleurDeconnexion.php\">Deconnexion</a>";
+              } else {
+                echo "<a href=\"../vues/vueConnexion.php\">Connexion</a>";
+                echo "<a href=\"../vues/vueInscription.php\">Inscription</a>";
+              }
+
+
+               ?>
           </div>
         </nav>
 
