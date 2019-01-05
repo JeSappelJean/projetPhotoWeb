@@ -1,5 +1,11 @@
 <!--Class DAO du projet + definition de différentes fonctions-->
 <?php
+/* pour recreer la base executer ces commandes une par une apres avoir ouvert la base sqlite (commande shell: sqlite3 photoWeb.db)
+
+.read create.sql
+.separator |
+.import template.txt template
+.+ autres ( ce que vous rajouter)*/
 
   /*require_once('../model/template.class.php');*/
   // Creation de l'unique objet DAO
