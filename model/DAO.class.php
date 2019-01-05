@@ -8,7 +8,7 @@
 .+ autres ( ce que vous rajouter)*/
 
   /*require_once('../model/template.class.php');*/
-  
+
   // Creation de l'unique objet DAO
   $dao = new DAO();
 
@@ -58,8 +58,12 @@
     }
 
     function createTemplateVide($num, $theme, $nbpages){
-        $req="insert into template values ($num, $theme, $nbpages)";
-        $sth=$this->db->query($req);
+        $query=$this->db->prepare('INSERT INTO TEMPLATE (num, theme, nbpages) VALUES (:num,:theme, :nbpages)');
+        $query->bindValue(':num', $num, PDO::PARAM_INT);
+        $query->bindValue(':theme', $theme, PDO::PARAM_STR);
+        $query->bindValue(':nbpages', $nbpages, PDO::PARAM_INT);
+        $query->execute();
+        $query->CloseCursor();
     }
 
     /*Fonction non testée
