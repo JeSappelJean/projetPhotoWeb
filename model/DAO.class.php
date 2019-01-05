@@ -8,6 +8,7 @@
 .+ autres ( ce que vous rajouter)*/
 
   /*require_once('../model/template.class.php');*/
+  
   // Creation de l'unique objet DAO
   $dao = new DAO();
 
