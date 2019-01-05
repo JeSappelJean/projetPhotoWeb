@@ -38,7 +38,7 @@
         </div>
 
         <nav>
-          <a href="../controleur/afficherVueCommunaute.ctrl.php" title="share"><input type="button" value="Partage"></a>
+          <a href="../controleur/afficherVueMesTemplates.ctrl.php" title="share"><input type="button" value="Partage"></a>
           <a href="../controleur/afficherVueSauvegardeNotification.ctrl.php" title="sauvegarde"><input type="button" value="Sauvegarder"></a>
         </nav>
 

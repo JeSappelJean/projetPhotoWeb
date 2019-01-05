@@ -55,7 +55,7 @@
             </div>
         </div>
         <nav>
-          <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Finaliser"></a>
+          <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Final"><input type="button" value="Finaliser"></a>
         </nav>
       </footer>
 

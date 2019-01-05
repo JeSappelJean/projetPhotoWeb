@@ -2,6 +2,7 @@
 body {
   margin: 0px;
   padding: 0px;
+  font-family: Arial ;
 }
 
 header>article>a {
@@ -47,6 +48,7 @@ span.blanc {
 header>nav>ul {
   margin-right: 35px;
   padding: 35px;
+  display: flex;
 }
 
 header>nav>ul::after {
