@@ -21,7 +21,7 @@
 
       <footer>
         <div id="navigueBar">
-            <a id="MesModeles" href="../controleur/afficherVueMonthTheme.ctrl.php"><b>Mes Modèles</b></a>
+            <a id="MesModeles" href="../controleur/afficherVueMesTemplates.ctrl.php"><b>Mes Modèles</b></a>
             <a id="ModeleComm" href="../controleur/afficherVueModeleCommunautaire.ctrl.php"><b>Modèles Communautaires</b></a>
             <a id="MonthTheme"><b>Thème du mois (Concours)</b></a>
         </div>

@@ -22,7 +22,7 @@
       <footer>
         <p>Bientôt ici le résultat de votre sauvegarde (bien Sauvegardé | mal Sauvegardé)</p>
         <nav>
-          <a href="../controleur/afficherVueCommunaute.ctrl.php" title="Continuer"><input type="button" value="Continuer"></a>
+          <a href="../controleur/afficherVueMesTemplates.ctrl.php" title="Continuer"><input type="button" value="Continuer"></a>
         </nav>
       </footer>
     </body>
