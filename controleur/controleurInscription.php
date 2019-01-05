@@ -10,7 +10,6 @@
   $listErr = array();
 
   $mail_dispo=$BDD->getInfoMembre($login);
-  var_dump($mail_dispo);
 
   if(!$mail_dispo) {
       array_push($listErr, "Votre mail est déjà utilisé par un membre");
