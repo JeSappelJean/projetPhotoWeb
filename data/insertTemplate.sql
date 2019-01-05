@@ -1,0 +1,10 @@
+insert into template values (1,'hiver',abs(random() % 9)+1);
+insert into template values (2,'ete',abs(random() % 9)+1);
+insert into template values (3,'automne',abs(random() % 9)+1);
+insert into template values (4,'printemps',abs(random() % 9)+1);
+insert into template values (5,'hiver',abs(random() % 9)+1);
+insert into template values (6,'ete',abs(random() % 9)+1);
+insert into template values (7,'hiver',abs(random() % 9)+1);
+insert into template values (8,'automne',abs(random() % 9)+1);
+insert into template values (9,'ete',abs(random() % 9)+1);
+insert into template values (10,'printemps',abs(random() % 9)+1);
