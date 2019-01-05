@@ -62,7 +62,7 @@
       </footer>
 
       <nav>
-        <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Calendrier & Agenda"><input type="button" value="Finaliser"></a>
+        <a href="../controleur/afficherVueFinalisation.ctrl.php" title="finaliser"><input type="button" value="Finaliser"></a>
       </nav>
     </body>
 
