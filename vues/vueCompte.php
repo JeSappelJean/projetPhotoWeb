@@ -37,7 +37,7 @@
             <h2>Mon compte</h2>
               <div class="photos">
                   <h3>Mes Photos</h3>
-                    <p>bla bla</p>
+                    <p>bla bla bla</p>
                     <p>bla bla</p>
               </div>
               <div class="avantages">
