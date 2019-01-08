@@ -2,7 +2,7 @@
 <?php
     class Template {
       private $num;
-      private $theme;
+      public $theme;
       private $nbpages;
       private $public;
       private $concours;
