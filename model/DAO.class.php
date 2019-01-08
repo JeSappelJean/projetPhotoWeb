@@ -68,7 +68,7 @@
         $query->CloseCursor();
     }
 
-<<<<<<< HEAD
+
     function getTemplatesConcours(): array {
             $req="Select * from template where concours = 'true';";
             $sth=$this->db->query($req);
