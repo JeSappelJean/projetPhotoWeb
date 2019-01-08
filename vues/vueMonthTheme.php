@@ -40,7 +40,18 @@
             </div>
 
             <div id="column_right">
-              
+              <?php
+              $templates_concours[] = $dao->getTemplatesConcours();
+              foreach ($templates_concours[] as $value) {
+                      echo '<article>';
+                      if(isset($_SESSION['idClient'])){
+                          echo afficherVueArticleSingulier($value,$_SESSION['idClient']);
+                      }else{
+                          echo afficherVueArticleSingulier($value);
+                      }
+                      echo'</article>';
+                  }
+               ?>
             </div>
         </div>
       </footer>
