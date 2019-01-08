@@ -71,6 +71,18 @@
             <div id="column_right">
               <?php
               $theme = $_GET['theme'];
+              if ($theme == "ete") {
+                $image = "../data/imagesSite/imEte.jpg" ;
+              } else if ( $theme == "automne") {
+                $image = "../data/imagesSite/imAutomne.jpg" ;
+              } else if ( $theme == "printemps") {
+                $image = "../data/imagesSite/imPrintemps.jpg" ;
+              } else if ( $theme == "hiver") {
+                $image = "../data/imagesSite/imHiver.jpg" ;
+              }
+
+
+
               require_once('../model/DAO.class.php');
 
               echo"$theme";
@@ -79,10 +91,12 @@
 
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
                 foreach ($liste as $v) {
+                  print '<img src ="'.$image.'" alt="$theme" />';
                   echo $v->theme;
+
                 }
               ?>
-
+              
             </div>
         </div>
       </footer>
