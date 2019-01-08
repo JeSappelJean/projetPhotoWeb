@@ -75,6 +75,7 @@
             $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
             return $result;
         }
+<<<<<<< HEAD
 
 
     function getTemplateWTheme($theme): array {
@@ -83,6 +84,15 @@
       $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
       return $result;
     }
+=======
+        
+  function getTemplateWTheme($theme): array {
+    $sql = "SELECT * FROM TEMPLATE WHERE theme = '$theme'";
+    $sth = $this->db->query($sql);
+    $res = $sth->fetchAll(PDO::FETCH_CLASS,'template');
+    return $res;
+  }
+>>>>>>> 7d8e217603026712dd8a9d6128888a95c25df67a
 
 
     /*Fonction non testée
