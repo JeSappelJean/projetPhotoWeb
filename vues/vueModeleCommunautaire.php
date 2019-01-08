@@ -41,19 +41,42 @@
                     <option value="automne">automne</option>
                     <option value="hiver">hiver</option>
                     <option value="printemps">printemps</option>
-                    <option value="printemps">hiver</option>
-                    <option value="printemps">...(a generer en php)</option>
+                    <option value="afaire">...(a generer en php)</option>
+
+                    <?php
+                      if(isset($_POST['theme'])) {
+                        $theme = ($_POST['theme']);
+                      } else {
+                        $theme = "ete";
+                      }
+                     ?>
+
+                     <a href="../controleur/afficherVueModeleCommunautaire.ctrl.php" title="Search"><input type="submit" value="Rechercher"></a>
                   </select>
                 </form>
-                <a href="#" title="Search"><input type="button" value="Rechercher"></a><!--Vue Rechercher a faire-->
+                <!--Vue Rechercher a faire-->
               </div>
 
               <div id="column_down">
 
               </div>
             </div>
-            
+
             <div id="column_right">
+              <?php
+              $theme = $_GET['theme'];
+              require_once('../model/DAO.class.php');
+
+              echo"$theme";
+              $dao = new DAO();
+
+
+              $liste = $dao->getTemplateWTheme($_GET['theme']) ;
+                foreach ($liste as $v) {
+                  echo $v->theme;
+                }
+              ?>
+
             </div>
         </div>
       </footer>
