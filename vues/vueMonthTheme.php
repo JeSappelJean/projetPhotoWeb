@@ -25,6 +25,23 @@
             <a id="ModeleComm" href="../controleur/afficherVueModeleCommunautaire.ctrl.php"><b>Modèles Communautaires</b></a>
             <a id="MonthTheme"><b>Thème du mois (Concours)</b></a>
         </div>
+
+        <div id="container">
+
+            <div id="column_left">
+
+              <div id="column_up">
+                
+              </div>
+
+              <div id="column_down">
+
+              </div>
+            </div>
+
+            <div id="column_right">
+            </div>
+        </div>
       </footer>
     </body>
 

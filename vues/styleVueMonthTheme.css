@@ -1,4 +1,5 @@
 /*Code CSS du Bandeau*/
+
 body {
   margin: 0px;
   padding: 0px;
@@ -129,6 +130,43 @@ header>nav>ul>li>ul>li>a:hover {
   margin-bottom: 5px;
   display: flex;
   padding: 5px;
+}
+
+#container{
+  width:auto;
+  height: 500px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #DCD9DC;
+}
+
+#column_left{
+  width: 50%;
+  border-right: 2px solid black;
+}
+
+#column_up{
+  border-bottom: 2px solid black;
+  height: 50%;
+}
+
+#column_up>a{
+  float: right;
+}
+
+#column_down{
+  height: 50%;
+}
+
+#column_right{
+  width:50%;
+  display: flex;
 }
 
 #MesModeles{
