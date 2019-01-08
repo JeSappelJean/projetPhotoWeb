@@ -70,7 +70,7 @@
 
 
     function getTemplatesConcours(): array {
-            $req="Select * from template where concours = 'true';";
+            $req="SELECT * from template where concours = 1;";
             $sth=$this->db->query($req);
             $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
             return $result;
