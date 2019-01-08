@@ -85,7 +85,7 @@
 
               require_once('../model/DAO.class.php');
 
-              echo"$theme";
+            
               $dao = new DAO();
 
 
