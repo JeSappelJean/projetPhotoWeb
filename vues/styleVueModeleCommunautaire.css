@@ -119,6 +119,9 @@ header>nav>ul>li>ul>li>a:hover {
 }
 
 
+
+
+
 /*Code CSS du Footer*/
 
 #navigueBar{
@@ -209,3 +212,10 @@ header>nav>ul>li>ul>li>a:hover {
   width:50%;
   display: flex;
 }
+
+#template {
+  margin-left: 5px;
+}
+ #template p {
+   margin-top: 0;
+ }

@@ -81,19 +81,14 @@
                 $image = "../data/imagesSite/imHiver.jpg" ;
               }
 
-
-
               require_once('../model/DAO.class.php');
-
-            
-              $dao = new DAO();
-
 
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
                 foreach ($liste as $v) {
+                  print '<div id="template">';
                   print '<img src ="'.$image.'" alt="$theme" width ="50" height="50"/>';
-                  echo $v->theme;
-
+                  print'<p>'.$v->theme.'</p>';
+                  print'</div>';
                 }
               ?>
 
