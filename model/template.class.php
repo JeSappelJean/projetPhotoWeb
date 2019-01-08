@@ -4,5 +4,7 @@
       private $num;
       private $theme;
       private $nbpages;
+      private $public;
+      private $concours;
     }
 ?>

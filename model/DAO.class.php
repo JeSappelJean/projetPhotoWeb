@@ -57,14 +57,23 @@
         return $result;
     }
 
-    function createTemplateVide($num, $theme, $nbpages){
-        $query=$this->db->prepare('INSERT INTO TEMPLATE (num, theme, nbpages) VALUES (:num,:theme, :nbpages)');
+    function createTemplateVide($num, $theme, $nbpages, $public, $concours){
+        $query=$this->db->prepare('INSERT INTO TEMPLATE (num, theme, nbpages, public, concours) VALUES (:num, :theme, :nbpages, :public, :concours)');
         $query->bindValue(':num', $num, PDO::PARAM_INT);
         $query->bindValue(':theme', $theme, PDO::PARAM_STR);
         $query->bindValue(':nbpages', $nbpages, PDO::PARAM_INT);
+        $query->bindValue(':public', $public, PDO::PARAM_BOOL);
+        $query->bindValue(':concours', $concours, PDO::PARAM_BOOL);
         $query->execute();
         $query->CloseCursor();
     }
+
+    function getTemplatesConcours(): array {
+            $req="Select * from template where concours = 'true';";
+            $sth=$this->db->query($req);
+            $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
+            return $result;
+        }
 
     /*Fonction non testée
     function getAllTemplate(): array {
