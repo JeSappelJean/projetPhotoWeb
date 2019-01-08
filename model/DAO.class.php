@@ -7,7 +7,7 @@
 .import template.txt template
 .+ autres ( ce que vous rajouter)*/
 
-  /*require_once('../model/template.class.php');*/
+  require_once('../model/template.class.php');
 
   // Creation de l'unique objet DAO
   $dao = new DAO();
@@ -68,12 +68,21 @@
         $query->CloseCursor();
     }
 
+<<<<<<< HEAD
     function getTemplatesConcours(): array {
             $req="Select * from template where concours = 'true';";
             $sth=$this->db->query($req);
             $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
             return $result;
         }
+=======
+  function getTemplateWTheme($theme): array {
+    $sql = "SELECT * FROM TEMPLATE WHERE theme = '$theme'";
+    $sth = $this->db->query($sql);
+    $res = $sth->fetchAll(PDO::FETCH_CLASS,'template');
+    return $res;
+  }
+>>>>>>> 1e7e9584dda834f6b6166a1d9cc293a628b2fb65
 
     /*Fonction non testée
     function getAllTemplate(): array {
