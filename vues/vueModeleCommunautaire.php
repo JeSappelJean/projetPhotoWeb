@@ -91,12 +91,12 @@
 
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
                 foreach ($liste as $v) {
-                  print '<img src ="'.$image.'" alt="$theme" />';
+                  print '<img src ="'.$image.'" alt="$theme" width ="50" height="50"/>';
                   echo $v->theme;
 
                 }
               ?>
-              
+
             </div>
         </div>
       </footer>
