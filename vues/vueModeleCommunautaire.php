@@ -34,7 +34,11 @@
                 <!-- barre de recherche -->
 
                 <?php
-                $selected = $_GET['theme'] ;
+                if(isset($_GET['theme'])) {
+                  $selected = $_GET['theme'] ;
+                } else {
+                  $selected = 'liste';
+                }
                 $selectedValue = 'selected="selected"';
                 ?>
 
@@ -43,6 +47,7 @@
                   <input type="text" name="recherche" value="hiver.."><br>
                   Thème:
                   <select name="theme" type="text" size="1">
+                    <option disabled value='lsite' <?php if ($selected == "liste") echo $selectedValue ?>>Liste des thèmes</option>
                     <option value="ete" <?php if ($selected == "ete") echo $selectedValue ?>>ete</option>
                     <option value="automne"<?php if ($selected == "automne") echo $selectedValue ?>>automne</option>
                     <option value="hiver"<?php if ($selected == "hiver") echo $selectedValue ?>>hiver</option>
@@ -70,6 +75,7 @@
 
             <div id="column_right">
               <?php
+              if(isset($_GET['theme'])) {
               $theme = $_GET['theme'];
               if ($theme == "ete") {
                 $image = "../data/imagesSite/imEte.jpg" ;
@@ -90,6 +96,7 @@
                   print'<p>'.$v->theme.'</p>';
                   print'</div>';
                 }
+              }
               ?>
 
             </div>
