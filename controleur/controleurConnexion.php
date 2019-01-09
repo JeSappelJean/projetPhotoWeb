@@ -6,7 +6,7 @@
   require_once('../model/membre.class.php');
 
   if ((empty($_POST['login']) || empty(md5($_POST['mdp']))) && (isset($_POST['login']) && isset($_POST['mdp']))) {
-      include("../vues/vueConnexionErr.html");
+      include("../vues/vueConnexionErr.php");
   } else if (isset($_POST['login'])) {
 
       $data = $BDD->getLoginMdp($_POST['login']);
