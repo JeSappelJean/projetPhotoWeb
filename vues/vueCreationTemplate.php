@@ -39,7 +39,6 @@
                     </form>
                 </fieldset>
                 </div>
-                <?php echo $GLOBALS['resultatCréation']; ?>
 
 
 
