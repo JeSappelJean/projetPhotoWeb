@@ -49,7 +49,7 @@
                   <p>
                   <!--A remplacer php-->
                   <?php
-                  if (isset($_SESSION['login'])){
+                  /*if (isset($_SESSION['login'])){
                     require_once('../model/DAO.class.php');
                       $liste = $dao->getTemplateUtilisateur($_SESSION['login']) ;
                         foreach ($liste as $v) {
@@ -64,7 +64,7 @@
                     }
 
 
-                   ?>
+                   */?>
 </p>
                 </div>
               </div>
