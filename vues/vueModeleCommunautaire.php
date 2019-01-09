@@ -69,7 +69,24 @@
               </div>
 
               <div id="column_down">
+                <p style="font-size:150%;"><b>Aperçu : </b></p>
+                <div id="repTemplate">
+                  <?php
+                  if(isset($_GET['id'])) {
+                    $selected = $_GET['id'] ;
+                  } else {
+                    $selected = "vide";
+                  }
+                  print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=100px height=100px>';
+                  ?>
 
+                </div>
+                <div>
+                  <b>
+                    <a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Voir les détails</a>
+                    <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
+                  </b>
+                </div>
               </div>
             </div>
 
@@ -92,7 +109,7 @@
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
                 foreach ($liste as $v) {
                   print '<div id="template">';
-                  print '<img src ="'.$image.'" alt="$theme" width ="150" height="150"/>';
+                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?recherche=hiver..&theme='.$theme.'&id='.$v->theme.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
                   print'<p>'.$v->theme.'</p>';
                   print'</div>';
                 }
