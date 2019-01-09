@@ -15,7 +15,7 @@
       <h2>Connexion réussi !</h2>
       <p>
         <b>
-          <a id="buttonHome" href="../controleur/afficherAccueil.ctrl.php">Accueil</a>
+          <a id="buttonHome" href="../controleur/controleurAccueil.php">Accueil</a>
         </b>
       </p>
     </div>
