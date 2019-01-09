@@ -212,6 +212,7 @@ header>nav>ul>li>ul>li>a:hover {
   width:50%;
   display: flex;
   flex-wrap: wrap;
+  overflow: scroll;
 }
 
 #template {
