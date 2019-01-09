@@ -34,15 +34,15 @@
               <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fmoncompte%2fphotos"> <img width= 75px; height=75px; src="../data/imagesSite/MesPhotos.png" alt="cadre"></a>
               <a href="../vues/vueCompte.php"> <img width= 75px; height=75px; src="../data/imagesSite/Compte.png" alt="user"></a>
               <a href="https://www.photoweb.fr/moncompte/Account/LogOn?ReturnUrl=%2fPanier"> <img width= 75px; height=75px; src="../data/imagesSite/Panier.png" alt="panier"></a>
-
+              <br>
               <?php
-              if (isset($_SESSION['login'])){
-                echo $_SESSION['login'], " est connecté";
-                echo "<a href=\"../controleur/controleurDeconnexion.php\">Deconnexion</a>";
-              } else {
-                echo "<a style=\"text-decoration:none; color:black; font-weight:bold; margin-right:5px;\" href=\"../controleur/afficherVueConnexion.ctrl.php\">Connexion</a>";
-                echo "<a style=\"text-decoration:none; color:black; font-weight:bold; margin-right:5px;\" href=\"../controleur/afficherVueInscription.ctrl.php\">Inscription</a>";
-              }
+                if (isset($_SESSION['login'])){
+                  echo $_SESSION['login'], " est connecté ";
+                  echo "<a style=\"text-decoration:none; color:black; font-weight:bold; margin-left:5px;\" href=\"../controleur/controleurDeconnexion.php\">Deconnexion</a>";
+                } else {
+                  echo "<a style=\"text-decoration:none; color:black; font-weight:bold; margin-right:5px;\" href=\"../controleur/afficherVueConnexion.ctrl.php\">Connexion</a>";
+                  echo "<a style=\"text-decoration:none; color:black; font-weight:bold; margin-right:5px;\" href=\"../controleur/afficherVueInscription.ctrl.php\">Inscription</a>";
+                }
               ?>
           </div>
         </nav>
