@@ -40,12 +40,10 @@
                 echo $_SESSION['login'], " est connecté";
                 echo "<a href=\"../controleur/controleurDeconnexion.php\">Deconnexion</a>";
               } else {
-                echo "<a href=\"../vues/vueConnexion.php\">Connexion</a>";
-                echo "<a href=\"../vues/vueInscription.php\">Inscription</a>";
+                echo "<a style=\"text-decoration:none; color:black; font-weight:bold; margin-right:5px;\" href=\"../controleur/afficherVueConnexion.ctrl.php\">Connexion</a>";
+                echo "<a style=\"text-decoration:none; color:black; font-weight:bold; margin-right:5px;\" href=\"../controleur/afficherVueInscription.ctrl.php\">Inscription</a>";
               }
-
-
-               ?>
+              ?>
           </div>
         </nav>
 
