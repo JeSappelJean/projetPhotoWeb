@@ -25,8 +25,7 @@
           </div>
 
           <div>
-            <a href="../vues/vueAccueil.php">
-            <img src="../data/imagesSite/LogoPhotoweb.png" alt="ImageLogoPhotoWeb"></a>
+            <a href="../controleur/controleurAccueil.php"><img src="../data/imagesSite/LogoPhotoweb.png" alt="ImageLogoPhotoWeb"></a>
           </div>
 
           <div>
