@@ -57,13 +57,6 @@
         return $result;
     }
 
-    function getTemplateUtilisateur($login): array {
-        $req="Select * from template where idCreateur=$login;";
-        $sth=$this->db->query($req);
-        $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
-        return $result;
-    }
-
     function createTemplateVide($num, $theme, $nbpages, $public, $concours){
         $query=$this->db->prepare('INSERT INTO TEMPLATE (num, theme, nbpages, public, concours) VALUES (:num, :theme, :nbpages, :public, :concours)');
         $query->bindValue(':num', $num, PDO::PARAM_INT);

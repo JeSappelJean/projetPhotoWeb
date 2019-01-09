@@ -43,6 +43,8 @@
                 ?>
 
                 <form method="get">
+                  Recherche:
+                  <input type="text" name="recherche" value="hiver.."><br>
                   Thème:
                   <select name="theme" type="text" size="1">
                     <option disabled value='lsite' <?php if ($selected == "liste") echo $selectedValue ?>>Liste des thèmes</option>
@@ -50,13 +52,13 @@
                     <option value="automne"<?php if ($selected == "automne") echo $selectedValue ?>>automne</option>
                     <option value="hiver"<?php if ($selected == "hiver") echo $selectedValue ?>>hiver</option>
                     <option value="printemps"<?php if ($selected == "printemps") echo $selectedValue ?>>printemps</option>
-                    <!--<option value="afaire">Noel</option>-->
+                    <option value="afaire">...(a generer en php)</option>
 
                     <?php
                       if(isset($_POST['theme'])) {
                         $theme = ($_POST['theme']);
                       } else {
-                        $theme = "hiver";
+                        $theme = "ete";
                       }
                      ?>
 
