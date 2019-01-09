@@ -129,25 +129,31 @@ footer {
   display: flex;
   border: 2px solid black;
   border-radius: 5px;
-  padding: 5px
+  padding: 5px;
+  background-color: #DCD9DC;
 }
 
 #column_left{
   width:560px;
   height:500px;
   margin-right:20px;
-  border: 2px solid black;
+  border: 3px solid #2C2827;
+  box-shadow: 5px 5px 12px #555;
   border-radius: 5px;
-  padding: 5px
+  padding: 5px;
+  background-color: #4DB8DC;
 }
 
 #column_right{
+  margin-top:22%;
   width:200px;
   height:200px;
-  border: 2px solid black;
+  border: 3px solid #2C2827;
+  box-shadow: 5px 5px 12px #555;
   border-radius: 5px;
   padding: 5px;
   text-align: left;
+  background-color: orange;
 }
 
 footer>nav>a {

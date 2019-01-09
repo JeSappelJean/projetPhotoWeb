@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 <?php
   class Membres{
     public $login;
