@@ -27,6 +27,6 @@
        include('../vues/vueConnexion.php');
    }
    else {
-    include("../vues/erreurInscription.php");
+    include("../vues/vueErreurInscription.php");
    }
  ?>

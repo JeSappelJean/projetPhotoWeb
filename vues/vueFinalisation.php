@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <title>PhotoWeb (Test Site)</title>
-        <link rel="stylesheet" type="text/css" href="../vues/stylePageFinalisation.css">
+        <link rel="stylesheet" type="text/css" href="../vues/styleVueFinalisation.css">
 
         <!--Affichage petit icône en haut de page-->
         <link rel="shortcut icon" type="image/ico" href="../data/imagesSite/favicon.ico"/>
@@ -30,7 +30,6 @@
                   <p> <b>Thème : </b></p>
                   <p> <b>Créé par : </b></p>
                   <p> <b>Nombres de pages :</b></p>
-                  <p> <b>...</b></p>
                 </b>
               </p>
 
