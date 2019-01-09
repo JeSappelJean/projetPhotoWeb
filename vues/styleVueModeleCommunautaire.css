@@ -211,6 +211,7 @@ header>nav>ul>li>ul>li>a:hover {
 #column_right{
   width:50%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 #template {

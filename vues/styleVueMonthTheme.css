@@ -162,11 +162,13 @@ header>nav>ul>li>ul>li>a:hover {
 
 #column_down{
   height: 50%;
+  text-align: center;
 }
 
 #column_right{
   width:50%;
   display: flex;
+  flex-wrap:wrap;
 }
 
 #MesModeles{
@@ -209,3 +211,56 @@ header>nav>ul>li>ul>li>a:hover {
   color: black;
   padding-top: 10px;
 }
+
+#template {
+  margin-left: 5px;
+}
+ #template p {
+   margin-top: 0;
+ }
+
+ #boutonEdit{
+   display:block;
+   width:150px;
+   line-height:50px;
+   text-align:center;
+   vertical-align:middle;
+   border: 2px solid black;
+   color:black;
+   text-decoration:none;
+   border-radius: 15px;
+   background-color: #DCD9DC;
+   float: left;
+   margin-top: 20px;
+ }
+
+ #boutonEdit:hover {
+   background-color: white;
+ }
+
+ #boutonUse{
+   margin-top: 20px;
+   display:block;
+   width:150px;
+   line-height:50px;
+   text-align:center;
+   vertical-align:middle;
+   border: 2px solid black;
+   color:black;
+   text-decoration:none;
+   border-radius: 15px;
+   background-color: #DCD9DC;
+   float: right;
+   margin-right: 5px;
+ }
+
+ #boutonUse:hover {
+   background-color: white;
+ }
+
+ #repTemplate{
+   margin: auto;
+   height: 100px;
+   width: 100px;
+   border: 1px dashed black;
+ }

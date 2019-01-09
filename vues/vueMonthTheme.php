@@ -19,7 +19,7 @@
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
 
-      <footer>
+
         <div id="navigueBar">
             <a id="MesModeles" href="../controleur/afficherVueMesTemplates.ctrl.php"><b>Mes Modèles</b></a>
             <a id="ModeleComm" href="../controleur/afficherVueModeleCommunautaire.ctrl.php"><b>Modèles Communautaires</b></a>
@@ -35,7 +35,17 @@
               </div>
 
               <div id="column_down">
+                <p style="font-size:150%;"><b>Aperçu : </b></p>
+                <div id="repTemplate">
+                  <b>Votre Template (à venir)</b>
+                </div>
 
+                <div>
+                  <b>
+                    <a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Voir les détails</a>
+                    <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
+                  </b>
+                </div>
               </div>
             </div>
 
@@ -44,14 +54,16 @@
               $templates_concours = $dao->getTemplatesConcours();
 
               foreach ($templates_concours as $value) {
-                      echo '<article>';
-                      print '<img src ="../data/imagesSite/im'.$value->theme.'.jpg" alt="$theme" width ="50" height="50"/>';
-                      echo $value->theme;
-                      echo'</article>';
+                      print '<div id="template">';
+                      print '<img src ="../data/imagesSite/im'.$value->theme.'.jpg" alt="$theme" width ="150" height="150"/>';
+                      print'<p>'.$value->theme.'</p>';
+                      print'</div>';
                   }
                ?>
             </div>
         </div>
+              <footer>
+                <a href="../controleur/afficherVueMonthTheme.ctrl.php?"></a>
       </footer>
     </body>
 
