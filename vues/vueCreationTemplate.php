@@ -28,11 +28,11 @@
 
                 <div>
                 <fieldset>
-                    <form action="traitementNouveauTemplate.ctrl.php" method="post">
+                    <form action="../controleur/traitementNouveauTemplate.ctrl.php" method="post">
                         <p>num:</p>
                         <input type="text" name="num" required="required">
                         <p>theme:</p>
-                        <p id="choixTheme">Aucun thème choisi</p>
+                        <input id="choixTheme" type="text" name="theme" value="" readonly>
                         <p>nbpages:</p>
                         <input type="text" name="nbpages" required="required">
                         <input type="submit" value="valider">
@@ -49,7 +49,7 @@
               <p> <b>Choisissez le thème de votre Template : </b></p>
               <p>
                 <b id = "theme">
-                  <input id="boutonSaisonsH" type="button" value="Hiver"/>
+                  <input id="boutonSaisonsH" type="button" value="Hiver" name = "Hiver"/>
                   <input id="boutonSaisonsA" type="button" value="Automne"/>
                   <input id="boutonSaisonsP" type="button" value="Printemps"/>
                   <input id="boutonSaisonsE" type="button" value="Eté"/>
@@ -61,20 +61,18 @@
 
       </footer>
 
-      <nav>
-        <a href="../controleur/afficherVueFinalisation.ctrl.php" title="finaliser"><input type="button" value="Finaliser"></a>
-      </nav>
       <script>
         function creerTemplate(theme){
           var xhr = new XMLHttpRequest();
-          xhr.open('GET','http://localhost/PhotoShare/vues/vueCreationTemplate.php');
+          xhr.open('GET','../vues/vueCreationTemplate');
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
           xhr.addEventListener('readystatechange',function(){
             //Vérification que l'événement est terminé (DONE) et que la requète à été résalisé avec succès (statut 200)
             //Affichage du theme
               if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
-                document.getElementById('choixTheme').innerHTML = theme ;
+                document.getElementById('choixTheme').value = theme ;
               }
-
           });
 
           xhr.send(null);
@@ -92,6 +90,11 @@
         }
 
         function eventClick(th){
+          //$.post('../controleur/traitementNouveauTemplate.ctrl.php',
+            //{
+              //theme: th.target.value,
+            //});
+          //th.target.submit();
           creerTemplate(th.target.value);
         }
         //Excécuter selectTheme quand le page est complètement chargée

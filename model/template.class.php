@@ -1,10 +1,11 @@
 <!--Définition de la class Template-->
 <?php
     class Template {
-      private $num;
+      public $num;
+      public $login;
       public $theme;
-      private $nbpages;
-      private $public;
-      private $concours;
+      public $nbpages;
+      public $public;
+      public $concours;
     }
 ?>

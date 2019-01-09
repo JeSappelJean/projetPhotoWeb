@@ -27,9 +27,9 @@
               <p>
                 <b>
                   <h3>Votre Template Final :</h3>
-                  <p> <b>Thème : </b></p>
-                  <p> <b>Créé par : </b></p>
-                  <p> <b>Nombres de pages :</b></p>
+                  <p> <b>Thème : <?php echo $template[0]->theme ?></b></p>
+                  <p> <b>Créé par : <?php echo $template[0]->login ?> </b></p>
+                  <p> <b>Nombres de pages : <?php echo $template[0]->nbpages ?> </b></p>
                 </b>
               </p>
 

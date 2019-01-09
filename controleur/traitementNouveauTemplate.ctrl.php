@@ -1,9 +1,17 @@
 <!--Traitement pour la création d'un nouveau template-->
 <?php
+    session_start();
     include_once('../model/DAO.class.php');
+    $BDD = new DAO();
+    var_dump($_POST['theme']);
+    var_dump($_SESSION['login']);
 
-    $dao->createTemplateVide($_POST['num'],$_POST['theme'],$_POST['nbpages']);
+    $BDD->createTemplateVide($_POST['num'],$_SESSION['login'],$_POST['theme'],$_POST['nbpages'],false,false);
+    $template = $BDD->getInfoTemplate($_POST['num']);
+    var_dump($template[0]->nbpages);
+    $template = $BDD->getInfoTemplate($_POST['num']);
+    var_dump($template[0]->nbpages);
     $GLOBALS['resultatCréation']='Template créé avec succes';
     /*$GLOBALS['templateModifiable']=$dao->getTemplate(4);*/
-    include('../vues/vueCreationTemplate.php');
+    include('../vues/vueFinalisation.php');
 ?>

@@ -57,9 +57,10 @@
         return $result;
     }
 
-    function createTemplateVide($num, $theme, $nbpages, $public, $concours){
-        $query=$this->db->prepare('INSERT INTO TEMPLATE (num, theme, nbpages, public, concours) VALUES (:num, :theme, :nbpages, :public, :concours)');
+    function createTemplateVide($num, $login, $theme, $nbpages, $public, $concours){
+        $query=$this->db->prepare('INSERT INTO TEMPLATE (num, login, theme, nbpages, public, concours) VALUES (:num, :login, :theme, :nbpages, :public, :concours)');
         $query->bindValue(':num', $num, PDO::PARAM_INT);
+        $query->bindValue(':login', $login, PDO::PARAM_STR);
         $query->bindValue(':theme', $theme, PDO::PARAM_STR);
         $query->bindValue(':nbpages', $nbpages, PDO::PARAM_INT);
         $query->bindValue(':public', $public, PDO::PARAM_BOOL);
@@ -68,7 +69,12 @@
         $query->CloseCursor();
     }
 
-
+    function getInfoTemplate($num) {
+      $req="SELECT login,theme, nbpages from template where num = $num ";
+      $sth=$this->db->query($req);
+      $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
+      return $result;
+    }
     function getTemplatesConcours(): array {
             $req="SELECT * from template where concours = 1;";
             $sth=$this->db->query($req);
