@@ -69,6 +69,7 @@
         $query->CloseCursor();
     }
 
+
     function getInfoTemplate($num) {
       $req="SELECT login,theme, nbpages from template where num = $num ";
       $sth=$this->db->query($req);

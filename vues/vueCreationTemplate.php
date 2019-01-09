@@ -30,11 +30,11 @@
                 <fieldset>
                     <form action="../controleur/traitementNouveauTemplate.ctrl.php" method="post">
                         <p>num:</p>
-                        <input type="text" name="num" required="required">
+                        <input type="number" name="num" required>
                         <p>theme:</p>
-                        <input id="choixTheme" type="text" name="theme" value="" readonly>
+                        <input id="choixTheme" type="text" name="theme" value="" required="required" readonly>
                         <p>nbpages:</p>
-                        <input type="text" name="nbpages" required="required">
+                        <input type="number" name="nbpages" required>
                         <input type="submit" value="valider">
                     </form>
                 </fieldset>
@@ -62,6 +62,12 @@
       </footer>
 
       <script>
+        <?php
+        if(!isset($_SESSION['login'])){
+          echo "alert(\"Pour créer un template vous devez d'abord vous connecter !\");";
+          echo "window.location = '../controleur/controleurAccueil.php';";
+        }
+         ?>
         function creerTemplate(theme){
           var xhr = new XMLHttpRequest();
           xhr.open('GET','../vues/vueCreationTemplate');
