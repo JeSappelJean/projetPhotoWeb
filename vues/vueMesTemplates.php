@@ -32,7 +32,7 @@
             <div id="column_left">
               <p style="font-size:150%;"><b>Aperçu : </b></p>
               <div id="repTemplate">
-                <b>Votre Template (à venir)</b>
+                <b>Vous n'avez pas encore sélectionné de template</b>
               </div>
 
               <div>
@@ -46,9 +46,27 @@
             <div id="column_right">
               <div>
                 <div>
-                  <p>Template correspondant thème</p><!--A remplacer php-->
+                  <p>
+                  <!--A remplacer php-->
+                  <?php
+                  if (isset($_SESSION['login'])){
+                    require_once('../model/DAO.class.php');
+                      $liste = $dao->getTemplateUtilisateur($_SESSION['login']) ;
+                        foreach ($liste as $v) {
+                          print '<div id="template">';
+                          print '<img src ="'.$image.'" alt="$theme" width ="50" height="50"/>';
+                          print'<p>'.$v->theme.'</p>';
+                          print'</div>';
+                          echo $_SESSION['login'], " est connecté";
+                          }
+                    } else {
+                    echo "Vous n'êtes pas encore connecté";
+                    }
+
+
+                   ?>
+</p>
                 </div>
-                <p>Nom thème</p><!--A remplacer php-->
               </div>
             </div>
         </div>
