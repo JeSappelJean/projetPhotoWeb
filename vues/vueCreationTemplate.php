@@ -29,12 +29,15 @@
                 <div>
                 <fieldset>
                     <form action="../controleur/traitementNouveauTemplate.ctrl.php" method="post">
-                        <p>num:</p>
-                        <input type="number" name="num" required>
-                        <p>theme:</p>
-                        <input id="choixTheme" type="text" name="theme" value="" required="required" readonly>
-                        <p>nbpages:</p>
+
+                        <p>Theme :</p>
+                        <input id="choixTheme"  type="text" name="theme" value="Default" required="required" readonly style="border: none">
+                        <p>Nombre de pages :</p>
                         <input type="number" name="nbpages" required>
+                        <p>Partager le template à la communauté : </p>
+                        <input type="checkbox" name="public" value="public">
+
+                        <br>
                         <input type="submit" value="valider">
                     </form>
                 </fieldset>
@@ -95,11 +98,6 @@
         }
 
         function eventClick(th){
-          //$.post('../controleur/traitementNouveauTemplate.ctrl.php',
-            //{
-              //theme: th.target.value,
-            //});
-          //th.target.submit();
           creerTemplate(th.target.value);
         }
         //Excécuter selectTheme quand le page est complètement chargée

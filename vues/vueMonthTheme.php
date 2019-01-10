@@ -45,6 +45,11 @@
                     $selected = "vide";
                   }
                   print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=100px height=100px>';
+                  if (isset($_GET['id'])) {
+                    echo "<input id=\"likeBtn\" type=\"image\" src=\"../data/imagesSite/like.png\" onclick=\"like()\">";
+                    echo "<input id=\"nbLike\" type=\"text\" name=\"nbLike\" value=\"0\" >";
+                  }
+
                   ?>
 
                 </div>
@@ -71,6 +76,20 @@
                ?>
             </div>
         </div>
+
+        <script type="text/javascript">
+          function like() {
+            <?php
+            if(isset($_POST['login'])){
+
+            } ?>
+            document.getElementById("nbLike").value++;
+          }
+
+        </script>
+
+
+
               <footer>
 
       </footer>

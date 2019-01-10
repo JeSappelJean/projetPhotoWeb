@@ -278,3 +278,8 @@ header>nav>ul>li>ul>li>a:hover {
    width: 100px;
    border: 1px dashed black;
  }
+
+ #likeBtn {
+   height: 5%;
+   width: 10%;
+ }

@@ -3,10 +3,17 @@
     session_start();
     include_once('../model/DAO.class.php');
     $BDD = new DAO();
+    $num = $BDD->getNbTemplate() + 1;
 
-    $BDD->createTemplateVide($_POST['num'],$_SESSION['login'],$_POST['theme'],$_POST['nbpages'],false,false);
-    $template = $BDD->getInfoTemplate($_POST['num']);
-    $template = $BDD->getInfoTemplate($_POST['num']);
+    if(isset($_POST['public'])){
+      $public = ($_POST['public']=='public');
+    } else {
+      $public = false;
+    }
+
+    $BDD->createTemplateVide(($num),$_SESSION['login'],$_POST['theme'],$_POST['nbpages'],$public,false);
+    $template = $BDD->getInfoTemplate($num);
+
     $GLOBALS['resultatCréation']='Template créé avec succes';
     /*$GLOBALS['templateModifiable']=$dao->getTemplate(4);*/
     include('../vues/vueFinalisation.php');
