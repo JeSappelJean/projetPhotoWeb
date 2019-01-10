@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--On récupère les fonctions à utilisés-->
-<?php /*require_once('../vue/function.vue.php');*/?>
+<?php require_once('../model/DAO.class.php'); ?>
 
 <html>
 
@@ -43,16 +43,13 @@
                 ?>
 
                 <form method="get">
-                  Recherche:
-                  <input type="text" name="recherche" value="hiver.."><br>
-                  Thème:
+                  <h2>Thème:</h2>
                   <select name="theme" type="text" size="1">
                     <option disabled value='lsite' <?php if ($selected == "liste") echo $selectedValue ?>>Liste des thèmes</option>
-                    <option value="ete" <?php if ($selected == "ete") echo $selectedValue ?>>ete</option>
-                    <option value="automne"<?php if ($selected == "automne") echo $selectedValue ?>>automne</option>
-                    <option value="hiver"<?php if ($selected == "hiver") echo $selectedValue ?>>hiver</option>
-                    <option value="printemps"<?php if ($selected == "printemps") echo $selectedValue ?>>printemps</option>
-                    <option value="afaire">...(a generer en php)</option>
+                    <option value="ete" <?php if ($selected == "ete") echo $selectedValue ?>>Ete</option>
+                    <option value="automne"<?php if ($selected == "automne") echo $selectedValue ?>>Automne</option>
+                    <option value="hiver"<?php if ($selected == "hiver") echo $selectedValue ?>>Hiver</option>
+                    <option value="printemps"<?php if ($selected == "printemps") echo $selectedValue ?>>Printemps</option>
 
                     <?php
                       if(isset($_POST['theme'])) {
@@ -65,23 +62,34 @@
                      <a href="../controleur/afficherVueModeleCommunautaire.ctrl.php" title="Search"><input type="submit" value="Rechercher"></a>
                   </select>
                 </form>
-                <!--Vue Rechercher a faire-->
               </div>
 
               <div id="column_down">
-                <p style="font-size:150%;"><b>Aperçu : </b></p>
+                <h2>Aperçu: </h2>
                 <div id="repTemplate">
-                  <?php
-                  if(isset($_GET['id'])) {
-                    $selected = $_GET['id'] ;
-                  } else {
-                    $selected = "vide";
-                  }
-                  print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=100px height=100px>';
-                  ?>
+                  <div id="repTemplateG">
+                    <?php
+                    if(isset($_GET['id'])) {
+                      $selected = $_GET['id'] ;
+                    } else {
+                      $selected = "vide";
+                    }
+                    print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=150px height=120px>';
+                    ?>
+                  </div>
+                  <div id="repTemplateD">
+                    <?php
+                      if( isset($_GET['theme']) && isset($_GET['nbpages']) ){
+                        $themeUse = $_GET['theme'] ;
+                        $nbpagesUse = $_GET['nbpages'];
+                        echo '<p><b>Thème : </b>'.$_GET['theme'].'</p>';
+                        echo '<p><b>Nombre de pages : </b>'.$_GET['nbpages'].'</p>';
+                      } 
+                    ?>
+                  </div>
 
                 </div>
-                <div>
+                <div id="boutonsContainer">
                   <b>
                     <a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Voir les détails</a>
                     <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
@@ -104,13 +112,13 @@
                 $image = "../data/imagesSite/imHiver.jpg" ;
               }
 
-              require_once('../model/DAO.class.php');
+
 
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
                 foreach ($liste as $v) {
                   print '<div id="template">';
-                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?recherche=hiver..&theme='.$theme.'&id='.$v->theme.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
-                  print'<p>'.$v->theme.'</p>';
+                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->theme.'&nbpages='.$v->nbpages.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
+                  print'<p><b>'.$v->theme.'</b></p>';
                   print'</div>';
                 }
               }

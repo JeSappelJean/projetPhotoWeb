@@ -178,7 +178,7 @@ header>nav>ul>li>ul>li>a:hover {
 
 #container{
   width:auto;
-  height: 500px;
+  height: 600px;
   margin-top: 5px;
   margin-left: 5px;
   margin-right: 5px;
@@ -215,13 +215,30 @@ header>nav>ul>li>ul>li>a:hover {
   overflow-y: scroll;
 }
 
+/*Affichage template colonne de gauche*/
+
 #template {
-  margin-left: 5px;
+  margin: 5px;
+  width: 150px;
+  height: 180px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 5px 5px 12px #555;
+  background-color: white;
 }
+
+#template:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+
  #template p {
-   margin-top: 0;
+   margin-top: 0px;
  }
 
+/*Affichage partie bas gauche */
  #boutonEdit{
    display:block;
    width:150px;
@@ -261,9 +278,22 @@ header>nav>ul>li>ul>li>a:hover {
    background-color: white;
  }
 
- #repTemplate{
-   margin: auto;
-   height: 100px;
-   width: 100px;
-   border: 1px dashed black;
+ #repTemplateG{
+   margin-left: 25%;
+   width: 150px;
+   height: 120px;
+   text-align: center;
+   border: 2px solid black;
+   border-radius: 4px;
+   box-shadow: 5px 5px 12px #555;
+   margin-right: 10px;
+ }
+
+ #repTemplateD{
+   width: 160px;
+   height: 120px;
+ }
+
+ #repTemplate {
+   display: flex;
  }

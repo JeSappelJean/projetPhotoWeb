@@ -92,12 +92,19 @@
 
 
     function getTemplateWTheme($theme): array {
-      $req="SELECT * FROM template WHERE theme = '$theme';";
+      $req="SELECT * FROM template WHERE theme = '$theme' AND public = 1;";
       $sth=$this->db->query($req);
       $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
       return $result;
     }
 
+    function getTemplateLogin($login): array {
+      $req="SELECT * FROM template WHERE login = '$login';";
+      $sth=$this->db->query($req);
+      $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
+      return $result;
+    }
+    
     function addLike($login,$num){
       $query=$this->db->prepare('INSERT INTO LIKETEMP (login, num) VALUES (:login, :num)');
       $query->bindValue(':login', $login, PDO::PARAM_STR);
@@ -119,6 +126,8 @@
       $res = $query->fetch();
       return $res[0];
     }
+
+
 
 
     /*Fonction non testée

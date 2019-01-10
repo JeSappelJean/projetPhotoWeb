@@ -214,10 +214,23 @@ header>nav>ul>li>ul>li>a:hover {
 }
 
 #template {
-  margin-left: 5px;
+  margin: 5px;
+  width: 150px;
+  height: 180px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 5px 5px 12px #555;
 }
+
+#template:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+
  #template p {
-   margin-top: 0;
+   margin-top: 0px;
  }
 
  #boutonEdit{
