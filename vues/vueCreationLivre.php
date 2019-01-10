@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--On récupère les fonctions à utilisés-->
+<?php require_once('../model/DAO.class.php'); ?>
+
 <html>
 
     <head>
@@ -26,35 +29,52 @@
                 <fieldset>
                     <form action="../controleur/traitementNouveauLivre.ctrl.php" method="post">
 
-                        <p>Theme :</p>
-                        <input id="choixTheme"  type="text" name="theme" value="Default" required="required" readonly style="border: none">
-                        <p>Nombre de pages :</p>
-                        <input type="number" name="nbpages" required>
-                        <p>Partager le template à la communauté : </p>
-                        <input type="checkbox" name="public" value="public">
+                      <?php
+                        if(isset($_GET['id']) ) {
+                          $templatenum = $dao->getTemplate($_GET['id']);
+                          $selectedTemplate = $templatenum[0]->theme;
+                          $selectedNbpages = $templatenum[0]->nbpages;
+                          echo '<p>Theme :</p>';
+                          echo '<input id="choixTheme"  type="text" name="theme" value="'.$selectedTemplate.'" required="required" readonly style="border: none">';
+                          echo '<p>Nombre de pages :</p>';
+                          echo '<input id="choixTheme"  type="text" name="theme" value="'.$selectedNbpages.'" required="required" readonly style="border: none">';
+                          echo '<br>';
+                          echo '<input type="submit" value="valider">';
+                          echo '</form>';
+                          echo '</fieldset>';
+                          echo '</div>';
+                        } else {
 
-                        <br>
-                        <input type="submit" value="valider">
-                    </form>
-                </fieldset>
-                </div>
+                        echo '<p>Theme :</p>';
+                        echo '<input id="choixTheme"  type="text" name="theme" value="Default" required="required" readonly style="border: none">';
+                        echo '<p>Nombre de pages :</p>';
+                        echo '<input type="number" name="nbpages" required>';
+                        echo '<p>Partager le template à la communauté : </p>';
+                        echo '<input type="checkbox" name="public" value="public">';
 
+                        echo '<br>';
+                        echo '<input type="submit" value="valider">';
+                    echo '</form>';
+                echo '</fieldset>';
+                echo '</div>';
 
+            echo '</div>';
 
-            </div>
+            echo '<div id="column_right">';
+              echo '<p> <b>Choisissez le thème de votre Livre : </b></p>';
+              echo '<p>';
+                echo '<b id = "theme">';
+                  echo '<input style="margin-left:22px;" id="boutonSaisonsH" type="button" value="Hiver" name = "Hiver"/>';
+                  echo '<input style="margin-left:22px;" id="boutonSaisonsA" type="button" value="Automne"/>';
+                  echo '<input style="margin-left:22px;" id="boutonSaisonsP" type="button" value="Printemps"/>';
+                  echo '<input style="margin-left:22px;" id="boutonSaisonsE" type="button" value="Ete"/>';
+                echo '</b>';
+              echo '</p>';
 
-            <div id="column_right">
-              <p> <b>Choisissez le thème de votre Livre : </b></p>
-              <p>
-                <b id = "theme">
-                  <input style="margin-left:22px;" id="boutonSaisonsH" type="button" value="Hiver" name = "Hiver"/>
-                  <input style="margin-left:22px;" id="boutonSaisonsA" type="button" value="Automne"/>
-                  <input style="margin-left:22px;" id="boutonSaisonsP" type="button" value="Printemps"/>
-                  <input style="margin-left:22px;" id="boutonSaisonsE" type="button" value="Ete"/>
-                </b>
-              </p>
+            echo '</div>';
 
-            </div>
+            }
+          ?>
         </div>
 
       </footer>
