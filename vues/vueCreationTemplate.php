@@ -29,9 +29,9 @@
                 <div>
                 <fieldset>
                     <form action="../controleur/traitementNouveauTemplate.ctrl.php" method="post">
-                    
+
                         <p>theme:</p>
-                        <input id="choixTheme" type="text" name="theme" value="" required="required" readonly>
+                        <input id="choixTheme"  type="text" name="theme" value="Défault" required="required" readonly style="border: none">
                         <p>nbpages:</p>
                         <input type="number" name="nbpages" required>
                         <input type="submit" value="valider">
