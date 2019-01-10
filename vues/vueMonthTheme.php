@@ -92,19 +92,6 @@
               </div>
             </div>
 
-            <div id="column_right">
-              <?php
-              $templates_concours = $dao->getTemplatesConcours();
-
-              foreach ($templates_concours as $value) {
-                      print '<div id="template">';
-                      print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
-                      print'<p>'.$value->theme.'</p>';
-                      print'</div>';
-                  }
-               ?>
-            </div>
-        </div>
 
 <div id="resultat"></div>
 
