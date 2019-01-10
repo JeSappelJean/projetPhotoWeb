@@ -79,8 +79,12 @@
                   </div>
                   <div id="repTemplateD">
                     <?php
-                      echo '<p><b>Thème : </b>'.$_GET['theme'].'</p>';
-                      echo '<p><b>Nombre de pages : </b>'.$_GET['nbpages'].'</p>';
+                      if( isset($_GET['theme']) && isset($_GET['nbpages']) ){
+                        $themeUse = $_GET['theme'] ;
+                        $nbpagesUse = $_GET['nbpages'];
+                        echo '<p><b>Thème : </b>'.$_GET['theme'].'</p>';
+                        echo '<p><b>Nombre de pages : </b>'.$_GET['nbpages'].'</p>';
+                      } 
                     ?>
                   </div>
 
