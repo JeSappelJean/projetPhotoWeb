@@ -38,7 +38,7 @@
 
         <nav>
           <a href="../controleur/afficherVueMesTemplates.ctrl.php" title="share"><input type="button" value="Partage"></a>
-          <a href="../controleur/afficherAccueil.ctrl.php" title="share"><input type="button" value="Accueil"></a>
+          <a href="../controleur/afficherAccueil.ctrl.php" title="Home"><input type="button" value="Accueil"></a>
         </nav>
 
       </footer>
