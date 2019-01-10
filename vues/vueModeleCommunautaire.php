@@ -109,9 +109,11 @@
 
 
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
+
                 foreach ($liste as $v) {
+                  $alea = rand(0,9);
                   print '<div id="template">';
-                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->num.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
+                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->num.'"><img src ="../data/imagesSite/im'.$v->theme.''.$alea.'.jpg" alt="$theme" width ="150" height="150"/></a>';
                   print'<p><b>'.$v->theme.'</b></p>';
                   print'</div>';
                 }
