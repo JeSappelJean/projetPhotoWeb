@@ -54,23 +54,31 @@
                     $templates_concours = $dao->getTemplatesConcours();
                     $nbLike = 0;
                     $numtp = 0;
-                    foreach ($templates_concours as $value) {
+                    $i = 0;
+                    foreach ($templates_concours as $value)
+                     {
                       if  ($dao->getNbLike($value->num) > $nbLike) {
-                            $nblike = $dao->getNbLike($value->num);
+                            $nbLike = $dao->getNbLike($value->num);
                             $numtp = $value->num;
+                            $i++;
                       }
-                    }
+
+                      }
+
+                      $i = $i - 1;
 
                     if ($numtp > 0) {
                     $template = $dao->getTemplate($numtp);
 
-                    print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$numtp.'"><img src ="../data/imagesSite/im'.$template[0]->theme.'.jpg" alt="plusliké" width =200px height=200px/></a>';
+
+                    print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$numtp.'&i='.$i.'"><img src ="../data/imagesSite/im'.$template[0]->theme.''.$i.'.jpg" alt="plusliké" width =200px height=200px/></a>';
                   } else {
                     print '<img src="../data/imagesSite/imVide.jpg" alt="vide" width=100px height=100px>';
                   }
+                      echo'<p id="nblike">Template le plus liké avec un total de '.$nbLike.' like!<br></p>';
 
                     ?>
-                    <p>Template le plus liké!</p>
+
                     </div>
                   </div>
 
@@ -79,18 +87,21 @@
                       <div id="repTemplate">
                         <div id="repTemplateG">
                         <?php
-                        if(isset($_GET['id'])) {
+                        if(isset($_GET['id']) && isset($_GET['i'])) {
                           $templatenum = $dao->getTemplate($_GET['id']);
                           $selected = $templatenum[0]->theme;
+                          $nbtemp = $_GET['i'];
                         } else {
                           $selected = "vide";
+                          $nbtemp = "";
                         }
-                        print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=200px height=200px>';
+                        print '<img src="../data/imagesSite/im'.$selected.''.$nbtemp.'.jpg" alt="template actuel" width=200px height=200px>';
                         ?>
                         </div>
                         <div id="repTemplateD">
                           <?php
                             if(isset($_GET['id'])){
+                              $templatenum = $dao->getTemplate($_GET['id']);
                               $themeUse = $templatenum[0]->theme;
                               $nbpagesUse = $templatenum[0]->nbpages;
                               $auteur = $templatenum[0]->login;
@@ -124,7 +135,7 @@
                     $i = 0;
                     foreach ($templates_concours as $value) {
                             print '<div id="template">';
-                            print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.''.$i.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                            print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$value->num.'&i='.$i.'"><img src ="../data/imagesSite/im'.$value->theme.''.$i.'.jpg" alt="$theme" width ="150" height="150"/></a>';
                             print'<p>'.$value->theme.'</p>';
                             print'</div>';
                             if($i<9) {
