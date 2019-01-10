@@ -121,11 +121,15 @@
                   <div id="column_right">
                     <?php
                     $templates_concours = $dao->getTemplatesConcours();
+                    $i = 0;
                     foreach ($templates_concours as $value) {
                             print '<div id="template">';
-                            print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                            print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.''.$i.'.jpg" alt="$theme" width ="150" height="150"/></a>';
                             print'<p>'.$value->theme.'</p>';
                             print'</div>';
+                            if($i<9) {
+                              $i = $i + 1;
+                            }
                         }
                      ?>
                   </div>
