@@ -18,7 +18,7 @@
 
 
     $BDD->createLivreVide(($num2),$_SESSION['login'],($num1));
-    $template = $BDD->getInfoTemplate()
+    $template = $BDD->getInfoTemplate();
 
     include('../vues/vueFinalisation.php');
 ?>
