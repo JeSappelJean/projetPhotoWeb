@@ -36,17 +36,7 @@
                   ?>
                 </b>
               </p>
-              <p>
-                <b>
-                  <?php
-                    if (!isset($template)) {
-                      echo'<h3>Votre Template Final :</h3>';
-                      echo'<p> <b>Thème : '.$livre[0]->theme.'</b></p>.';
-                      echo'<p> <b>Créé par : '.$livre[0]->login.'</b></p>';
-                    }
-                  ?>
-                </b>
-              </p>
+
 
             </div>
         </div>
