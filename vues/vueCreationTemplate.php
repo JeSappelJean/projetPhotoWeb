@@ -99,7 +99,6 @@
 
         function eventClick(th){
           valueTheme(th.target.value);
-
         }
         //Excécuter selectTheme quand le page est complètement chargée
         window.addEventListener('load',selectTheme);
