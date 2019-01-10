@@ -30,10 +30,14 @@
                 <fieldset>
                     <form action="../controleur/traitementNouveauTemplate.ctrl.php" method="post">
 
-                        <p>theme:</p>
-                        <input id="choixTheme"  type="text" name="theme" value="Défault" required="required" readonly style="border: none">
-                        <p>nbpages:</p>
+                        <p>Theme :</p>
+                        <input id="choixTheme"  type="text" name="theme" value="Default" required="required" readonly style="border: none">
+                        <p>Nombre de pages :</p>
                         <input type="number" name="nbpages" required>
+                        <p>Partager le template à la communauté : </p>
+                        <input type="checkbox" name="public" value="public">
+
+                        <br>
                         <input type="submit" value="valider">
                     </form>
                 </fieldset>
