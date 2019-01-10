@@ -66,21 +66,26 @@
 
               <div id="column_down">
                 <h2>Aperçu: </h2>
-                <div id="repTemplateG">
-                  <?php
-                  if(isset($_GET['id'])) {
-                    $selected = $_GET['id'] ;
-                  } else {
-                    $selected = "vide";
-                  }
-                  print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=150px height=120px>';
-                  ?>
-                </div>
-                <div id="repTemplateD">
-                  
-                </div>
+                <div id="repTemplate">
+                  <div id="repTemplateG">
+                    <?php
+                    if(isset($_GET['id'])) {
+                      $selected = $_GET['id'] ;
+                    } else {
+                      $selected = "vide";
+                    }
+                    print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=150px height=120px>';
+                    ?>
+                  </div>
+                  <div id="repTemplateD">
+                    <?php
+                      echo '<p><b>Thème : </b>'.$_GET['theme'].'</p>';
+                      echo '<p><b>Nombre de pages : </b>'.$_GET['nbpages'].'</p>';
+                    ?>
+                  </div>
 
-                <div>
+                </div>
+                <div id="boutonsContainer">
                   <b>
                     <a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Voir les détails</a>
                     <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
