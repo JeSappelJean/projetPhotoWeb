@@ -10,7 +10,7 @@
     } else {
       $public = false;
     }
-
+    var_dump($_POST['nbpages']);
     $BDD->createTemplateVide(($num),$_SESSION['login'],$_POST['theme'],$_POST['nbpages'],$public,false);
     $template = $BDD->getInfoTemplate($num);
 
