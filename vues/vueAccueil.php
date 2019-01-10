@@ -18,7 +18,6 @@
     <body>
       <!--Affichage du bandeau du site-->
       <?php
-        /*echo "<p>" ,$currentLogin, " est actuellement connecté </p>";*/
         include_once('../vues/vueBandeauSite.php') 
       ?>
 

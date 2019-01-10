@@ -24,18 +24,20 @@
 
                 <div>
                 <fieldset>
-                    <form action="traitementNouveauTemplate.ctrl.php" method="post">
-                        <p>num:</p>
-                        <input type="text" name="num" required="required">
-                        <p>theme:</p>
-                        <input type="text" name="theme" required="required">
-                        <p>nbpages:</p>
-                        <input type="text" name="nbpages" required="required">
+                    <form action="../controleur/traitementNouveauTemplate.ctrl.php" method="post">
+
+                        <p>Theme :</p>
+                        <input id="choixTheme"  type="text" name="theme" value="Default" required="required" readonly style="border: none">
+                        <p>Nombre de pages :</p>
+                        <input type="number" name="nbpages" required>
+                        <p>Partager le template à la communauté : </p>
+                        <input type="checkbox" name="public" value="public">
+
+                        <br>
                         <input type="submit" value="valider">
                     </form>
                 </fieldset>
                 </div>
-                <?php echo $GLOBALS['resultatCréation']; ?>
 
 
 
@@ -44,22 +46,62 @@
             <div id="column_right">
               <p> <b>Choisissez le thème de votre Livre : </b></p>
               <p>
-                <b>
-                  <a id="boutonSaisonsH" href="#">Hiver</a>
-                  <a id="boutonSaisonsA" href="#">Automne</a>
-                  <a id="boutonSaisonsP" href="#">Printemps</a>
-                  <a id="boutonSaisonsE" href="#">Eté</a>
+                <b id = "theme">
+                  <input style="margin-left:22px;" id="boutonSaisonsH" type="button" value="Hiver" name = "Hiver"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsA" type="button" value="Automne"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsP" type="button" value="Printemps"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsE" type="button" value="Ete"/>
                 </b>
               </p>
 
             </div>
         </div>
-        <nav>
-          <a href="../controleur/afficherVueFinalisation.ctrl.php" title="Final"><input type="button" value="Finaliser"></a>
-        </nav>
+
       </footer>
 
+      <script>
+        <?php
+        if(!isset($_SESSION['login'])){
+          echo "alert(\"Pour créer un template vous devez d'abord vous connecter !\");";
+          echo "window.location = '../controleur/controleurAccueil.php';";
+        }
+         ?>
+        function creerTemplate(theme){
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET','../vues/vueCreationTemplate');
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
+          xhr.addEventListener('readystatechange',function(){
+            //Vérification que l'événement est terminé (DONE) et que la requète à été résalisé avec succès (statut 200)
+            //Affichage du theme
+              if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+                document.getElementById('choixTheme').value = theme ;
+              }
+          });
+
+          xhr.send(null);
+        }
+
+        //Attend un clic sur un bouton thème et envoie le theme à la requète XML
+        function selectTheme(){
+          var tableTheme = document.getElementById('theme');
+          var theme = tableTheme.getElementsByTagName("input");
+          var nbTheme = theme.length;
+
+          for(var i = 0; i < nbTheme; i++) {
+              theme[i].addEventListener('click',eventClick,false);
+          }
+        }
+
+        function eventClick(th){
+          creerTemplate(th.target.value);
+        }
+        //Excécuter selectTheme quand le page est complètement chargée
+        window.addEventListener('load',selectTheme);
+
+
+
+      </script>
     </body>
 
 </html>
