@@ -4,7 +4,7 @@
     include_once('../model/DAO.class.php');
     $BDD = new DAO();
 
-
+    
     $num1 = $BDD->getNbTemplate() + 1;
     if(isset($_POST['public'])){
       $public = ($_POST['public']=='public');
@@ -18,8 +18,6 @@
 
     $num2 = $BDD->getNbLivre() + 1;
     $BDD->createLivreVide(($num2),$_SESSION['login'],($num1));
-    $livre = $BDD->getInfoLivre($num2);
-    $GLOBALS['resultatCréationLivre']='Livre créé avec succes';
 
 
     include('../vues/vueFinalisation.php');

@@ -61,7 +61,7 @@
                 <b>
                   <?php
                     if(isset($_GET['theme'])) {
-                      echo '<a id="useButtonModel" href="../controleur/afficherVueCreationLivre.ctrl.php?id='.$_GET['id'].'">Utiliser ce modèle</a>';
+                      echo '<a id="useButtonModel" href="../controleur/traitementLivreAvecTemplate.ctrl.php?id='.$_GET['id'].'">Utiliser ce modèle</a>';
                     }
 
                   ?>
