@@ -34,12 +34,12 @@
                 <!-- barre de recherche -->
 
                 <?php
-                if(isset($_GET['theme'])) {
-                  $selected = $_GET['theme'] ;
-                } else {
-                  $selected = 'liste';
-                }
-                $selectedValue = 'selected="selected"';
+                  if(isset($_GET['theme'])) {
+                    $selected = $_GET['theme'] ;
+                  } else {
+                    $selected = 'liste';
+                  }
+                  $selectedValue = 'selected="selected"';
                 ?>
 
                 <form method="get">
@@ -50,14 +50,6 @@
                     <option value="automne"<?php if ($selected == "automne") echo $selectedValue ?>>Automne</option>
                     <option value="hiver"<?php if ($selected == "hiver") echo $selectedValue ?>>Hiver</option>
                     <option value="printemps"<?php if ($selected == "printemps") echo $selectedValue ?>>Printemps</option>
-
-                    <?php
-                      if(isset($_POST['theme'])) {
-                        $theme = ($_POST['theme']);
-                      } else {
-                        $theme = "ete";
-                      }
-                     ?>
 
                      <a href="../controleur/afficherVueModeleCommunautaire.ctrl.php" title="Search"><input type="submit" value="Rechercher"></a>
                   </select>
@@ -84,7 +76,7 @@
                         $nbpagesUse = $_GET['nbpages'];
                         echo '<p><b>Thème : </b>'.$_GET['theme'].'</p>';
                         echo '<p><b>Nombre de pages : </b>'.$_GET['nbpages'].'</p>';
-                      } 
+                      }
                     ?>
                   </div>
 
