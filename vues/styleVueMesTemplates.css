@@ -194,22 +194,31 @@ header>nav>ul>li>ul>li>a:hover {
 #column_right{
   width:50%;
   display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
 }
 
-#column_right>div{
-  border: 3px solid #2C2827;
-  height: 75px;
-  width: 125px;
+#template {
+  margin: 5px;
+  width: 150px;
+  height: 180px;
   text-align: center;
-  margin: 15px;
+  border: 2px solid black;
   border-radius: 4px;
+  box-shadow: 5px 5px 12px #555;
 }
 
-#column_right>div>div:hover {
+#template:hover {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
 }
+
+ #template p {
+   margin-top: 0px;
+ }
+
+
 
 #boutonEdit{
   display:block;

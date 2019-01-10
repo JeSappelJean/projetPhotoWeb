@@ -91,6 +91,12 @@
       return $result;
     }
 
+    function getTemplateLogin($login): array {
+      $req="SELECT * FROM template WHERE login = '$login';";
+      $sth=$this->db->query($req);
+      $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
+      return $result;
+    }
 
     /*Fonction non testée
     function getAllTemplate(): array {
