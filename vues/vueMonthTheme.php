@@ -69,8 +69,9 @@
                     </div>
 
                     <div id="column_down">
-                      <p style="font-size:150%;"><b>Aperçu : </b></p>
+                      <p id ="apercu" style="font-size:150%;"><b>Aperçu : </b></p>
                       <div id="repTemplate">
+                        <div id="repTemplateG">
                         <?php
                         if(isset($_GET['id'])) {
                           $templatenum = $dao->getTemplate($_GET['id']);
@@ -78,7 +79,22 @@
                         } else {
                           $selected = "vide";
                         }
-                        print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=100px height=100px>';
+                        print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=200px height=200px>';
+                        ?>
+                        </div>
+                        <div id="repTemplateD">
+                          <?php
+                            if(isset($_GET['id'])){
+                              $themeUse = $templatenum[0]->theme;
+                              $nbpagesUse = $templatenum[0]->nbpages;
+                              $auteur = $templatenum[0]->login;
+                              echo '<p><b>Thème : </b>'.$themeUse.'</p>';
+                              echo '<p><b>Nombre de pages : </b>'.$nbpagesUse.'</p>';
+                              echo '<p><b>Auteur : </b>'.$auteur.'</p>';
+                            }
+                          ?>
+                        </div>
+                        <?php
                         if (isset($_GET['id'])) {
                           $nbLike = (integer)$dao->getNbLike($_GET['id']);
                           echo "<input id=\"likeBtn\" type=\"image\" src=\"../data/imagesSite/like.png\" >";
