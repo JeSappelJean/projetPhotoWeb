@@ -36,6 +36,7 @@
                           $selectedTemplate = $templatenum[0]->theme;
                           $selectedNbpages = $templatenum[0]->nbpages;
                           echo '<p>Theme :</p>';
+                          echo '<input type="hidden" name="num" value="',$_GET['id'],'">';
                           echo '<input id="choixTheme"  type="text" name="theme" value="'.$selectedTemplate.'" required="required" readonly style="border: none">';
                           echo '<p>Nombre de pages :</p>';
                           echo '<input id="choixTheme"  type="text" name="theme" value="'.$selectedNbpages.'" required="required" readonly style="border: none">';
