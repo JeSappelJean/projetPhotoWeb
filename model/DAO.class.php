@@ -57,6 +57,13 @@
         return $result;
     }
 
+    function getNbTemplate() {
+      $sql = "SELECT COUNT(*) as nbr FROM TEMPLATE";
+      $query = $this->db->query($sql);
+      $res = $query->fetch();
+      return $res[0];
+    }
+
     function createTemplateVide($num, $login, $theme, $nbpages, $public, $concours){
         $query=$this->db->prepare('INSERT INTO TEMPLATE (num, login, theme, nbpages, public, concours) VALUES (:num, :login, :theme, :nbpages, :public, :concours)');
         $query->bindValue(':num', $num, PDO::PARAM_INT);
