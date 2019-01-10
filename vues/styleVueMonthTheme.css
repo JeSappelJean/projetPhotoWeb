@@ -114,6 +114,8 @@
    margin-top: 0px;
  }
 
+ 
+
  #boutonEdit{
    display:block;
    width:150px;
@@ -159,12 +161,3 @@
    width: 100px;
    border: 1px dashed black;
  }
-
-<<<<<<< HEAD
- 
-=======
- #likeBtn {
-   height: 20px;
-   width: 20px;
- }
->>>>>>> f62fb06f230dceaf447a9597b17397b52acab7f8

@@ -40,9 +40,6 @@
                     }
                     if(isset($_GET['id'])) {
                       $templatenum = $dao->getTemplate($_GET['id']);
-                      $selected = $templatenum[0]->theme;
-                    } else {
-                      $selected = "vide";
                     }
                   ?>
                 </div>
@@ -62,7 +59,12 @@
               ?>
               <p>
                 <b>
-                  <a id="useButtonModel" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce modèle</a>
+                  <?php
+                    if(isset($_GET['theme'])) {
+                      echo '<a id="useButtonModel" href="../controleur/afficherVueCreationLivre.ctrl.php?id='.$_GET['id'].'">Utiliser ce modèle</a>';
+                    }
+
+                  ?>
                 </b>
               </p>
             </div>
