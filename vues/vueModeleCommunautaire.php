@@ -75,8 +75,10 @@
                       if(isset($_GET['id'])){
                         $themeUse = $templatenum[0]->theme;
                         $nbpagesUse = $templatenum[0]->nbpages;
+                        $auteur = $templatenum[0]->login;
                         echo '<p><b>Thème : </b>'.$themeUse.'</p>';
                         echo '<p><b>Nombre de pages : </b>'.$nbpagesUse.'</p>';
+                        echo '<p><b>Auteur : </b>'.$auteur.'</p>';
                       }
                     ?>
                   </div>
