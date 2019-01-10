@@ -68,10 +68,10 @@
               <ul class="sousMenu">
                 <li><a href="../controleur/afficherVueCreationTemplate.ctrl.php" class="menuLivres" title="Template">Créer un template</a></li>
                 <li><a href="../controleur/afficherVueMesTemplates.ctrl.php" class="menuLivres" title="Livre photo">Mes Templates</a></li>
-                <li><a href="../controleur/afficherVueModeleCommunautaire.ctrl.php" class="menuLivres" title="Livre photo">Templates de la communauté</a></li>
-                <li><a href="../controleur/afficherVueMonthTheme.ctrl.php" class="menuLivres" title="Livre photo">Thème du mois (Concours)</a></li>
               </ul>
             </li>
+
+            <li><a href="../controleur/afficherVueMonthTheme.ctrl.php" title="Cadeaux Noël">Concours</a></li>
 
           </ul>
       </nav>
