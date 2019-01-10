@@ -73,6 +73,8 @@
               </ul>
             </li>
 
+            <li><a href="../controleur/afficherVueMonthTheme.ctrl.php" title="Cadeaux Noël">Concours</a></li>
+
           </ul>
       </nav>
 

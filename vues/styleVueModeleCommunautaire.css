@@ -159,8 +159,8 @@
 
  #repTemplateG{
    margin-left: 25%;
-   width: 150px;
-   height: 120px;
+   height: 200px;
+   width: 200px
    text-align: center;
    border: 2px solid black;
    border-radius: 4px;
@@ -169,8 +169,8 @@
  }
 
  #repTemplateD{
-   width: 170px;
-   height: 120px;
+   width: 200px;
+   height: 200px;
  }
 
  #repTemplate {

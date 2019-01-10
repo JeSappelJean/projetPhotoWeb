@@ -67,7 +67,7 @@
                       } else {
                         $selected = "vide";
                       }
-                      print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=150px height=120px>';
+                      print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=200px height=200px>';
                     ?>
                   </div>
                   <div id="repTemplateD">
