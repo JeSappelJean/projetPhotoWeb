@@ -32,7 +32,7 @@
             <div id="column_left">
 
               <div id="column_up">
-
+                
               </div>
 
               <div id="column_down">
