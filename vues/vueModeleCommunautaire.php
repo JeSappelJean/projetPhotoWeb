@@ -83,15 +83,16 @@
                         echo '<p><b>Auteur : </b>'.$auteur.'</p>';
                       }
                     ?>
+                    </div>
+                      <b>
+                        <?php
+                          if (isset($_GET['id'])){
+                            echo '<a id="boutonUse" href="../controleur/traitementLivreAvecTemplate.ctrl.php?id='.$_GET['id'].'">Utiliser ce modèle</a>';
+                          }
+                        ?>
+                      </b>
                   </div>
-                </div>
-                <div id="boutonsContainer">
-                  <b>
-                    <!--<a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Editer</a>-->
-                    <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
-                  </b>
-                </div>
-              </div>
+                  </div>
             </div>
 
             <div id="column_right">
