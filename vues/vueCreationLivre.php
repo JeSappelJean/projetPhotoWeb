@@ -27,10 +27,11 @@
 
                 <div>
                 <fieldset>
-                    <form action="../controleur/traitementNouveauLivre.ctrl.php" method="post">
+
 
                       <?php
                         if(isset($_GET['id']) ) {
+                          echo '<form action="../controleur/traitementNouveauLivreAvecTemplate.ctrl.php" method="post">';
                           $templatenum = $dao->getTemplate($_GET['id']);
                           $selectedTemplate = $templatenum[0]->theme;
                           $selectedNbpages = $templatenum[0]->nbpages;
@@ -44,13 +45,13 @@
                           echo '</fieldset>';
                           echo '</div>';
                         } else {
-
-                        echo '<p>Theme :</p>';
-                        echo '<input id="choixTheme"  type="text" name="theme" value="Default" required="required" readonly style="border: none">';
-                        echo '<p>Nombre de pages :</p>';
-                        echo '<input type="number" name="nbpages" required>';
-                        echo '<p>Partager le template à la communauté : </p>';
-                        echo '<input type="checkbox" name="public" value="public">';
+                          echo '<form action="../controleur/traitementNouveauLivre.ctrl.php" method="post">';
+                          echo '<p>Theme :</p>';
+                          echo '<input id="choixTheme"  type="text" name="theme" value="Default" required="required" readonly style="border: none">';
+                          echo '<p>Nombre de pages :</p>';
+                          echo '<input type="number" name="nbpages" required>';
+                          echo '<p>Partager le template à la communauté : </p>';
+                          echo '<input type="checkbox" name="public" value="public">';
 
                         echo '<br>';
                         echo '<input type="submit" value="valider">';
