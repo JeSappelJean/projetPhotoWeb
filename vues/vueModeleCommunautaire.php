@@ -58,6 +58,7 @@
 
               <div id="column_down">
                 <h2>Aperçu: </h2>
+<<<<<<< HEAD
                 <div id="repTemplate">
                   <div id="repTemplateG">
                     <?php
@@ -79,6 +80,22 @@
                       }
                     ?>
                   </div>
+=======
+                <div id="repTemplateG">
+                  <?php
+                  if(isset($_GET['id'])) {
+                    $templatenum = $dao->getTemplate($_GET['id']);
+                    $selected = $templatenum[0]->theme;
+                  } else {
+                    $selected = "vide";
+                  }
+                  print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=150px height=120px>';
+                  ?>
+                </div>
+                <div id="repTemplateD">
+
+                </div>
+>>>>>>> a654aafebede0b38eb8bf35360e33493d815dc91
 
                 </div>
                 <div id="boutonsContainer">
@@ -109,7 +126,7 @@
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
                 foreach ($liste as $v) {
                   print '<div id="template">';
-                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->theme.'&nbpages='.$v->nbpages.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
+                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->num.'&nbpages='.$v->nbpages.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
                   print'<p><b>'.$v->theme.'</b></p>';
                   print'</div>';
                 }
