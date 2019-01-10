@@ -90,20 +90,9 @@
                      ?>
                   </div>
               </div>
+
             </div>
 
-            <div id="column_right">
-              <?php
-              $templates_concours = $dao->getTemplatesConcours();
-
-              foreach ($templates_concours as $value) {
-                      print '<div id="template">';
-                      print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
-                      print'<p>'.$value->theme.'</p>';
-                      print'</div>';
-                  }
-               ?>
-            </div>
         </div>
 
 <div id="resultat"></div>
@@ -179,3 +168,58 @@ $(document).ready(function(){
 });
 //}
 </script>
+
+
+      <div id="resultat"></div>
+
+
+
+                    <footer>
+
+            </footer>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+          </body>
+
+      </html>
+      <script>
+        //document.getElementById ("likeBtn").addEventListener ("click", like, false);
+      //  function like() {
+      function $_GET(param) {
+      	var vars = {};
+      	window.location.href.replace( location.hash, '' ).replace(
+      		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+      		function( m, key, value ) { // callback
+      			vars[key] = value !== undefined ? value : '';
+      		}
+      	);
+      	if ( param ) {
+      		return vars[param] ? vars[param] : null;
+      	}
+      	return vars;
+      }
+      $(document).ready(function(){
+      $("#likeBtn").click(function(e){
+      //e.preventDefault();
+      $.post(
+      '../controleur/controleurLike.php', // Un script PHP que l'on va créer juste après
+      {
+          id : $_GET('id')
+      },
+      function(data){
+          if(data == 'Like'){
+               // Le membre est connecté. Ajoutons lui un message dans la page HTML.
+               alert(data);
+               document.getElementById("nbLike").value++;
+          }
+          else{
+               // Le membre n'a pas été connecté. (data vaut ici "failed")
+               alert(data);
+               document.getElementById("nbLike").value--;
+          }
+      },
+      'text'
+      );
+      });
+      });
+      //}
+      </script>
