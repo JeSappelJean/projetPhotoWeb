@@ -26,10 +26,25 @@
             <div id="column_right">
               <p>
                 <b>
-                  <h3>Votre Template Final :</h3>
-                  <p> <b>Thème : <?php echo $template[0]->theme ?></b></p>
-                  <p> <b>Créé par : <?php echo $template[0]->login ?> </b></p>
-                  <p> <b>Nombres de pages : <?php echo $template[0]->nbpages ?> </b></p>
+                  <?php
+                    if (isset($template)) {
+                      echo'<h3>Votre Template Final :</h3>';
+                      echo'<p> <b>Thème : '.$template[0]->theme.'</b></p>.';
+                      echo'<p> <b>Créé par : '.$template[0]->login.'</b></p>';
+                      echo'<p> <b>Nombres de pages : '.$template[0]->nbpages .'</b></p>';
+                    }
+                  ?>
+                </b>
+              </p>
+              <p>
+                <b>
+                  <?php
+                    if (!isset($template)) {
+                      echo'<h3>Votre Template Final :</h3>';
+                      echo'<p> <b>Thème : '.$livre[0]->theme.'</b></p>.';
+                      echo'<p> <b>Créé par : '.$livre[0]->login.'</b></p>';
+                    }
+                  ?>
                 </b>
               </p>
 

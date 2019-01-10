@@ -16,9 +16,9 @@
     $GLOBALS['resultatCréation']='Template créé avec succes';
 
 
-    $num2 = $BDD->getNbLivre() + 1;
+    
     $BDD->createLivreVide(($num2),$_SESSION['login'],($num1));
-
+    $template = $BDD->getInfoTemplate()
 
     include('../vues/vueFinalisation.php');
 ?>
