@@ -43,9 +43,7 @@
                 ?>
 
                 <form method="get">
-                  Recherche:
-                  <input type="text" name="recherche" value="hiver.."><br>
-                  Thème:
+                  <h2>Thème:</h2>
                   <select name="theme" type="text" size="1">
                     <option disabled value='lsite' <?php if ($selected == "liste") echo $selectedValue ?>>Liste des thèmes</option>
                     <option value="ete" <?php if ($selected == "ete") echo $selectedValue ?>>ete</option>
@@ -65,7 +63,6 @@
                      <a href="../controleur/afficherVueModeleCommunautaire.ctrl.php" title="Search"><input type="submit" value="Rechercher"></a>
                   </select>
                 </form>
-                <!--Vue Rechercher a faire-->
               </div>
 
               <div id="column_down">
@@ -110,7 +107,7 @@
                 foreach ($liste as $v) {
                   print '<div id="template">';
                   print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?recherche=hiver..&theme='.$theme.'&id='.$v->theme.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
-                  print'<p>'.$v->theme.'</p>';
+                  print'<p><b>'.$v->theme.'</b></p>';
                   print'</div>';
                 }
               }
