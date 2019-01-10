@@ -64,10 +64,12 @@
                       if(isset($_GET['id']) && isset($_GET['nump'])) {
                         $templatenum = $dao->getTemplate($_GET['id']);
                         $selected = $templatenum[0]->theme;
+                        $nump = $_GET['nump'];
                       } else {
                         $selected = "vide";
+                        $nump = "";
                       }
-                      print '<img src="../data/imagesSite/im'.$selected.''.$_GET['nump'].'.jpg" alt="template actuel" width=200px height=200px>';
+                      print '<img src="../data/imagesSite/im'.$selected.''.$nump.'.jpg" alt="template actuel" width=200px height=200px>';
                     ?>
                   </div>
                   <div id="repTemplateD">
