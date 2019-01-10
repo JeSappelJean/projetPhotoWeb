@@ -70,7 +70,7 @@
           echo "window.location = '../controleur/controleurAccueil.php';";
         }
          ?>
-        function creerTemplate(theme){
+        function valueTheme(theme){
           var xhr = new XMLHttpRequest();
           xhr.open('GET','../vues/vueCreationTemplate');
           xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -98,17 +98,8 @@
         }
 
         function eventClick(th){
-          <?php
-          if(isset($_GET['id'])) {
-            $id = $_GET['id'];
-          } else {
-            $id = NULL;
-          }
-          if ($id != NULL){
-            echo "supprimerTemplate(th.target.value)";
-          }
-            echo "creerTemplate(th.target.value)";
-          ?>
+          valueTheme(th.target.value);
+
         }
         //Excécuter selectTheme quand le page est complètement chargée
         window.addEventListener('load',selectTheme);

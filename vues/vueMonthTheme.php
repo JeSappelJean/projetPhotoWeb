@@ -47,8 +47,9 @@
                   }
                   print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=100px height=100px>';
                   if (isset($_GET['id'])) {
-                    echo "<input id=\"likeBtn\" type=\"image\" src=\"../data/imagesSite/like.png\" onclick=\"like()\">";
-                    echo "<input id=\"nbLike\" type=\"text\" name=\"nbLike\" value=\"0\" readonly >";
+                    $nbLike = (integer)$dao->getNbLike($_GET['id']);
+                    echo "<input id=\"likeBtn\" type=\"image\" src=\"../data/imagesSite/like.png\" >";
+                    echo "<input id=\"nbLike\" type=\"text\" name=\"nbLike\" value=\"",$nbLike, "\" readonly >";
                   }
 
                   ?>
@@ -77,22 +78,58 @@
             </div>
         </div>
 
-        <script type="text/javascript">
-          function like() {
-            <?php
-            if(isset($_POST['login'])){
-
-            } ?>
-            document.getElementById("nbLike").value++;
-          }
-
-        </script>
+<div id="resultat"></div>
 
 
 
               <footer>
 
       </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     </body>
 
 </html>
+<script>
+  //document.getElementById ("likeBtn").addEventListener ("click", like, false);
+
+//  function like() {
+function $_GET(param) {
+	var vars = {};
+	window.location.href.replace( location.hash, '' ).replace(
+		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+		function( m, key, value ) { // callback
+			vars[key] = value !== undefined ? value : '';
+		}
+	);
+
+	if ( param ) {
+		return vars[param] ? vars[param] : null;
+	}
+	return vars;
+}
+$(document).ready(function(){
+$("#likeBtn").click(function(e){
+//e.preventDefault();
+$.post(
+'../controleur/controleurLike.php', // Un script PHP que l'on va créer juste après
+{
+    id : $_GET('id')
+},
+function(data){
+    if(data == 'Like'){
+         // Le membre est connecté. Ajoutons lui un message dans la page HTML.
+         alert(data);
+         document.getElementById("nbLike").value++;
+    }
+    else{
+         // Le membre n'a pas été connecté. (data vaut ici "failed")
+         alert(data);
+         document.getElementById("nbLike").value--;
+    }
+},
+'text'
+);
+});
+});
+//}
+</script>

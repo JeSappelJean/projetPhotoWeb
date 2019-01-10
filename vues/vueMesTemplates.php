@@ -51,6 +51,7 @@
                     }
                     if ($id != NULL){
                       print '<a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php?id='.$id.'"><b>Editer ce Modèle</b></a>';
+                      print '<a id="boutonSupprimer" href="../controleur/supprimerTemplate.php?id='.$id.'"><b>Supprimer ce Modèle</b></a>';
                     }
                   ?>
 
