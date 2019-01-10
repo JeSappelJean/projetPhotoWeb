@@ -25,7 +25,10 @@
 
         <div id="container">
             <div id="column_left">
-              <h2> Nos Templates De la Saison : </h2></br>
+              <div id="titreNosTemplate">
+                <h2> Nos Templates De la Saison : </h2></br>
+              </div>
+              <div id="NosTemplate">
                   <?php
                     $liste = $dao->getTemplateSaison();
                     foreach ($liste as $v) {
@@ -43,7 +46,6 @@
                       print'<p><b>'.$v->theme.'</b></p>';
                       print'</div>';
                     }
-
                     if(isset($_GET['id'])) {
                       $templatenum = $dao->getTemplate($_GET['id']);
                       $selected = $templatenum[0]->theme;
@@ -51,10 +53,11 @@
                       $selected = "vide";
                     }
                   ?>
+                </div>
             </div>
 
             <div id="column_right">
-              <h3>Modèle du jour :</h3>
+              <h3>Modèle Selectionné :</h3>
               <?php
                 if(isset($_GET['id'])){
                   $themeUse = $templatenum[0]->theme;
