@@ -19,8 +19,6 @@
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
 
-
-      <footer>
         <div id="navigueBar">
             <a id="MesModeles"><b>Mes Modèles</b></a>
             <a id="ModeleComm"href="../controleur/afficherVueModeleCommunautaire.ctrl.php"><b>Modèles Communautaires</b></a>
@@ -62,8 +60,6 @@
             </div>
 
             <div id="column_right">
-              <div>
-                <div>
                   <?php
                   $templates = $dao->getTemplateLogin($_SESSION['login']);
 
@@ -74,12 +70,9 @@
                           print'</div>';
                       }
                    ?>
-                </div>
-
-              </div>
             </div>
         </div>
-
+      <footer>
       </footer>
       <script>
       <?php
