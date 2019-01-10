@@ -61,13 +61,13 @@
                 <div id="repTemplate">
                   <div id="repTemplateG">
                     <?php
-                      if(isset($_GET['id'])) {
+                      if(isset($_GET['id']) && isset($_GET['nump'])) {
                         $templatenum = $dao->getTemplate($_GET['id']);
                         $selected = $templatenum[0]->theme;
                       } else {
                         $selected = "vide";
                       }
-                      print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=200px height=200px>';
+                      print '<img src="../data/imagesSite/im'.$selected.''.$_GET['nump'].'.jpg" alt="template actuel" width=200px height=200px>';
                     ?>
                   </div>
                   <div id="repTemplateD">
@@ -109,9 +109,11 @@
 
 
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
+
                 foreach ($liste as $v) {
+                  $alea = rand(0,9);
                   print '<div id="template">';
-                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->num.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
+                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->num.'&nump='.$alea.'"><img src ="../data/imagesSite/im'.$v->theme.''.$alea.'.jpg" alt="$theme" width ="150" height="150"/></a>';
                   print'<p><b>'.$v->theme.'</b></p>';
                   print'</div>';
                 }
