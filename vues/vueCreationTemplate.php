@@ -54,7 +54,7 @@
                   <input id="boutonSaisonsH" type="button" value="Hiver" name = "Hiver"/>
                   <input id="boutonSaisonsA" type="button" value="Automne"/>
                   <input id="boutonSaisonsP" type="button" value="Printemps"/>
-                  <input id="boutonSaisonsE" type="button" value="Eté"/>
+                  <input id="boutonSaisonsE" type="button" value="Ete"/>
                 </b>
               </p>
 

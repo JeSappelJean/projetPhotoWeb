@@ -47,7 +47,7 @@
                   print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=100px height=100px>';
                   if (isset($_GET['id'])) {
                     echo "<input id=\"likeBtn\" type=\"image\" src=\"../data/imagesSite/like.png\" onclick=\"like()\">";
-                    echo "<input id=\"nbLike\" type=\"text\" name=\"nbLike\" value=\"0\" >";
+                    echo "<input id=\"nbLike\" type=\"text\" name=\"nbLike\" value=\"0\" readonly >";
                   }
 
                   ?>
