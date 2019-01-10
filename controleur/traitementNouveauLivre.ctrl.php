@@ -18,8 +18,6 @@
 
     $num2 = $BDD->getNbLivre() + 1;
     $BDD->createLivreVide(($num2),$_SESSION['login'],($num1));
-    $livre = $BDD->getInfoLivre($num2);
-    $GLOBALS['resultatCréationLivre']='Livre créé avec succes';
 
 
     include('../vues/vueFinalisation.php');
