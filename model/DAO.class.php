@@ -8,7 +8,7 @@
 .+ autres ( ce que vous rajouter)*/
 
   require_once('../model/template.class.php');
-
+  require_once('../model/livre.class.php');
   // Creation de l'unique objet DAO
   $dao = new DAO();
 
@@ -64,6 +64,13 @@
       return $res[0];
     }
 
+    function getNbLivre() {
+      $sql = "SELECT COUNT(*) as nbr FROM LIVRE";
+      $query = $this->db->query($sql);
+      $res = $query->fetch();
+      return $res[0];
+    }
+
     function createTemplateVide($num, $login, $theme, $nbpages, $public, $concours){
         $query=$this->db->prepare('INSERT INTO TEMPLATE (num, login, theme, nbpages, public, concours) VALUES (:num, :login, :theme, :nbpages, :public, :concours)');
         $query->bindValue(':num', $num, PDO::PARAM_INT);
@@ -76,6 +83,15 @@
         $query->CloseCursor();
     }
 
+    function createLivreVide($num, $login, $template){
+        $query=$this->db->prepare('INSERT INTO LIVRE (num, login, template) VALUES (:num, :login, :template)');
+        $query->bindValue(':num', $num, PDO::PARAM_INT);
+        $query->bindValue(':login', $login, PDO::PARAM_STR);
+        $query->bindValue(':template', $template, PDO::PARAM_INT);
+        $query->execute();
+        $query->CloseCursor();
+    }
+
 
     function getInfoTemplate($num) {
       $req="SELECT login,theme, nbpages from template where num = $num ";
@@ -83,6 +99,14 @@
       $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
       return $result;
     }
+
+    function getInfoLivre($num) {
+      $req="SELECT login,template from livre where num = $num ";
+      $sth=$this->db->query($req);
+      $result=$sth->fetchAll(PDO::FETCH_CLASS,'livre');
+      return $result;
+    }
+
     function getTemplatesConcours(): array {
             $req="SELECT * from template where concours = 1;";
             $sth=$this->db->query($req);

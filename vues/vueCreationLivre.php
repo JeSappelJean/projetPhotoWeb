@@ -24,7 +24,7 @@
 
                 <div>
                 <fieldset>
-                    <form action="../controleur/traitementNouveauTemplate.ctrl.php" method="post">
+                    <form action="../controleur/traitementNouveauLivre.ctrl.php" method="post">
 
                         <p>Theme :</p>
                         <input id="choixTheme"  type="text" name="theme" value="Default" required="required" readonly style="border: none">
@@ -60,6 +60,12 @@
       </footer>
 
       <script>
+        <?php
+          if(!isset($_SESSION['login'])){
+            echo "alert(\"Pour créer un livre vous devez d'abord vous connecter !\");";
+            echo "window.location = '../controleur/controleurAccueil.php';";
+          }
+         ?>
         function creerTemplate(theme){
           var xhr = new XMLHttpRequest();
           xhr.open('GET','../vues/vueCreationTemplate');
