@@ -57,7 +57,6 @@
 
                 <div>
                   <b>
-                    <a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Voir les détails</a>
                     <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
                   </b>
                 </div>
