@@ -153,7 +153,7 @@
       $query->execute();
     }
 
-    function getNbLike($num): int{
+    function getNbLike($num){
 
       $sql = "SELECT COUNT(*) AS nbr FROM LIKETEMP WHERE num = $num";
       $query = $this->db->query($sql);
