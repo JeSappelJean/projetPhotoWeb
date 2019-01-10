@@ -6,5 +6,6 @@
       if (isset($_SESSION['login'])){
         $currentLogin = $_SESSION['login'];
       }
+      $GLOBALS['id'] = $_GET['id'];
     include('../vues/vueCreationLivre.php');
  ?>
