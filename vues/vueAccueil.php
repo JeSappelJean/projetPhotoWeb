@@ -32,17 +32,9 @@
                   <?php
                     $liste = $dao->getTemplateSaison();
                     foreach ($liste as $v) {
-                      if ($v->theme == "ete") {
-                        $image = "../data/imagesSite/imEte.jpg" ;
-                      } else if ( $v->theme == "automne") {
-                        $image = "../data/imagesSite/imAutomne.jpg" ;
-                      } else if ( $v->theme == "printemps") {
-                        $image = "../data/imagesSite/imPrintemps.jpg" ;
-                      } else if ( $v->theme == "hiver") {
-                        $image = "../data/imagesSite/imHiver.jpg" ;
-                      }
+                    $alea = rand(0,9);
                       print '<div id="template">';
-                      print '<a href="../controleur/afficherAccueil.ctrl.php?theme='.$v->theme.'&id='.$v->num.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
+                      print '<a href="../controleur/afficherAccueil.ctrl.php?theme='.$v->theme.'&id='.$v->num.'"><img src ="../data/imagesSite/im'.$v->theme.''.$alea.'.jpg" alt="$theme" width ="150" height="150"/></a>';
                       print'<p><b>'.$v->theme.'</b></p>';
                       print'</div>';
                     }
