@@ -12,7 +12,6 @@ CREATE TABLE TEMPLATE (
    concours BOOLEAN NOT NULL,
    PRIMARY KEY (login,num),
    FOREIGN KEY (login) REFERENCES UTILISATEURS(login)
-
 );
 /*img_blob BLOB NOT NULL PRIMARY KEY*/
 
