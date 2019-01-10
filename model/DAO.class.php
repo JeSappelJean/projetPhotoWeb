@@ -104,7 +104,7 @@
       $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
       return $result;
     }
-    
+
     function addLike($login,$num){
       $query=$this->db->prepare('INSERT INTO LIKETEMP (login, num) VALUES (:login, :num)');
       $query->bindValue(':login', $login, PDO::PARAM_STR);
@@ -127,17 +127,21 @@
       return $res[0];
     }
 
-
-
-
-    /*Fonction non testée
-    function getAllTemplate(): array {
-        $req="Select * from template;";
-        $sth=$this->db->query($req);
-        $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
-        return $result;
-    }*/
-
+    function getTemplateSaison() {
+      $jourActuel=date("z")+1;
+      if ($jourActuel < 79) {
+        $req="SELECT * FROM template WHERE theme = 'hiver';";
+      } else if ( ($jourActuel >= 79) && ($jourActuel < 170) ) {
+        $req="SELECT * FROM template WHERE theme = 'printemps';";
+      } else if ( ($jourActuel >= 170) && ($jourActuel < 240) ) {
+        $req="SELECT * FROM template WHERE theme = 'ete';";
+      } else if ( ($jourActuel >= 240) && ($jourActuel < 365) ) {
+        $req="SELECT * FROM template WHERE theme = 'automne';";
+      }
+      $sth=$this->db->query($req);
+      $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
+      return $result;
+    }
 
 }
 ?>

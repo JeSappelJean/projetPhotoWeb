@@ -26,6 +26,7 @@ footer {
   border-radius: 5px;
   padding: 5px;
   background-color: #4DB8DC;
+  overflow-y: scroll;
 }
 
 #column_right{
@@ -38,6 +39,8 @@ footer {
   padding: 5px;
   text-align: left;
   background-color: orange;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #useButtonModel {
@@ -58,3 +61,26 @@ footer {
   float: right;
   background-color: grey;
 }
+
+/*Affichage template colonne de gauche*/
+
+#template {
+  margin: 5px;
+  width: 150px;
+  height: 180px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 5px 5px 12px #555;
+  background-color: white;
+}
+
+#template:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+
+ #template p {
+   margin-top: 0px;
+ }
