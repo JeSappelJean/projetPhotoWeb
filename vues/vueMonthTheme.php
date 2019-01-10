@@ -75,7 +75,7 @@
                   } else {
                     print '<img src="../data/imagesSite/imVide.jpg" alt="vide" width=100px height=100px>';
                   }
-                      echo'<p>Template le plus liké!</p>';
+                      echo'<p id="nblike">Template le plus liké avec un total de '.$nbLike.' like!<br></p>';
 
                     ?>
 
