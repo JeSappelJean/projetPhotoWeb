@@ -51,10 +51,10 @@
               <p> <b>Choisissez le thème de votre Template : </b></p>
               <p>
                 <b id = "theme">
-                  <input style="margin-left:22px;" id="boutonSaisonsH" type="button" value="Hiver" name = "Hiver"/>
-                  <input style="margin-left:22px;" id="boutonSaisonsA" type="button" value="Automne"/>
-                  <input style="margin-left:22px;" id="boutonSaisonsP" type="button" value="Printemps"/>
-                  <input style="margin-left:22px;" id="boutonSaisonsE" type="button" value="Ete"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsH" type="button" value="hiver" name = "Hiver"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsA" type="button" value="automne"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsP" type="button" value="printemps"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsE" type="button" value="ete"/>
                 </b>
               </p>
 
