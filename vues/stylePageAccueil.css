@@ -1,122 +1,5 @@
-/*Code CSS du Bandeau*/
-body {
-  margin: 0px;
-  padding: 0px;
-  font-family: Arial ;
-}
-
-header>article>a {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    background-color: #31333D;
-    font-style: normal;
-    font-family: sans-serif;
-    font-size: 90%;
-}
-
-header>section>p {
-  display: flex;
-  flex-wrap: nowrap;
-  font-style: normal;
-  font-family: sans-serif;
-  font-size: 75%;
-}
-
-header>section>p>a{
-  text-decoration: none;
-}
-
-#conteneur1{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
-span.bleu {
-    color: #029BDD;
-}
-
-span.souligne {
-    text-decoration: underline;
-}
-
-span.blanc {
-    color: #FFFFFF;
-}
-
-header>nav>ul {
-  margin-right: 35px;
-  padding: 35px;
-  display: flex;
-}
-
-header>nav>ul::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-header>nav>ul>li {
-  display: inline;
-  font-weight: bold;
-  color: black;
-  padding-right: 20px;
-  float: left;
-  position:relative;
-}
-
-header>nav>ul>li:hover {
-  display: inline;
-  font-weight: bold;
-  color: black;
-  padding-right: 20px;
-  float: left;
-  position:relative;
-  font-size: 102%;
-}
-
-header>nav>ul>li>a {
-  text-decoration: none;
-  color: #262626;
-  font-size: 150%;
-}
-
-ul.sousMenu {
-  display: none;
-}
-
-li:hover ul.sousMenu {
-  display: inline-block;
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  padding: 0px;
-  z-index: 100000;
-}
-
-ul.sousMenu li {
-  border-bottom: 1px solid #CCC;
-}
-
-ul.sousMenu li a {
-  padding-left: 15px;
-}
-
-header>nav>ul>li>ul>li {
-  list-style-type: none;
-}
-
-header>nav>ul>li>ul>li>a {
-  text-decoration: none;
-  color:black;
-}
-
-header>nav>ul>li>ul>li>a:hover {
-  color:white;
-  background-color: grey;
-}
-
+@import "styleVueBandeau.css";
+@import url("styleVueBandeau.css");
 
 /*CSS footer : Affichage modèle du Jour*/
 
@@ -143,6 +26,7 @@ footer {
   border-radius: 5px;
   padding: 5px;
   background-color: #4DB8DC;
+  overflow-y: scroll;
 }
 
 #column_right{
@@ -155,6 +39,8 @@ footer {
   padding: 5px;
   text-align: left;
   background-color: orange;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #useButtonModel {
@@ -175,3 +61,35 @@ footer {
   float: right;
   background-color: grey;
 }
+
+/*Affichage template colonne de gauche*/
+#titreNosTemplate {
+  width: auto;
+  text-align: center;
+}
+
+#NosTemplate {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#template {
+  margin: 5px;
+  width: 150px;
+  height: 180px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 5px 5px 12px #555;
+  background-color: white;
+}
+
+#template:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+
+ #template p {
+   margin-top: 0px;
+ }

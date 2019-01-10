@@ -51,10 +51,10 @@
               <p> <b>Choisissez le thème de votre Template : </b></p>
               <p>
                 <b id = "theme">
-                  <input id="boutonSaisonsH" type="button" value="Hiver" name = "Hiver"/>
-                  <input id="boutonSaisonsA" type="button" value="Automne"/>
-                  <input id="boutonSaisonsP" type="button" value="Printemps"/>
-                  <input id="boutonSaisonsE" type="button" value="Ete"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsH" type="button" value="hiver" name = "Hiver"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsA" type="button" value="automne"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsP" type="button" value="printemps"/>
+                  <input style="margin-left:22px;" id="boutonSaisonsE" type="button" value="ete"/>
                 </b>
               </p>
 
@@ -98,7 +98,17 @@
         }
 
         function eventClick(th){
-          creerTemplate(th.target.value);
+          <?php
+          if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+          } else {
+            $id = NULL;
+          }
+          if ($id != NULL){
+            echo "supprimerTemplate(th.target.value)";
+          }
+            echo "creerTemplate(th.target.value)";
+          ?>
         }
         //Excécuter selectTheme quand le page est complètement chargée
         window.addEventListener('load',selectTheme);

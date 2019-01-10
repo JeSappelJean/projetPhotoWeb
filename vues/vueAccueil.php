@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--On récupère les fonctions à utilisés-->
-<?php /*require_once('../vue/function.vue.php');*/?>
+<?php require_once('../model/DAO.class.php'); ?>
 
 <html>
 
@@ -18,25 +18,48 @@
     <body>
       <!--Affichage du bandeau du site-->
       <?php
-        /*echo "<p>" ,$currentLogin, " est actuellement connecté </p>";*/
-        include_once('../vues/vueBandeauSite.php') 
+        include_once('../vues/vueBandeauSite.php')
       ?>
 
       <footer>
 
         <div id="container">
             <div id="column_left">
-              <h2> Nos Templates Du Jour : </h2>
-                <div>
-
+              <div id="titreNosTemplate">
+                <h2> Nos Templates De la Saison : </h2></br>
+              </div>
+              <div id="NosTemplate">
+                  <?php
+                    $liste = $dao->getTemplateSaison();
+                    foreach ($liste as $v) {
+                    $alea = rand(0,9);
+                      print '<div id="template">';
+                      print '<a href="../controleur/afficherAccueil.ctrl.php?theme='.$v->theme.'&id='.$v->num.'"><img src ="../data/imagesSite/im'.$v->theme.''.$alea.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                      print'<p><b>'.$v->theme.'</b></p>';
+                      print'</div>';
+                    }
+                    if(isset($_GET['id'])) {
+                      $templatenum = $dao->getTemplate($_GET['id']);
+                      $selected = $templatenum[0]->theme;
+                    } else {
+                      $selected = "vide";
+                    }
+                  ?>
                 </div>
             </div>
 
             <div id="column_right">
-              <h3>Modèle du jour :</h3>
-              <p> <b>Thème : </b></p>
-              <p> <b>Créé par : </b></p>
-              <p> <b>Utilisations : </b></p>
+              <h3>Modèle Selectionné :</h3>
+              <?php
+                if(isset($_GET['id'])){
+                  $themeUse = $templatenum[0]->theme;
+                  $nbpagesUse = $templatenum[0]->nbpages;
+                  $auteur = $templatenum[0]->login;
+                  echo '<p><b>Thème : </b>'.$themeUse.'</p>';
+                  echo '<p><b>Nombre de pages : </b>'.$nbpagesUse.'</p>';
+                  echo '<p><b>Auteur : </b>'.$auteur.'</p>';
+                }
+              ?>
               <p>
                 <b>
                   <a id="useButtonModel" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce modèle</a>
