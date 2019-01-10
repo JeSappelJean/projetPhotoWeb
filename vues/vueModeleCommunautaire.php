@@ -58,33 +58,35 @@
 
               <div id="column_down">
                 <h2>Aperçu: </h2>
-                <div id="repTemplateG">
-                  <?php
-                    if(isset($_GET['id'])) {
-                      $templatenum = $dao->getTemplate($_GET['id']);
-                      $selected = $templatenum[0]->theme;
-                    } else {
-                      $selected = "vide";
-                    }
-                    print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=150px height=120px>';
-                  ?>
-                </div>
-                <div id="repTemplateD">
-                  <?php
-                    if(isset($_GET['id'])){
-                      echo '<p><b>Thème : </b>'.$templatenum->theme.'</p>';
-                      echo '<p><b>Nombre de pages : </b>'.$templatenum->nbpages.'</p>';
-                    }
-                  ?>
-                </div>
-
+                <div id="repTemplate">
+                  <div id="repTemplateG">
+                    <?php
+                      if(isset($_GET['id'])) {
+                        $templatenum = $dao->getTemplate($_GET['id']);
+                        $selected = $templatenum[0]->theme;
+                      } else {
+                        $selected = "vide";
+                      }
+                      print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=150px height=120px>';
+                    ?>
+                  </div>
+                  <div id="repTemplateD">
+                    <?php
+                      if(isset($_GET['id'])){
+                        $themeUse = $templatenum[0]->theme;
+                        $nbpagesUse = $templatenum[0]->nbpages;
+                        echo '<p><b>Thème : </b>'.$themeUse.'</p>';
+                        echo '<p><b>Nombre de pages : </b>'.$nbpagesUse.'</p>';
+                      }
+                    ?>
+                  </div>
                 </div>
                 <div id="boutonsContainer">
                   <b>
-                    <a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Voir les détails</a>
+                    <!--<a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Editer</a>-->
                     <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
                   </b>
-                
+                </div>
               </div>
             </div>
 
