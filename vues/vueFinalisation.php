@@ -29,7 +29,7 @@
                   <?php
                     if (isset($template)) {
                       echo'<h3>Votre Template Final :</h3>';
-                      echo'<p> <b>Thème : '.$template[0]->theme.'</b></p>.';
+                      echo'<p> <b>Thème : '.$template[0]->theme.'</b></p>';
                       echo'<p> <b>Créé par : '.$template[0]->login.'</b></p>';
                       echo'<p> <b>Nombres de pages : '.$template[0]->nbpages .'</b></p>';
                     }
