@@ -19,8 +19,6 @@
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
 
-
-      <footer>
         <div id="navigueBar">
             <a id="MesModeles"><b>Mes Modèles</b></a>
             <a id="ModeleComm"href="../controleur/afficherVueModeleCommunautaire.ctrl.php"><b>Modèles Communautaires</b></a>
@@ -45,15 +43,23 @@
 
               <div>
                 <b>
-                  <a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Editer ce Modèle</a>
+                  <?php
+                    if(isset($_GET['id'])) {
+                      $id = $_GET['id'];
+                    } else {
+                      $id = NULL;
+                    }
+                    if ($id != NULL){
+                      print '<a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php?id='.$id.'"><b>Editer ce Modèle</b></a>';
+                    } 
+                  ?>
+
                   <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
                 </b>
               </div>
             </div>
 
             <div id="column_right">
-              <div>
-                <div>
                   <?php
                   $templates = $dao->getTemplateLogin($_SESSION['login']);
 
@@ -64,12 +70,9 @@
                           print'</div>';
                       }
                    ?>
-                </div>
-
-              </div>
             </div>
         </div>
-
+      <footer>
       </footer>
       <script>
       <?php
