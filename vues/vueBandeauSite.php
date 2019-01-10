@@ -66,12 +66,12 @@
 
             <li><a href="#" class="" title="Template">Template</a>
               <ul class="sousMenu">
-                <li><a href="../controleur/afficherVueCreationTemplate.ctrl.php" class="menuLivres" title="Template">Créer un template</a></li>
-                <li><a href="../controleur/afficherVueMesTemplates.ctrl.php" class="menuLivres" title="Livre photo">Mes Templates</a></li>
+                <li><a href="../controleur/afficherVueCreationTemplate.ctrl.php" class="menuLivres" title="CréerTemplate">Créer un template</a></li>
+                <li><a href="../controleur/afficherVueMesTemplates.ctrl.php" class="menuLivres" title="MesTemplates">Mes Templates</a></li>
               </ul>
             </li>
 
-            <li><a href="../controleur/afficherVueMonthTheme.ctrl.php" title="Cadeaux Noël">Concours</a></li>
+            <li><a href="../controleur/afficherVueMonthTheme.ctrl.php" title="Concours">Concours</a></li>
 
           </ul>
       </nav>
