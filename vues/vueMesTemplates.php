@@ -67,7 +67,11 @@
                     $alea = rand(0,9);
                     foreach ($templates as $value) {
                             print '<div id="template">';
-                            print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.''.$alea.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                            if($value->theme == "Vide"){
+                              print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                            } else {
+                              print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.''.$alea.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                            }
                             print'<p><b>'.$value->theme.'</b></p>';
                             print'</div>';
                         }
