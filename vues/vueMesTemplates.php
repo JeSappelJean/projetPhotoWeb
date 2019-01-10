@@ -51,7 +51,7 @@
                     }
                     if ($id != NULL){
                       print '<a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php?id='.$id.'"><b>Editer ce Modèle</b></a>';
-                    } 
+                    }
                   ?>
 
                   <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
@@ -62,11 +62,11 @@
             <div id="column_right">
                   <?php
                   $templates = $dao->getTemplateLogin($_SESSION['login']);
-
+                  $alea = rand(0,9);
                   foreach ($templates as $value) {
                           print '<div id="template">';
-                          print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
-                          print'<p>'.$value->theme.'</p>';
+                          print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.''.$alea.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                          print'<p><b>'.$value->theme.'</b></p>';
                           print'</div>';
                       }
                    ?>

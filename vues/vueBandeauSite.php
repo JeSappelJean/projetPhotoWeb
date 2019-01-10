@@ -66,12 +66,24 @@
 
             <li><a href="#" class="" title="Template">Template</a>
               <ul class="sousMenu">
+<<<<<<< HEAD
+<<<<<<< HEAD
                 <li><a href="../controleur/afficherVueCreationTemplate.ctrl.php" class="menuLivres" title="Template">Créer un template</a></li>
                 <li><a href="../controleur/afficherVueMesTemplates.ctrl.php" class="menuLivres" title="Livre photo">Mes Templates</a></li>
                 <li><a href="../controleur/afficherVueModeleCommunautaire.ctrl.php" class="menuLivres" title="Livre photo">Templates de la communauté</a></li>
                 <li><a href="../controleur/afficherVueMonthTheme.ctrl.php" class="menuLivres" title="Livre photo">Thème du mois (Concours)</a></li>
+=======
+                <li><a href="../controleur/afficherVueCreationTemplate.ctrl.php" class="menuLivres" title="CréerTemplate">Créer un template</a></li>
+                <li><a href="../controleur/afficherVueMesTemplates.ctrl.php" class="menuLivres" title="MesTemplates">Mes Templates</a></li>
+>>>>>>> c02c56a499ff44fd3b95358c415e93b1d7bb58c3
+=======
+                <li><a href="../controleur/afficherVueCreationTemplate.ctrl.php" class="menuLivres" title="CréerTemplate">Créer un template</a></li>
+                <li><a href="../controleur/afficherVueMesTemplates.ctrl.php" class="menuLivres" title="MesTemplates">Mes Templates</a></li>
+>>>>>>> e5ea93f3c836d02084af99c9d367dd935d97ea1c
               </ul>
             </li>
+
+            <li><a href="../controleur/afficherVueMonthTheme.ctrl.php" title="Concours">Concours</a></li>
 
           </ul>
       </nav>
