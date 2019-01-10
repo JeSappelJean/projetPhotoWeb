@@ -113,6 +113,5 @@ header>nav>ul>li>ul>li>a {
 }
 
 header>nav>ul>li>ul>li>a:hover {
-  color:white;
-  background-color: grey;
+  color:grey;
 }
