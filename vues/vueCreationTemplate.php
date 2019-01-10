@@ -31,7 +31,7 @@
                     <form action="../controleur/traitementNouveauTemplate.ctrl.php" method="post">
 
                         <p>Theme :</p>
-                        <input id="choixTheme"  type="text" name="theme" value="Default" required="required" readonly style="border: none">
+                        <input id="choixTheme"  type="text" name="theme" value="Vide" required="required" readonly style="border: none">
                         <p>Nombre de pages :</p>
                         <input type="number" name="nbpages" required>
                         <p>Partager le template à la communauté : </p>
