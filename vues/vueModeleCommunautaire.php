@@ -34,12 +34,12 @@
                 <!-- barre de recherche -->
 
                 <?php
-                if(isset($_GET['theme'])) {
-                  $selected = $_GET['theme'] ;
-                } else {
-                  $selected = 'liste';
-                }
-                $selectedValue = 'selected="selected"';
+                  if(isset($_GET['theme'])) {
+                    $selected = $_GET['theme'] ;
+                  } else {
+                    $selected = 'liste';
+                  }
+                  $selectedValue = 'selected="selected"';
                 ?>
 
                 <form method="get">
@@ -51,14 +51,6 @@
                     <option value="hiver"<?php if ($selected == "hiver") echo $selectedValue ?>>Hiver</option>
                     <option value="printemps"<?php if ($selected == "printemps") echo $selectedValue ?>>Printemps</option>
 
-                    <?php
-                      if(isset($_POST['theme'])) {
-                        $theme = ($_POST['theme']);
-                      } else {
-                        $theme = "ete";
-                      }
-                     ?>
-
                      <a href="../controleur/afficherVueModeleCommunautaire.ctrl.php" title="Search"><input type="submit" value="Rechercher"></a>
                   </select>
                 </form>
@@ -68,17 +60,22 @@
                 <h2>Aperçu: </h2>
                 <div id="repTemplateG">
                   <?php
-                  if(isset($_GET['id'])) {
-                    $templatenum = $dao->getTemplate($_GET['id']);
-                    $selected = $templatenum[0]->theme;
-                  } else {
-                    $selected = "vide";
-                  }
-                  print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=150px height=120px>';
+                    if(isset($_GET['id'])) {
+                      $templatenum = $dao->getTemplate($_GET['id']);
+                      $selected = $templatenum[0]->theme;
+                    } else {
+                      $selected = "vide";
+                    }
+                    print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=150px height=120px>';
                   ?>
                 </div>
                 <div id="repTemplateD">
-
+                  <?php
+                    if(isset($_GET['id'])){
+                      echo '<p><b>Thème : </b>'.$templatenum->theme.'</p>';
+                      echo '<p><b>Nombre de pages : </b>'.$templatenum->nbpages.'</p>';
+                    }
+                  ?>
                 </div>
 
                 </div>
@@ -87,7 +84,7 @@
                     <a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Voir les détails</a>
                     <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
                   </b>
-                </div>
+                
               </div>
             </div>
 
@@ -110,7 +107,7 @@
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
                 foreach ($liste as $v) {
                   print '<div id="template">';
-                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->num.'&nbpages='.$v->nbpages.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
+                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->num.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
                   print'<p><b>'.$v->theme.'</b></p>';
                   print'</div>';
                 }
