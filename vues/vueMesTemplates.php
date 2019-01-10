@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!--On récupère les fonctions à utilisés-->
-<?php /*require_once('../vue/function.vue.php');*/?>
+<?php require_once('../model/DAO.class.php');?>
 
 <html>
 
@@ -32,7 +32,14 @@
             <div id="column_left">
               <p style="font-size:150%;"><b>Aperçu : </b></p>
               <div id="repTemplate">
-                <b>Votre Template (à venir)</b>
+                <?php
+                if(isset($_GET['id'])) {
+                  $selected = $_GET['id'] ;
+                } else {
+                  $selected = "vide";
+                }
+                print '<img src="../data/imagesSite/im'.$selected.'.jpg" alt="template actuel" width=250px height=250px>';
+                ?>
               </div>
 
               <div>
@@ -46,14 +53,33 @@
             <div id="column_right">
               <div>
                 <div>
-                  <p>Template correspondant thème</p><!--A remplacer php-->
+                  <?php
+                  $templates = $dao->getTemplateLogin($_SESSION['login']);
+
+                  foreach ($templates as $value) {
+                          print '<div id="template">';
+                          print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->theme.'"><img src ="../data/imagesSite/im'.$value->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                          print'<p>'.$value->theme.'</p>';
+                          print'</div>';
+                      }
+                   ?>
                 </div>
-                <p>Nom thème</p><!--A remplacer php-->
+
               </div>
             </div>
         </div>
 
       </footer>
+      <script>
+      <?php
+      if(!isset($_SESSION['login'])){
+        echo "alert(\"Pour créer un template vous devez d'abord vous connecter !\");";
+        echo "window.location = '../controleur/controleurAccueil.php';";
+      }
+       ?>
+      </script>
+      </script>
+
     </body>
 
 </html>
