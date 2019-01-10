@@ -62,14 +62,17 @@
 
             <div id="column_right">
                   <?php
-                  $templates = $dao->getTemplateLogin($_SESSION['login']);
-                  $alea = rand(0,9);
-                  foreach ($templates as $value) {
-                          print '<div id="template">';
-                          print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.''.$alea.'.jpg" alt="$theme" width ="150" height="150"/></a>';
-                          print'<p><b>'.$value->theme.'</b></p>';
-                          print'</div>';
-                      }
+                  if (isset($_SESSION['login'])){
+                    $templates = $dao->getTemplateLogin($_SESSION['login']);
+                    $alea = rand(0,9);
+                    foreach ($templates as $value) {
+                            print '<div id="template">';
+                            print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.''.$alea.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                            print'<p><b>'.$value->theme.'</b></p>';
+                            print'</div>';
+                        }
+                  }
+
                    ?>
             </div>
         </div>
@@ -78,7 +81,7 @@
       <script>
       <?php
       if(!isset($_SESSION['login'])){
-        echo "alert(\"Pour créer un template vous devez d'abord vous connecter !\");";
+        echo "alert(\"Pour consulter vos templates vous devez d'abord vous connecter !\");";
         echo "window.location = '../controleur/controleurAccueil.php';";
       }
        ?>
