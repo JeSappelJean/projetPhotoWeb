@@ -161,6 +161,13 @@
       return $res[0];
     }
 
+    function userLiked($login,$num):bool{
+      $sql = "SELECT COUNT(*) AS nbr FROM LIKETEMP WHERE login='$login' AND num = $num";
+      $sth = $this->db->query($sql);
+      $dispo = ($sth->fetchColumn()==0)?0:1;
+      return $dispo;
+    }
+
     function getTemplateSaison() {
       $jourActuel=date("z")+1;
       if ($jourActuel < 79) {
