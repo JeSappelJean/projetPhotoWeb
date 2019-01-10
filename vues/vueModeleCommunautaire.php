@@ -69,7 +69,8 @@
                 <div id="repTemplateG">
                   <?php
                   if(isset($_GET['id'])) {
-                    $selected = $_GET['id'] ;
+                    $templatenum = $dao->getTemplate($_GET['id']);
+                    $selected = $templatenum[0]->theme;
                   } else {
                     $selected = "vide";
                   }
@@ -77,7 +78,7 @@
                   ?>
                 </div>
                 <div id="repTemplateD">
-                  
+
                 </div>
 
                 <div>
@@ -108,7 +109,7 @@
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
                 foreach ($liste as $v) {
                   print '<div id="template">';
-                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->theme.'&nbpages='.$v->nbpages.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
+                  print '<a href="../controleur/afficherVueModeleCommunautaire.ctrl.php?theme='.$theme.'&id='.$v->num.'&nbpages='.$v->nbpages.'"><img src ="'.$image.'" alt="$theme" width ="150" height="150"/></a>';
                   print'<p><b>'.$v->theme.'</b></p>';
                   print'</div>';
                 }
