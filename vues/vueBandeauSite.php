@@ -53,7 +53,6 @@
               <a href="#" class="menuLivres" title="Livre photo">Livre photo</a>
               <ul class="sousMenu">
                 <li><a href="../controleur/afficherVueCreationLivre.ctrl.php" class="menuLivres" title="Livre photo">Créer un Livre</a></li>
-                <li><a href="#" class="menuLivres" title="Livre photo">Categorie 2</a></li>
               </ul>
             </li>
 
@@ -69,6 +68,8 @@
               <ul class="sousMenu">
                 <li><a href="../controleur/afficherVueCreationTemplate.ctrl.php" class="menuLivres" title="Template">Créer un template</a></li>
                 <li><a href="../controleur/afficherVueMesTemplates.ctrl.php" class="menuLivres" title="Livre photo">Mes Templates</a></li>
+                <li><a href="../controleur/afficherVueModeleCommunautaire.ctrl.php" class="menuLivres" title="Livre photo">Templates de la communauté</a></li>
+                <li><a href="../controleur/afficherVueMonthTheme.ctrl.php" class="menuLivres" title="Livre photo">Thème du mois (Concours)</a></li>
               </ul>
             </li>
 
