@@ -85,7 +85,7 @@
 
 
     function getTemplateWTheme($theme): array {
-      $req="SELECT * FROM template WHERE theme = '$theme';";
+      $req="SELECT * FROM template WHERE theme = '$theme' AND public = 1;";
       $sth=$this->db->query($req);
       $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
       return $result;
