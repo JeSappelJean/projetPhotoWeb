@@ -48,7 +48,7 @@
                         } else {
                           echo '<form action="../controleur/traitementNouveauLivre.ctrl.php" method="post">';
                           echo '<p>Theme :</p>';
-                          echo '<input id="choixTheme"  type="text" name="theme" value="Default" required="required" readonly style="border: none">';
+                          echo '<input id="choixTheme"  type="text" name="theme" value="Vide" required="required" readonly style="border: none">';
                           echo '<p>Nombre de pages :</p>';
                           echo '<input type="number" name="nbpages" required>';
                           echo '<p>Partager le template à la communauté : </p>';
