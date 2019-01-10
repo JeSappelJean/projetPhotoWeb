@@ -60,12 +60,6 @@
       </footer>
 
       <script>
-        <?php
-        if(!isset($_SESSION['login'])){
-          echo "alert(\"Pour créer un template vous devez d'abord vous connecter !\");";
-          echo "window.location = '../controleur/controleurAccueil.php';";
-        }
-         ?>
         function creerTemplate(theme){
           var xhr = new XMLHttpRequest();
           xhr.open('GET','../vues/vueCreationTemplate');
