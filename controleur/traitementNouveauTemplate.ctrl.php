@@ -10,8 +10,14 @@
     } else {
       $public = false;
     }
-    var_dump($_POST['nbpages']);
-    $BDD->createTemplateVide(($num),$_SESSION['login'],$_POST['theme'],$_POST['nbpages'],$public,false);
+
+    if(isset($_POST['concours'])){
+      $concours = ($_POST['concours']=='concours');
+    } else {
+      $concours = false;
+    }
+
+    $BDD->createTemplateVide(($num),$_SESSION['login'],$_POST['theme'],$_POST['nbpages'],$public,$concours);
     $template = $BDD->getInfoTemplate($num);
 
     $GLOBALS['resultatCréation']='Template créé avec succes';

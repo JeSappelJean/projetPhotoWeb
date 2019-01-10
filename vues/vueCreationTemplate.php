@@ -35,7 +35,9 @@
                         <p>Nombre de pages :</p>
                         <input type="number" name="nbpages" required>
                         <p>Partager le template à la communauté : </p>
-                        <input type="checkbox" name="public" value="public">
+                        <input id="public" type="checkbox" name="public" value="public">
+                        <p>Proposer son template pour le concours du mois : </p>
+                        <input id="concours" type="checkbox" name="concours" value="concours">
 
                         <br>
                         <input type="submit" value="valider">
@@ -63,49 +65,63 @@
 
       </footer>
 
-      <script>
-        <?php
-        if(!isset($_SESSION['login'])){
-          echo "alert(\"Pour créer un template vous devez d'abord vous connecter !\");";
-          echo "window.location = '../controleur/controleurAccueil.php';";
-        }
-         ?>
-        function valueTheme(theme){
-          var xhr = new XMLHttpRequest();
-          xhr.open('GET','../vues/vueCreationTemplate');
-          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-          xhr.addEventListener('readystatechange',function(){
-            //Vérification que l'événement est terminé (DONE) et que la requète à été résalisé avec succès (statut 200)
-            //Affichage du theme
-              if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
-                document.getElementById('choixTheme').value = theme ;
-              }
-          });
-
-          xhr.send(null);
-        }
-
-        //Attend un clic sur un bouton thème et envoie le theme à la requète XML
-        function selectTheme(){
-          var tableTheme = document.getElementById('theme');
-          var theme = tableTheme.getElementsByTagName("input");
-          var nbTheme = theme.length;
-
-          for(var i = 0; i < nbTheme; i++) {
-              theme[i].addEventListener('click',eventClick,false);
-          }
-        }
-
-        function eventClick(th){
-          valueTheme(th.target.value);
-        }
-        //Excécuter selectTheme quand le page est complètement chargée
-        window.addEventListener('load',selectTheme);
 
 
-
-      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     </body>
 
 </html>
+
+<script>
+  <?php
+  if(!isset($_SESSION['login'])){
+    echo "alert(\"Pour créer un template vous devez d'abord vous connecter !\");";
+    echo "window.location = '../controleur/controleurAccueil.php';";
+  }
+   ?>
+  function valueTheme(theme){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET','../vues/vueCreationTemplate');
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.addEventListener('readystatechange',function(){
+      //Vérification que l'événement est terminé (DONE) et que la requète à été résalisé avec succès (statut 200)
+      //Affichage du theme
+        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+          document.getElementById('choixTheme').value = theme ;
+        }
+    });
+
+    xhr.send(null);
+  }
+
+  //Attend un clic sur un bouton thème et envoie le theme à la requète XML
+  function selectTheme(){
+    var tableTheme = document.getElementById('theme');
+    var theme = tableTheme.getElementsByTagName("input");
+    var nbTheme = theme.length;
+
+    for(var i = 0; i < nbTheme; i++) {
+        theme[i].addEventListener('click',eventClick,false);
+    }
+  }
+
+  function eventClick(th){
+    valueTheme(th.target.value);
+  }
+  //Excécuter selectTheme quand le page est complètement chargée
+  window.addEventListener('load',selectTheme);
+
+  $(function() {
+    enable_cb();
+    $("#public").click(enable_cb);
+    });
+
+    function enable_cb() {
+      $("#concours").prop("disabled", !this.checked);
+      if(this.checked==false){
+        $("#concours").prop("checked", false);
+      }
+    }
+
+</script>
