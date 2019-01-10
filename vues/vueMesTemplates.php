@@ -43,7 +43,17 @@
 
               <div>
                 <b>
-                  <a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php">Editer ce Modèle</a>
+                  <?php
+                    if(isset($_GET['id'])) {
+                      $id = $_GET['id'];
+                    } else {
+                      $id = NULL;
+                    }
+                    if ($id != NULL){
+                      print '<a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php?id='.$id.'"><b>Editer ce Modèle</b></a>';
+                    } 
+                  ?>
+
                   <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
                 </b>
               </div>

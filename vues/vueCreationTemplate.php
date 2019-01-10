@@ -98,7 +98,17 @@
         }
 
         function eventClick(th){
-          creerTemplate(th.target.value);
+          <?php
+          if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+          } else {
+            $id = NULL;
+          }
+          if ($id != NULL){
+            echo "supprimerTemplate(th.target.value)";
+          }
+            echo "creerTemplate(th.target.value)";
+          ?>
         }
         //Excécuter selectTheme quand le page est complètement chargée
         window.addEventListener('load',selectTheme);
