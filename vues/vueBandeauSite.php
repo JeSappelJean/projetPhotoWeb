@@ -67,7 +67,7 @@
             <li><a href="#" class="" title="Template">Template</a>
               <ul class="sousMenu">
                 <li><a href="../controleur/afficherVueCreationTemplate.ctrl.php" class="menuLivres" title="CréerTemplate">Créer un template</a></li>
-                <li><a href="../controleur/afficherVueMesTemplates.ctrl.php" class="menuLivres" title="MesTemplates">Mes Templates</a></li>
+                <li><a href="../controleur/afficherVueMesTemplates.ctrl.php" class="menuLivres" title="MesTemplates">Templates</a></li>
               </ul>
             </li>
 
