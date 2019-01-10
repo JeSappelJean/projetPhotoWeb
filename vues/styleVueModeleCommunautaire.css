@@ -138,7 +138,7 @@
  }
 
  #boutonUse{
-   margin-top: 20px;
+   margin-right: 5px;
    display:block;
    width:150px;
    line-height:50px;
@@ -150,7 +150,6 @@
    border-radius: 15px;
    background-color: #DCD9DC;
    float: right;
-   margin-right: 5px;
  }
 
  #boutonUse:hover {

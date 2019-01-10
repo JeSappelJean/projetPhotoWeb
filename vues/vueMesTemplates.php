@@ -55,7 +55,11 @@
                     }
                   ?>
 
-                  <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
+                  <?php
+                    if (isset($_GET['id'])){
+                      echo '<a id="boutonUse" href="../controleur/traitementLivreAvecTemplate.ctrl.php?id='.$_GET['id'].'">Utiliser ce modèle</a>';
+                    }
+                  ?>
                 </b>
               </div>
             </div>
@@ -64,13 +68,12 @@
                   <?php
                   if (isset($_SESSION['login'])){
                     $templates = $dao->getTemplateLogin($_SESSION['login']);
-                    $alea = rand(0,9);
                     foreach ($templates as $value) {
                             print '<div id="template">';
                             if($value->theme == "Vide"){
                               print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
                             } else {
-                              print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.''.$alea.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                              print '<a href="../controleur/afficherVueMesTemplates.ctrl.php?id='.$value->num.'"><img src ="../data/imagesSite/im'.$value->theme.'0.jpg" alt="$theme" width ="150" height="150"/></a>';
                             }
                             print'<p><b>'.$value->theme.'</b></p>';
                             print'</div>';
