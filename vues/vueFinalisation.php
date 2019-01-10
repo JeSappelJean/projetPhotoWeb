@@ -21,6 +21,10 @@
         <div id="container">
             <div id="column_left">
               <b> Représentation Template : (Temporaire)</b>
+              <br>
+              <?php
+              echo '<img src ="../data/imagesSite/im'.$template[0]->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+              ?>
             </div>
 
             <div id="column_right">
