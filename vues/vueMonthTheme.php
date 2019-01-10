@@ -108,28 +108,46 @@ function $_GET(param) {
 	return vars;
 }
 $(document).ready(function(){
-$("#likeBtn").click(function(e){
+  $("#likeBtn").click(function(e){
 //e.preventDefault();
-$.post(
-'../controleur/controleurLike.php', // Un script PHP que l'on va créer juste après
-{
-    id : $_GET('id')
-},
-function(data){
-    if(data == 'Like'){
+    $.post(
+      '../controleur/controleurLike.php', // Un script PHP que l'on va créer juste après
+      {
+        id : $_GET('id')
+      },
+      function(data){
+        if(data == 'Like'){
          // Le membre est connecté. Ajoutons lui un message dans la page HTML.
-         alert(data);
+         //alert(data);
          document.getElementById("nbLike").value++;
-    }
-    else{
+         $("#resultat").html("<style> #likeBtn { filter: hue-rotate(180deg); -webkit-filter: hue-rotate(180deg); }</style>");
+       }
+       else{
          // Le membre n'a pas été connecté. (data vaut ici "failed")
-         alert(data);
+         //alert(data);
          document.getElementById("nbLike").value--;
-    }
-},
-'text'
-);
+         $("#resultat").empty();
+       }
+     },
+     'text'
+   );
+ });
 });
+
+$(document).ready(function(){
+      $.post(
+      '../controleur/userLiked.php', // Un script PHP que l'on va créer juste après
+      {
+        id : $_GET('id')
+      },
+      function(data){
+        if(data == 'alreadyLike'){
+         // Le membre est connecté. Ajoutons lui un message dans la page HTML.
+         $("#resultat").html("<style> #likeBtn { filter: hue-rotate(180deg); -webkit-filter: hue-rotate(180deg); }</style>");
+       }
+     },
+     'text'
+   );
 });
 //}
 </script>

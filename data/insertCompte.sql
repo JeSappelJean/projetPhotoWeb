@@ -1,1 +1,1 @@
-insert into compte values("admin", "admin");
+insert into UTILISATEURS values('admin', 'admin');
