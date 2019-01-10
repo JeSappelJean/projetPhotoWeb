@@ -25,8 +25,7 @@
 
         <div id="container">
             <div id="column_left">
-              <h2> Nos Templates De la Saison : </h2>
-                <div>
+              <h2> Nos Templates De la Saison : </h2></br>
                   <?php
                     $liste = $dao->getTemplateSaison();
                     foreach ($liste as $v) {
@@ -52,7 +51,6 @@
                       $selected = "vide";
                     }
                   ?>
-                </div>
             </div>
 
             <div id="column_right">

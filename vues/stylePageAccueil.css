@@ -27,6 +27,8 @@ footer {
   padding: 5px;
   background-color: #4DB8DC;
   overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #column_right{
