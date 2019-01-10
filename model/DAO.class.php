@@ -114,6 +114,13 @@
       return $ok;
     }
 
+    function delTemplate($num){
+      $sql = "DELETE FROM TEMPLATE WHERE num =  :num";
+      $query = $this->db->prepare($sql);
+      $query->bindValue(':num', $num, PDO::PARAM_INT);
+      $query->execute();
+    }
+
     function unLike($login,$num){
       $sql = "DELETE FROM LIKETEMP WHERE login =  :login AND num = :num";
       $query = $this->db->prepare($sql);
@@ -124,10 +131,10 @@
 
     function getNbLike($num){
 
-      $sql = "SELECT num, COUNT(*) AS nbr FROM LIKETEMP WHERE num = $num";
+      $sql = "SELECT COUNT(*) AS nbr FROM LIKETEMP WHERE num = $num";
       $query = $this->db->query($sql);
       $res = $query->fetch();
-      return $res[1];
+      return $res[0];
     }
 
     function getTemplateSaison() {
