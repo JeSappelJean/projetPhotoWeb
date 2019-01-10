@@ -30,6 +30,7 @@
 #column_left{
   width: 50%;
   border-right: 2px solid black;
+
 }
 
 #column_up{
@@ -40,6 +41,19 @@
 #column_up>a{
   float: right;
 }
+
+#template_up{
+  margin-left: 25%;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 5px 5px 12px #555;
+  margin-right: 10px;
+}
+
+
 
 #column_down{
   height: 50%;
@@ -136,7 +150,7 @@
  }
 
  #boutonUse{
-   
+
    display:block;
    width:150px;
    line-height:50px;

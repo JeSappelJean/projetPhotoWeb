@@ -47,6 +47,9 @@
                   <div id="column_left">
 
                     <div id="column_up">
+                      <div id="template_up">
+
+
                     <?php
                     $templates_concours = $dao->getTemplatesConcours();
                     $nbLike = 0;
@@ -57,16 +60,19 @@
                             $numtp = $value->num;
                       }
                     }
+
                     if ($numtp > 0) {
                     $template = $dao->getTemplate($numtp);
 
-                    print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$numtp.'"><img src ="../data/imagesSite/im'.$template[0]->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                    print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$numtp.'"><img src ="../data/imagesSite/im'.$template[0]->theme.'.jpg" alt="plusliké" width =200px height=200px/></a>';
                   } else {
-                    print '<img src="../data/imagesSite/imVide.jpg" alt="template actuel" width=100px height=100px>';
+                    print '<img src="../data/imagesSite/imVide.jpg" alt="vide" width=100px height=100px>';
                   }
 
                     ?>
+                    <p>Template le plus liké!</p>
                     </div>
+                  </div>
 
                     <div id="column_down">
                       <p id ="apercu" style="font-size:150%;"><b>Aperçu : </b></p>
