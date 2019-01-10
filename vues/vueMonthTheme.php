@@ -16,7 +16,7 @@
         <!DOCTYPE html>
 
       <!--On récupère les fonctions à utilisés-->
-      <?php /*require_once('../vue/function.vue.php');*/?>
+      <?php require_once('../model/DAO.class.php');?>
 
       <html>
 
@@ -47,7 +47,25 @@
                   <div id="column_left">
 
                     <div id="column_up">
+                    <?php
+                    $templates_concours = $dao->getTemplatesConcours();
+                    $nbLike = 0;
+                    $numtp = 0;
+                    foreach ($templates_concours as $value) {
+                      if  ($dao->getNbLike($value->num) > $nbLike) {
+                            $nblike = $dao->getNbLike($value->num);
+                            $numtp = $value->num;
+                      }
+                    }
+                    if ($numtp > 0) {
+                    $template = $dao->getTemplate($numtp);
 
+                    print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$numtp.'"><img src ="../data/imagesSite/im'.$template[0]->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                  } else {
+                    print '<img src="../data/imagesSite/imVide.jpg" alt="template actuel" width=100px height=100px>';
+                  }
+
+                    ?>
                     </div>
 
                     <div id="column_down">
