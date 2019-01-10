@@ -1,4 +1,3 @@
-<!--Class DAO du projet + definition de différentes fonctions-->
 <?php
 /* pour recreer la base executer ces commandes une par une apres avoir ouvert la base sqlite (commande shell: sqlite3 photoWeb.db)
 
@@ -104,27 +103,31 @@
       $result=$sth->fetchAll(PDO::FETCH_CLASS,'template');
       return $result;
     }
-    
+
     function addLike($login,$num){
       $query=$this->db->prepare('INSERT INTO LIKETEMP (login, num) VALUES (:login, :num)');
       $query->bindValue(':login', $login, PDO::PARAM_STR);
       $query->bindValue(':num', $num, PDO::PARAM_INT);
-      $query->execute();
-      if($query == false){
-        $ok = false;
-      } else {
-        $ok = true;
-      }
+      $ok = $query->execute();
       $query->CloseCursor();
 
       return $ok;
     }
 
+    function unLike($login,$num){
+      $sql = "DELETE FROM LIKETEMP WHERE login =  :login AND num = :num";
+      $query = $this->db->prepare($sql);
+      $query->bindValue(':login', $login, PDO::PARAM_STR);
+      $query->bindValue(':num', $num, PDO::PARAM_INT);
+      $query->execute();
+    }
+
     function getNbLike($num){
-      $req="SELECT num COUNT(*) AS nbr FROM LIKETEMP WHERE num = $num;";
+
+      $sql = "SELECT num, COUNT(*) AS nbr FROM LIKETEMP WHERE num = $num";
       $query = $this->db->query($sql);
       $res = $query->fetch();
-      return $res[0];
+      return $res[1];
     }
 
 

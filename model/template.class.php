@@ -1,4 +1,3 @@
-<!--Définition de la class Template-->
 <?php
     class Template {
       public $num;

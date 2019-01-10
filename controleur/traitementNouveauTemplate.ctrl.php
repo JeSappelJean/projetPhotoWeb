@@ -1,7 +1,7 @@
 <!--Traitement pour la création d'un nouveau template-->
 <?php
     session_start();
-    include_once('../model/DAO.class.php');
+    require_once('../model/DAO.class.php');
     $BDD = new DAO();
     $num = $BDD->getNbTemplate() + 1;
 
