@@ -98,11 +98,6 @@
         }
 
         function eventClick(th){
-          //$.post('../controleur/traitementNouveauTemplate.ctrl.php',
-            //{
-              //theme: th.target.value,
-            //});
-          //th.target.submit();
           creerTemplate(th.target.value);
         }
         //Excécuter selectTheme quand le page est complètement chargée

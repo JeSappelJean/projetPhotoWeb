@@ -98,6 +98,28 @@
       return $result;
     }
 
+    function addLike($login,$num){
+      $query=$this->db->prepare('INSERT INTO LIKETEMP (login, num) VALUES (:login, :num)');
+      $query->bindValue(':login', $login, PDO::PARAM_STR);
+      $query->bindValue(':num', $num, PDO::PARAM_INT);
+      $query->execute();
+      if($query == false){
+        $ok = false;
+      } else {
+        $ok = true;
+      }
+      $query->CloseCursor();
+
+      return $ok;
+    }
+
+    function getNbLike($num){
+      $req="SELECT num COUNT(*) AS nbr FROM LIKETEMP WHERE num = $num;";
+      $query = $this->db->query($sql);
+      $res = $query->fetch();
+      return $res[0];
+    }
+
 
     /*Fonction non testée
     function getAllTemplate(): array {
