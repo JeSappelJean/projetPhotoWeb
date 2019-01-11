@@ -1,7 +1,8 @@
-<!--Traitement pour le like ou le non like-->
 <?php
+ /*Traitement pour le like ou le non like*/
+ session_start();
   /*Permet de garder la connexion utilisateur active*/
-  session_start();
+
 
   /*On récupère la class DAO*/
   require_once('../model/DAO.class.php');
