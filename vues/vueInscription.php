@@ -15,7 +15,7 @@
     <form class="" action="../controleur/controleurInscription.php" method="post">
         <div class="item">
           <h2>Login :</h2>
-          <input type="text" name="login" placeholder="E-mail" required>
+          <input type="text" name="login" placeholder="Login" required>
         </div>
         <div class="item">
           <h2>Mot de passe :</h2>
