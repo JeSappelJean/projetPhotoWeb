@@ -64,11 +64,10 @@
                       $template = $dao->getTemplate($numtp);
                       echo '<div id="templateAff">';
                       print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$numtp.'&i='.$i.'"><img src ="../data/imagesSite/im'.$template[0]->theme.''.$i.'.jpg" alt="plusliké" width =200px height=200px/></a>';
+                      echo'</div>';
                       } else {
                       print '<img src="../data/imagesSite/imVide.jpg" alt="vide" width=100px height=100px>';
                       }
-                      echo'</div>';
-
                       echo'<div id="templateTxt">';
                       echo'<p id="nblike"><b>Template le plus liké avec un total de '.$nbLike.' like!<br></b></p>';
                       echo'</div>';
@@ -160,7 +159,7 @@ function $_GET(param) {
 			vars[key] = value !== undefined ? value : '';
 		}
 	);
- 
+
 	if ( param ) {
 		return vars[param] ? vars[param] : null;
 	}
