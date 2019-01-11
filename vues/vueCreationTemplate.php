@@ -65,10 +65,6 @@
             </div>
         </div>
 
-
-
-
-
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     </body>
 
@@ -76,6 +72,7 @@
 
 <script>
   <?php
+  //Vérification que l'utilisateur est connecté
   if(!isset($_SESSION['login'])){
     echo "alert(\"Pour créer un template vous devez d'abord vous connecter !\");";
     echo "window.location = '../controleur/controleurAccueil.php';";

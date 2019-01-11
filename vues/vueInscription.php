@@ -11,10 +11,10 @@
   </head>
 
   <body>
-
+    <!--Création d'un formulaire qui permet à l'utilisateur de s'inscrire -->
     <form class="" action="../controleur/controleurInscription.php" method="post">
         <div class="item">
-          <h2>E-mail :</h2>
+          <h2>Login :</h2>
           <input type="text" name="login" placeholder="E-mail" required>
         </div>
         <div class="item">
@@ -27,6 +27,6 @@
         </div>
         <input id="connexion" class="connexion" type="submit" name="connexion" value="Inscription">
     </form>
-
   </body>
+
 </html>

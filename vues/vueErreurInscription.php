@@ -10,7 +10,7 @@
       <link rel="shortcut icon" type="image/ico" href="../data/imagesSite/favicon.ico"/>
 
   </head>
-
+<!--La vue s'affiche quand l'utilisateur a rencontré des problèmes lors de l'inscription (login déjà pris, mdp incorrect)-->
   <body>
     <div>
       <h2>Erreur Inscription, réessayer.</h2>

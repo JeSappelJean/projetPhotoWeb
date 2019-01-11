@@ -9,7 +9,7 @@
       <link rel="shortcut icon" type="image/ico" href="../data/imagesSite/favicon.ico"/>
 
   </head>
-
+  <!--La vue s'affiche quand l'utilisateur est bien déconnecté -->
   <body>
     <div>
       <h2>Vous êtes maintenant déconnecté !</h2>

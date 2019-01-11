@@ -16,8 +16,6 @@
       <?php include_once('../vues/vueBandeauSite.php') ?>
 
       <!--Affichage Image (Template par la suite)-->
-
-
         <div id="container">
             <div id="column_left">
               <b> Représentation Template : (Temporaire)</b>
@@ -45,12 +43,13 @@
             </div>
         </div>
 
+        <!--Création de 2 boutons "Communauté" et "Acceuil" -->
         <nav>
           <a href="../controleur/afficherVueMesTemplates.ctrl.php" title="share"><input type="button" value="Communauté"></a>
           <a href="../controleur/afficherAccueil.ctrl.php" title="Home"><input type="button" value="Accueil"></a>
         </nav>
 
-      
+
 
 
     </body>
