@@ -36,24 +36,12 @@
 #column_up{
   border-bottom: 2px solid black;
   height: 50%;
+  display: flex;
 }
 
 #column_up>a{
   float: right;
 }
-
-#template_up{
-  margin-left: 25%;
-  height: 200px;
-  width: 200px;
-  text-align: center;
-  border: 2px solid black;
-  border-radius: 4px;
-  box-shadow: 5px 5px 12px #555;
-  margin-right: 10px;
-}
-
-
 
 #column_down{
   height: 50%;
@@ -150,7 +138,6 @@
  }
 
  #boutonUse{
-
    display:block;
    width:150px;
    line-height:50px;
@@ -166,7 +153,6 @@
  }
 
  #boutonUse:hover {
-
    background-color: white;
  }
 
@@ -198,6 +184,10 @@
    width: 35px;
    margin-right: 5px;
    margin-top: 10px;
+   font-size: 30px;
+    text-align: center;
+    background-color :  #DCD9DC;
+    border: none;
  }
 
 #apercu {
@@ -205,9 +195,18 @@ margin-top: 0px;
 margin-bottom: 5px;
 }
 
-#nbLike {
-font-size: 30px;
- text-align: center;
- background-color :  #DCD9DC;
- border : none;
+#templateTxt {
+  text-align: center;
+  margin-top: 75px;
+}
+
+#templateAff{
+  margin-left: 25%;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 5px 5px 12px #555;
+  margin-right: 10px;
 }

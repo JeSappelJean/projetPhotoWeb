@@ -23,7 +23,7 @@
               <b> Représentation Template : (Temporaire)</b>
               <br>
               <?php
-              echo '<img src ="../data/imagesSite/im'.$template[0]->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
+                echo '<img src ="../data/imagesSite/im'.$template[0]->theme.'.jpg" alt="$theme" width ="150" height="150"/></a>';
               ?>
             </div>
 
@@ -46,7 +46,7 @@
         </div>
 
         <nav>
-          <a href="../controleur/afficherVueMesTemplates.ctrl.php" title="share"><input type="button" value="Partage"></a>
+          <a href="../controleur/afficherVueMesTemplates.ctrl.php" title="share"><input type="button" value="Communauté"></a>
           <a href="../controleur/afficherAccueil.ctrl.php" title="Home"><input type="button" value="Accueil"></a>
         </nav>
 

@@ -28,6 +28,19 @@ footer {
   background-color: #4DB8DC;
 }
 
+#column_left>img{
+  margin-top: 40px;
+  margin-left:60px;
+  height: 400px;
+  width: 400px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 5px 5px 12px #555;
+  margin-right: 10px;
+}
+
+
 #column_right{
   margin-top:22%;
   width:200px;
