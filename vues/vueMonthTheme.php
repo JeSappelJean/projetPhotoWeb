@@ -169,7 +169,7 @@ function $_GET(param) {
 			vars[key] = value !== undefined ? value : '';
 		}
 	);
-
+ 
 	if ( param ) {
 		return vars[param] ? vars[param] : null;
 	}
