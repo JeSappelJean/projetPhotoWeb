@@ -9,12 +9,13 @@
       <link rel="shortcut icon" type="image/ico" href="../data/imagesSite/favicon.ico"/>
 
   </head>
-
+<!-- Affichage en cas d'erreur de conenxion-->
   <body>
     <div>
       <h2>Erreur lors de la connexion. Réessayer.</h2>
       <p>
         <b>
+          <!-- Redirection vers la page d'Accueil-->
           <a id="buttonHome" href="../controleur/afficherAccueil.ctrl.php">Accueil</a>
         </b>
       </p>
