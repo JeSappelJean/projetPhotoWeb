@@ -3,9 +3,7 @@
 
 /*Code CSS de l'affichage du template et de ses caractéristiques*/
 
-footer {
-  margin-top: 75px;
-}
+
 
 #container{
   width:780px;
@@ -53,7 +51,7 @@ footer {
   background-color: orange;
 }
 
-footer>nav>a {
+body>nav>a {
   float: right;
   margin-right:50px;
   margin-top: 10px;

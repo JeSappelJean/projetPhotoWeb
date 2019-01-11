@@ -21,7 +21,7 @@
         include_once('../vues/vueBandeauSite.php')
       ?>
 
-      <footer>
+
         <!--Création de la division globale-->
         <div id="container">
           <!--Création de la division contenant les templates de la saison-->
@@ -82,7 +82,7 @@
             </div>
         </div>
 
-      </footer>
+      
     </body>
 
 </html>

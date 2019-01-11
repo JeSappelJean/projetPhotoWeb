@@ -27,7 +27,7 @@
     $GLOBALS['resultatCréation']='Template créé avec succes';
 
     /*Permet de creer un template et de récupérer ses informations*/
-    $BDD->createLivreVide(($num2),$_SESSION['login'],($num1));
+    $BDD->createLivre(($num2),$_SESSION['login'],($num1));
     $template = $BDD->getInfoTemplate($num1);
 
     /*Affichage vueFinalisatione*/

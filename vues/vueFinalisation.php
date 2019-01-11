@@ -16,7 +16,7 @@
       <?php include_once('../vues/vueBandeauSite.php') ?>
 
       <!--Affichage Image (Template par la suite)-->
-      <footer>
+
 
         <div id="container">
             <div id="column_left">
@@ -50,7 +50,7 @@
           <a href="../controleur/afficherAccueil.ctrl.php" title="Home"><input type="button" value="Accueil"></a>
         </nav>
 
-      </footer>
+      
 
 
     </body>

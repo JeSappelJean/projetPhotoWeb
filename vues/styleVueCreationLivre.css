@@ -102,7 +102,7 @@ background-image:url(../data/imagesSite/imEte.jpg);
   -moz-filter: grayscale(100%);
 }
 
-body>footer>nav>a {
+body>nav>a {
   float: right;
   margin-bottom:150px;
   margin-right: 150px;

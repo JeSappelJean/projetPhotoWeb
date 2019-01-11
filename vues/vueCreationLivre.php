@@ -19,7 +19,6 @@
       <?php include_once('../vues/vueBandeauSite.php') ?>
 
 
-      <footer>
 
         <div id="container">
             <div id="column_left">
@@ -79,7 +78,6 @@
           ?>
         </div>
 
-      </footer>
 
       <script>
         <?php
