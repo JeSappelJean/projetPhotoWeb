@@ -21,11 +21,12 @@
 
 
 
-
+      <!--Affichage de la divisionqui contiendra toute les infos pour la création du template -->
         <div id="container">
             <div id="column_left">
               <b> Représentation Template : (Temporaire)</b>
 
+                <!--Affichage de la division qui permet la création d'un template (thème, nb pages et partage) -->
                 <div>
                 <fieldset>
                     <form action="../controleur/traitementNouveauTemplate.ctrl.php" method="post">
@@ -49,6 +50,7 @@
 
             </div>
 
+            <!--Affichage de la division qui permet de choisir le thème du template) -->
             <div id="column_right">
               <p> <b>Choisissez le thème de votre Template : </b></p>
               <p>
@@ -63,7 +65,7 @@
             </div>
         </div>
 
-      
+
 
 
 
