@@ -160,9 +160,7 @@
 
 </html>
 <script>
-  //document.getElementById ("likeBtn").addEventListener ("click", like, false);
-
-//  function like() {
+// Fonction permettant d'utiliser GET à la manière du php (source : https://www.creativejuiz.fr/blog/javascript/recuperer-parametres-get-url-javascript)
 function $_GET(param) {
 	var vars = {};
 	window.location.href.replace( location.hash, '' ).replace(
@@ -177,24 +175,23 @@ function $_GET(param) {
 	}
 	return vars;
 }
+
+//Détection du click sur le bouton like
 $(document).ready(function(){
   $("#likeBtn").click(function(e){
-//e.preventDefault();
     $.post(
-      '../controleur/controleurLike.php', // Un script PHP que l'on va créer juste après
+      '../controleur/controleurLike.php',
       {
         id : $_GET('id')
       },
       function(data){
+        //L'utilisateur like
         if(data == 'Like'){
-         // Le membre est connecté. Ajoutons lui un message dans la page HTML.
-         //alert(data);
          document.getElementById("nbLike").value++;
          $("#resultat").html("<style> #likeBtn { filter: hue-rotate(180deg); -webkit-filter: hue-rotate(180deg); }</style>");
        }
+       //L'utilisateur dislike
        else{
-         // Le membre n'a pas été connecté. (data vaut ici "failed")
-         //alert(data);
          document.getElementById("nbLike").value--;
          $("#resultat").empty();
        }
@@ -204,20 +201,20 @@ $(document).ready(function(){
  });
 });
 
+//S'active à chaque chargement de la page pour actualiser la couleur jaune du bouton si celui est liké
 $(document).ready(function(){
       $.post(
-      '../controleur/userLiked.php', // Un script PHP que l'on va créer juste après
+      '../controleur/userLiked.php',
       {
         id : $_GET('id')
       },
       function(data){
+        //Le bouton s'affichera en jaune car l'utilisateur a liké
         if(data == 'alreadyLike'){
-         // Le membre est connecté. Ajoutons lui un message dans la page HTML.
          $("#resultat").html("<style> #likeBtn { filter: hue-rotate(180deg); -webkit-filter: hue-rotate(180deg); }</style>");
        }
      },
      'text'
    );
 });
-//}
 </script>
