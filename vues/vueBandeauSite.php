@@ -1,23 +1,29 @@
 
       <header>
-
+        <!--Création du premier article contenant les infos sur la livraison premium-->
         <article>
             <a href="https://www.photoweb.fr/livraison-gratuite">
                 <div>
+                    <!--Affiche de l'image-->
                   <img src="../data/imagesSite/colis.png" alt="ImageBoitePhotoWeb">
                 </div>
 
                 <div>
+                    <!--Affichage du texte-->
                   <p><b><span class="bleu">ABONNEMENT LIVRAISON PREMIUM :</span> <span class="blanc">  Livraison gratuite et illimitée !   <span class="souligne">> Je découvre</span></span></b></p>
                 </div>
             </a>
         </article>
 
+        <!--Création de la section contenant les numéros de téléphone-->
         <section>
           <p>
-            <a href="https://www.photoweb.fr/espace_contact/espace-contact.asp">ASSISTANCE : <b>0 820 220 108</b></a> - <a href="https://www.photoweb.fr/espace_contact/espace-contact.asp">SUIVI DE COMMANDE : <b>09 69 32 05 36</b></a>
+              <!--Lien menant vers le site PhotoWeb pour l'assistance-->
+            <a href="https://www.photoweb.fr/espace_contact/espace-contact.asp">ASSISTANCE : <b>0 820 220 108</b></a> -
+            <a href="https://www.photoweb.fr/espace_contact/espace-contact.asp">SUIVI DE COMMANDE : <b>09 69 32 05 36</b></a>
           </p>
         </section>
+
 
         <nav id="conteneur1">
           <div>
