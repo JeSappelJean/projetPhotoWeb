@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 
-<!--On récupère les fonctions à utilisés-->
-<?php /*require_once('../vue/function.vue.php');*/?>
-
 <html>
 
     <head>
@@ -47,39 +44,35 @@
                   <div id="column_left">
 
                     <div id="column_up">
-                      <div id="template_up">
-
 
                     <?php
-                    $templates_concours = $dao->getTemplatesConcours();
-                    $nbLike = 0;
-                    $numtp = 0;
-                    $i = 0;
-                    foreach ($templates_concours as $value)
-                     {
-                      if  ($dao->getNbLike($value->num) > $nbLike) {
-                            $nbLike = $dao->getNbLike($value->num);
-                            $numtp = $value->num;
-                            $i++;
+                      $templates_concours = $dao->getTemplatesConcours();
+                      $nbLike = 0;
+                      $numtp = 0;
+                      $i = 0;
+                      foreach ($templates_concours as $value)
+                       {
+                        if  ($dao->getNbLike($value->num) > $nbLike) {
+                              $nbLike = $dao->getNbLike($value->num);
+                              $numtp = $value->num;
+                              $i++;
+                        }
+                        }
+                        $i = $i - 1;
+
+                      if ($numtp > 0) {
+                      $template = $dao->getTemplate($numtp);
+                      echo '<div id="templateAff">';
+                      print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$numtp.'&i='.$i.'"><img src ="../data/imagesSite/im'.$template[0]->theme.''.$i.'.jpg" alt="plusliké" width =200px height=200px/></a>';
+                      } else {
+                      print '<img src="../data/imagesSite/imVide.jpg" alt="vide" width=100px height=100px>';
                       }
+                      echo'</div>';
 
-                      }
-
-                      $i = $i - 1;
-
-                    if ($numtp > 0) {
-                    $template = $dao->getTemplate($numtp);
-
-
-                    print '<a href="../controleur/afficherVueMonthTheme.ctrl.php?id='.$numtp.'&i='.$i.'"><img src ="../data/imagesSite/im'.$template[0]->theme.''.$i.'.jpg" alt="plusliké" width =200px height=200px/></a>';
-                  } else {
-                    print '<img src="../data/imagesSite/imVide.jpg" alt="vide" width=100px height=100px>';
-                  }
-                      echo'<p id="nblike">Template le plus liké avec un total de '.$nbLike.' like!<br></p>';
-
+                      echo'<div id="templateTxt">';
+                      echo'<p id="nblike"><b>Template le plus liké avec un total de '.$nbLike.' like!<br></b></p>';
+                      echo'</div>';
                     ?>
-
-                    </div>
                   </div>
 
                     <div id="column_down">
@@ -118,13 +111,11 @@
                           echo "<input id=\"nbLike\" type=\"text\" name=\"nbLike\" value=\"",$nbLike, "\" readonly >";
                         }
                         ?>
-
-                      </div>
-
-                      <div>
-                        <b>
-                          <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
-                        </b>
+                        <div>
+                          <b>
+                            <a id="boutonUse" href="../controleur/afficherVueCreationLivre.ctrl.php">Utiliser ce Modèle</a>
+                          </b>
+                        </div>
                       </div>
                     </div>
                   </div>

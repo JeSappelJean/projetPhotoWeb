@@ -50,16 +50,12 @@
                       $id = NULL;
                     }
                     if ($id != NULL){
-                      print '<a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php?id='.$id.'"><b>Editer ce Modèle</b></a>';
+                      print '<a id="boutonEdit" href="../controleur/afficherVueCreationTemplate.ctrl.php?id='.$id.'"><b>Editer ce Modèle</b></a>';/*Non fonctionnel*/
                       print '<a id="boutonSupprimer" href="../controleur/supprimerTemplate.php?id='.$id.'"><b>Supprimer ce Modèle</b></a>';
+                      print '<a id="boutonUse" href="../controleur/traitementLivreAvecTemplate.ctrl.php?id='.$_GET['id'].'">Utiliser ce modèle</a>';
                     }
                   ?>
 
-                  <?php
-                    if (isset($_GET['id'])){
-                      echo '<a id="boutonUse" href="../controleur/traitementLivreAvecTemplate.ctrl.php?id='.$_GET['id'].'">Utiliser ce modèle</a>';
-                    }
-                  ?>
                 </b>
               </div>
             </div>
