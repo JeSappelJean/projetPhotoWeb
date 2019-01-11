@@ -8,12 +8,13 @@
   /*Test avec condition pour vérifier si l'utilisateur souhaites like ou ne pas like*/
   $test = $dao->addLike($_SESSION['login'],$_POST['id']);
 
-  if ($test == true){
+  if ($test == true && isset($_SESSION['login'])){
     echo "Like";
-  } else {
+  } else if ($test == false && isset($_SESSION['login'])){
     $dao->unLike($_SESSION['login'],$_POST['id']);
     echo "Dislike";
-
-}
+  } else {
+    echo "PasConnecte";
+  }
 
 ?>

@@ -181,9 +181,11 @@ $(document).ready(function(){
          $("#resultat").html("<style> #likeBtn { filter: hue-rotate(180deg); -webkit-filter: hue-rotate(180deg); }</style>");
        }
        //L'utilisateur dislike
-       else{
+       else if (data == 'Dislike'){
          document.getElementById("nbLike").value--;
          $("#resultat").empty();
+       } else {
+         alert("Vous devez être connecté pour like un template !")
        }
      },
      'text'
