@@ -2,7 +2,7 @@
 <?php
   session_start();
   require_once('../model/DAO.class.php');
-  require_once('../model/membre.class.php');
+  require_once('../model/membres.class.php');
 
   if ((empty($_POST['login']) || empty(md5($_POST['mdp']))) && (isset($_POST['login']) && isset($_POST['mdp']))) {
       include("../vues/vueConnexionErr.php");
