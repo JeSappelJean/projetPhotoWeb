@@ -1,5 +1,4 @@
 <!--Affichage de la vueAccueil -->
-
 <?php
   session_start();
 

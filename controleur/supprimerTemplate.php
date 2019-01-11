@@ -1,9 +1,14 @@
 <?php
-session_start();
-require_once('../model/DAO.class.php');
+  /*Permet de garder la connexion utilisateur active*/
+  session_start();
 
-$dao->delTemplate($_GET['id']);
+  /*On récupère la class DAO*/
+  require_once('../model/DAO.class.php');
 
-include('../vues/vueSuppressionOk.php');
+  /*Méthode permettant la suppresion du template;
+  $dao->delTemplate($_GET['id']);
+
+  /*On affiche la vueSuppressionOk*/
+  include('../vues/vueSuppressionOk.php');
 
  ?>
