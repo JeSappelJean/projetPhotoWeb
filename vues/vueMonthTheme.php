@@ -73,6 +73,7 @@
                       echo'</div>';
                     ?>
                   </div>
+                  <p id="resultat"></p>
 
                     <div id="column_down">
                       <p id ="apercu" style="font-size:150%;"><b>Aperçu : </b></p>
