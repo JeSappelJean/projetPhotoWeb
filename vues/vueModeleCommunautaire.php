@@ -19,7 +19,7 @@
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
 
-      
+<!--Affichage de la barre de navigation ("Mes modèles","Modèles communautaires" et "Thème du mois (Concours)")-->
         <div id="navigueBar">
             <a id="MesModeles" href="../controleur/afficherVueMesTemplates.ctrl.php"><b>Mes Modèles</b></a>
             <a id="ModeleComm"><b>Modèles Communautaires</b></a>
@@ -29,11 +29,11 @@
         <div id="container">
 
             <div id="column_left">
-
+              <!--Affichage de la sélection du thèmme voulu-->
               <div id="column_up">
                 <!-- barre de recherche -->
-
                 <?php
+                //Permet de vérifier si l'utilisateur a sélectionné un template ou non
                   if(isset($_GET['theme'])) {
                     $selected = $_GET['theme'] ;
                   } else {
@@ -41,7 +41,7 @@
                   }
                   $selectedValue = 'selected="selected"';
                 ?>
-
+                <!--Création d'un formulaire pour sélectionner le thème voulu-->
                 <form method="get">
                   <h2>Thème:</h2>
                   <select name="theme" type="text" size="1">
@@ -56,11 +56,13 @@
                 </form>
               </div>
 
+              <!--Affichage de la visualisation d'un template-->
               <div id="column_down">
                 <h2>Aperçu: </h2>
                 <div id="repTemplate">
                   <div id="repTemplateG">
                     <?php
+                    //Vérification que l'utilisateur a sélectionné un template
                       if(isset($_GET['id']) && isset($_GET['nump'])) {
                         $templatenum = $dao->getTemplate($_GET['id']);
                         $selected = $templatenum[0]->theme;
@@ -74,6 +76,7 @@
                   </div>
                   <div id="repTemplateD">
                     <?php
+                    //Récupération des informations d'un template si l'utilisateur en a sélectionné un
                       if(isset($_GET['id'])){
                         $themeUse = $templatenum[0]->theme;
                         $nbpagesUse = $templatenum[0]->nbpages;
@@ -96,7 +99,7 @@
                   </div>
                   </div>
             </div>
-
+            <!--Affichage des différents template en fonction du thème choisi-->
             <div id="column_right">
               <?php
               if(isset($_GET['theme'])) {
@@ -110,8 +113,6 @@
               } else if ( $theme == "hiver") {
                 $image = "../data/imagesSite/imHiver.jpg" ;
               }
-
-
 
               $liste = $dao->getTemplateWTheme($_GET['theme']) ;
                 $i = 0;

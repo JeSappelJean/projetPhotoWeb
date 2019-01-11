@@ -18,19 +18,19 @@
     <body>
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
-
+      <!--Affichage de la barre de navigation ("Mes modèles","Modèles communautaires" et "Thème du mois (Concours)")-->
         <div id="navigueBar">
             <a id="MesModeles"><b>Mes Modèles</b></a>
             <a id="ModeleComm"href="../controleur/afficherVueModeleCommunautaire.ctrl.php"><b>Modèles Communautaires</b></a>
             <a id="MonthTheme" href="../controleur/afficherVueMonthTheme.ctrl.php"><b>Thème du mois (Concours)</b></a>
         </div>
-
+        <!--Affichage de la partie visualisation du template-->
         <div id="container">
-
             <div id="column_left">
               <p style="font-size:150%;"><b>Aperçu : </b></p>
               <div id="repTemplate">
                 <?php
+                //Regarde si l'utilisateur a sélectionné un template
                 if(isset($_GET['id'])) {
                   $templatenum = $dao->getTemplate($_GET['id']);
                   $selected = $templatenum[0]->theme;
@@ -44,6 +44,7 @@
               <div>
                 <b>
                   <?php
+                  //Regarde si l'utilisateur a sélectionné un template pour afficher les boutons de modifications,supression ou d'utilisation du template
                     if(isset($_GET['id'])) {
                       $id = $_GET['id'];
                     } else {
@@ -59,7 +60,7 @@
                 </b>
               </div>
             </div>
-
+            <!--Affichage de la partie de sélection des tempaltes-->
             <div id="column_right">
                   <?php
                   if (isset($_SESSION['login'])){
@@ -79,9 +80,10 @@
                    ?>
             </div>
         </div>
-      
+
       <script>
       <?php
+      //Vérification que l'utilisateur est bien connecté
       if(!isset($_SESSION['login'])){
         echo "alert(\"Pour consulter vos templates vous devez d'abord vous connecter !\");";
         echo "window.location = '../controleur/controleurAccueil.php';";
