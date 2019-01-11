@@ -5,8 +5,9 @@
 
   /*Récupération de la class DAO*/
   require_once('../model/DAO.class.php');
-  /*Récupération de la class membre*/
-  require_once('../model/membre.class.php');
+
+  /*Récupération de la class membres*/
+  require_once('../model/membres.class.php');
 
   /*Conditions permettant de gérer les différents cas de connexion => 2 cas : connexion réussi | connexion erreur*/
   if ((empty($_POST['login']) || empty(md5($_POST['mdp']))) && (isset($_POST['login']) && isset($_POST['mdp']))) {

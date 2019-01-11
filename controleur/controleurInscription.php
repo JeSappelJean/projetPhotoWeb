@@ -16,7 +16,6 @@
 
   /*Gestion des cas d'échec pour un même login*/
   if(!$mail_dispo) {
-      array_push($listErr, "Votre mail est déjà utilisé par un membre");
       $nbErr++;
   }
 
