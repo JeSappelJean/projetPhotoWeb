@@ -179,12 +179,12 @@
 #likeBtn {
   height: 60px;
 }
- #nbLike {
-   height: 30px;
-   width: 35px;
-   margin-right: 5px;
-   margin-top: 10px;
- }
+
+#nbLike {
+font-size: 30px;
+ text-align: center;
+ background-color :  #DCD9DC;
+ border : none;
 
 #apercu {
 margin-top: 0px;

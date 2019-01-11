@@ -78,9 +78,11 @@
                         $themeUse = $templatenum[0]->theme;
                         $nbpagesUse = $templatenum[0]->nbpages;
                         $auteur = $templatenum[0]->login;
+                        $nblike = $dao->getNbLike($_GET['id']);
                         echo '<p><b>Thème : </b>'.$themeUse.'</p>';
                         echo '<p><b>Nombre de pages : </b>'.$nbpagesUse.'</p>';
                         echo '<p><b>Auteur : </b>'.$auteur.'</p>';
+                        echo '<p><b>Like : </b>'.$nblike.'</p>';
                       }
                     ?>
                     </div>
