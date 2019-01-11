@@ -19,7 +19,7 @@
       <!--Affichage du bandeau du site-->
       <?php include_once('../vues/vueBandeauSite.php') ?>
 
-      <footer>
+      
         <div id="navigueBar">
             <a id="MesModeles" href="../controleur/afficherVueMesTemplates.ctrl.php"><b>Mes Modèles</b></a>
             <a id="ModeleComm"><b>Modèles Communautaires</b></a>
@@ -129,7 +129,7 @@
 
             </div>
         </div>
-      </footer>
+
     </body>
 
 </html>

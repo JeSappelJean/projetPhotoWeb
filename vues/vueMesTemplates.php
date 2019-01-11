@@ -79,8 +79,7 @@
                    ?>
             </div>
         </div>
-      <footer>
-      </footer>
+      
       <script>
       <?php
       if(!isset($_SESSION['login'])){
